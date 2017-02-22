@@ -1,0 +1,60 @@
+@mixin component-style($component-names...) {
+  %#{$component-names} {
+    @content;
+  }
+  @each $component-name in $component-names {
+    //#{$component-name},
+    //[#{$component-name}],
+    //.#{$component-name} {
+    #{$component-name} {
+      @extend %#{$component-names};
+    }
+  }
+}
+
+%absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin absolute-fill() {
+  @extend %absolute-fill;
+}
+
+@mixin roboto-font() {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin rokkitt-font() {
+  font-family: 'Rokkitt', serif;
+}
+
+@mixin slant-grouping($numbers...) {
+  $slant-offset: 3%;
+  @each $number in $numbers {
+    .slant-grouping--#{$number} {
+
+      & > * {
+        position: relative;
+
+        $total-offset: $number * ($slant-offset - 1);
+        $total-offset-one-side: $total-offset / 2;
+        @for $i from 1 through $number {
+          $iMinus: $i - 1;
+          &:nth-child(#{$i}) {
+            @if $i <= ($number / 2) {
+              left: -$total-offset-one-side + ($iMinus * $slant-offset);
+            }
+            @if $i > ($number / 2) {
+              right: -$total-offset-one-side +
+                  (($number - $iMinus - 1) * $slant-offset);
+            }
+          }
+        }
+      }
+    }
+  }
+}

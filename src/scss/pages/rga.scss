@@ -1,0 +1,44 @@
+@import "../colors";
+
+.rga-google {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.google-logo,
+.rga-logo {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.rga-logo {
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.rga-block {
+  $rga-block-size: 20%;
+  background: $rga-red;
+  display: inline-block;
+  margin: 0.4% 7% 0 0;
+  padding-top: $rga-block-size;
+  width: $rga-block-size;
+}
+
+.rga-type {
+  display: inline-block;
+  width: 72%;
+}
+
+.at-symbol {
+  display: inline-block;
+  font-size: 120px;
+  margin: 0;
+}
+
+.google-logo {
+  display: inline-block;
+}

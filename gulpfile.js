@@ -32,7 +32,7 @@ gulp.task('css', () => {
 
 gulp.task('watch', ['css', 'js'], () => {
     livereload.listen();
-    gulp.watch('./src/scss/*.scss', ['css']);
+    gulp.watch('./src/scss/**/*.scss', ['css']);
     gulp.watch('./src/js/**/*.js', ['js']);
 });
 

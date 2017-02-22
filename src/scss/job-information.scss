@@ -1,0 +1,19 @@
+@import "components/decorative/picture-frame";
+
+.job__company {
+  bottom: $image-border-circle-radius * 2;
+  font-weight: 100;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.job__title,
+.job__time-worked {
+  margin: 0;
+}
+
+.job__time-worked {
+  font-size: 25px;
+}

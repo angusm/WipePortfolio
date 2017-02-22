@@ -1,30 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio" ng-strict-di>
 <head>
     <meta charset="UTF-8">
     <title>Angus MacDonald</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,500,500i,700|Rokkitt:700"
+          rel="stylesheet">
 </head>
 <body>
-    <div class="am-pagination portfolio">
-        <div class="am-pagination__page am-pagination__page--wipe portfolio__page">
-            <div class="portfolio__image-container">
-                <div class="portfolio__image">
-                    <div class="picture-frame__corner picture-frame__corner--top-left"></div>
-                    <div class="picture-frame__corner picture-frame__corner--top-right"></div>
-                    <div class="picture-frame__corner picture-frame__corner--bottom-left"></div>
-                    <div class="picture-frame__corner picture-frame__corner--bottom-right"></div>
-
-                    <div class="picture-frame__border picture-frame__border--top"></div>
-                    <div class="picture-frame__border picture-frame__border--right"></div>
-                    <div class="picture-frame__border picture-frame__border--bottom"></div>
-                    <div class="picture-frame__border picture-frame__border--left"></div>
-
-                    <div class="portfolio-page-image-content"></div>
+    <div class="portfolio">
+        <portfolio-page>
+            <portfolio-page-image></portfolio-page-image>
+            <portfolio-page-content>
+                <h1 class="name">Angus MacDonald</h1>
+                <div class="contact-info slant-grouping--4">
+                    <hr class="group__line-top">
+                    <div class="contact-line"><a target="_blank" href="mailto:angus@angusmacdonald.ca">angus@angusmacdonald.ca</a></div>
+                    <div class="contact-line">650 - 625 - 7971</div>
+                    <hr class="group__line-bottom">
                 </div>
-            </div>
-            <div class="portfolio-page-content"></div>
+                <div class="social-links">
+                    <a class="social-link"
+                       href="https://ca.linkedin.com/in/angus-macdonald-34426719">
+                        <img class="social-icon" src="img/linkedin.svg"> LinkedIn
+                    </a>
+                    <a class="social-link"
+                       href="https://github.com/angusm">
+                        <img class="social-icon" src="img/github.svg"> GitHub
+                    </a>
+                </div>
+            </portfolio-page-content>
+        </portfolio-page>
+        <portfolio-page>
+            <portfolio-page-image>
+                <div class="rga-google">
+                    <div class="rga-logo">
+                        <div class="rga-block"></div>
+                        <img class="rga-type" src="img/rga.svg">
+                    </div>
+                    <h1 class="at-symbol">@</h1>
+                    <img class="google-logo" src="img/google.svg">
+                </div>
+                <div class="job__company">
+                    R/GA embedded at Google
+                </div>
+            </portfolio-page-image>
+            <portfolio-page-content>
+                <h1 class="job__title">Software Engineer</h1>
+                <h2 class="job__time-worked">Mar. 2016 - Present</h2>
+                <div class="projects" id="projects">
+                    <project project-group="rga"
+                             project-title="Duo Marketing Page"
+                             project-link="https://duo.google.com"
+                             project-icon="img/duo.png"
+                             project-expanded="true">
+                        <ul>
+                            <li>Implemented batch animation update to avoid jank</li>
+                            <li>Implemented all effects with batch animation library</li>
+                            <li>Integrated effects with existing pagination component</li>
+                            <li>User-agent detection to direct to correct download page</li>
+                            <li>Page is responsive and compatible with evergreen browsers</li>
+                        </ul>
+                    </project>
+                    <project project-group="rga"
+                             project-title="Chrome Version Selection"
+                             project-link="https://www.google.com/chrome"
+                             project-icon="img/chrome.png">
+                        <ul>
+                            <li>Updated version selection for OS and browser combinations</li>
+                            <li>Worked on
+                                <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
+                                <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
+                                and
+                                <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
+                                pages </li>
+                            <li>Generated the hundreds of combinations for QA</li>
+                            <li>Refactored legacy code where necessary</li>
+                        </ul>
+                    </project>
+                    <project project-group="rga"
+                             project-title="Maps Treks Responsive Update"
+                             project-link="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza"
+                             project-icon="img/maps.png">
+                        <ul>
+                            <li>Adapted existing design to ensure proper responsiveness</li>
+                            <li>Worked to ensure changes did not effect related pages</li>
+                            <li>Adjusted javascript relating to embedded map</li>
+                            <li>
+                                Effected Treks include
+                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza/">Egypt</a>,
+                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/gombe-tanzania/">Tanzania</a>
+                                and
+                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/samburu-kenya/">Kenya</a>
+                            </li>
+                        </ul>
+                    </project>
+                    <project project-group="rga"
+                             project-title="Internal Projects"
+                             project-icon="img/google-g.png">
+                        <ul>
+                            <li>Worked on web application for internal use using Google's stack</li>
+                        </ul>
+                    </project>
+                </div>
+            </portfolio-page-content>
+        </portfolio-page>
+        <portfolio-page>
+            <portfolio-page-image>
+                <div class="nerds">
+                    <div class="nerds-logo">
+                        <img src="img/nerdcorps.png">
+                        <div class="ampersand-symbol-container">
+                            <h1 class="ampersand-symbol">&</h1>
+                        </div>
+                    </div>
+                    <div class="dhx-logo">
+                        <img src="img/dhx.svg">
+                        <div class="ampersand-symbol-container">
+                            <h1 class="ampersand-symbol">&</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="job__company">
+                    Nerd Corps Entertainment / DHX Media
+                </div>
+            </portfolio-page-image>
+            <portfolio-page-content>
+                <h1 class="job__title">Developer</h1>
+                <h2 class="job__time-worked">Aug. 2014 - Feb. 2016</h2>
+                <div class="projects" id="nerd-projects">
+                    <project project-group="nerds"
+                             project-title="Animation Scheduling App"
+                             project-icon="img/dhx.svg"
+                             project-expanded="true">
+                        <ul>
+                            <li>Built with Django & Angular</li>
+                            <li>Prototyped initial version</li>
+                            <li>Mixed API calls to Shotgun with local DB</li>
+                            <li>Wrapped API in ORM emulating Django syntax</li>
+                            <li>Collaborated on architecture</li>
+                            <li>Estimated and scheduled tasks</li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="Media Review App"
+                             project-icon="img/nerdstar.png">
+                        <ul>
+                            <li>Built with Django & Angular</li>
+                            <li>Collaborated on architecture decisions with teammates</li>
+                            <li>
+                                Prototyped & Built system for annotating and
+                                navigating video on a frame by frame basis, like
+                                the drawings on-screen during a sports game
+                            </li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="Kate & Mim-Mim Promotional Site"
+                             project-link="http://www.kateandmimmim.ca"
+                             project-icon="img/kateandmimmim.png">
+                        <ul>
+                            <li>Built with PHP & jQuery</li>
+                            <li>Styled pages to pixel perfection from given .psd</li>
+                            <li>Setup strings for localization within custom CMS</li>
+                            <li>Built responsive embedded game component</li>
+                            <li>Page is responsive and compatible with evergreen browsers</li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="Slugterra Promotional Site"
+                             project-link="http://www.slugterra.com"
+                             project-icon="img/slugterra.png">
+                        <ul>
+                            <li>Built with PHP, jQuery & Knockout</li>
+                            <li>Setup caching for localization</li>
+                            <li>Styled out localization issues</li>
+                            <li>Periodically added content</li>
+                            <li>Generated promotional codes for games</li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="Merchandising Approval App"
+                             project-icon="img/nerdstar.png">
+                        <ul>
+                            <li>Built with PHP & jQuery</li>
+                            <li>Wrote functionality relating to permissions</li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="Pipeline App"
+                             project-icon="img/nerdstar.png">
+                        <ul>
+                            <li>Built with Perl, PHP & jQuery ~10 yrs before I started</li>
+                            <li>Added a feature for estimating previs sequences</li>
+                            <li>Maintained, updated and debugged code</li>
+                        </ul>
+                    </project>
+                    <project project-group="nerds"
+                             project-title="And More..."
+                             project-icon="img/nerdstar.png">
+                        <ul>
+                            <li>Internal promotional sites</li>
+                            <li>Contract tracking application</li>
+                            <li>3D animation macro scripts</li>
+                        </ul>
+                    </project>
+                </div>
+            </portfolio-page-content>
+        </portfolio-page>
+        <portfolio-page class="avp">
+            <portfolio-page-image>
+                <div class="avp-image">
+                    <img class="avp-logo" src="img/avp.gif">
+                </div>
+                <div class="job__company">
+                    Associated Veterinary Purchasing
+                </div>
+            </portfolio-page-image>
+            <portfolio-page-content>
+                <h1 class="job__title">Developer</h1>
+                <h2 class="job__time-worked">Aug. 2014 - Feb. 2016</h2>
+                <div class="projects" id="avp-projects">
+                    <project project-group="avp"
+                             project-title="jBASE System"
+                             project-icon="img/avp-icon.gif"
+                             project-expanded="true">
+                        <ul>
+                            <li>
+                                Maintained legacy (est. 1989)
+                                <a href="http://www.jbase.com/">jBASE</a>
+                                system (GOTOs, GOSUBs type stuff)
+                            </li>
+                            <li>
+                                Maintained features relating to payroll,
+                                time-sheets, inventory, sales orders,
+                                purchase orders, waybills, rebates...
+                            </li>
+                            <li>
+                                Ensured processing of thousands of orders
+                                a day
+                            </li>
+                            <li>
+                                Got tough enough to handle undocumented source
+                                code with 3-character variable names in ALL CAPS
+                            </li>
+                        </ul>
+                    </project>
+                    <project project-group="avp"
+                             project-title="Customer Site"
+                             project-icon="img/avp-icon.gif">
+                        <ul>
+                            <li>Initially built on custom CMS by third-party</li>
+                            <li>Replicated site style in CakePHP templates for new features</li>
+                            <li>Helped maintain and update online invoice system</li>
+                            <li>Created and maintained online statement system</li>
+                            <li>Helped with content updates</li>
+                        </ul>
+                    </project>
+                    <project project-group="avp"
+                             project-title="E-Commerce Site"
+                             project-icon="img/avp-icon.gif">
+                        <ul>
+                            <li>Built with CakePHP & jQuery</li>
+                            <li>Developed site for online ordering</li>
+                            <li>Inventory was updated from jBASE system</li>
+                            <li>Accounts were pulled from Customer Site</li>
+                            <li>
+                                Orders were created and submitted to jBASE system
+                            </li>
+                        </ul>
+                    </project>
+                </div>
+            </portfolio-page-content>
+        </portfolio-page>
+        <portfolio-page>
+            <portfolio-page-image>
+                <div class="dcm">
+                    <img class="dcm-logo" src="img/dcm.png">
+                </div>
+                <div class="job__company">
+                    DCM Studios
+                </div>
+            </portfolio-page-image>
+            <portfolio-page-content>
+                <h1 class="job__title">Contractor</h1>
+                <h2 class="job__time-worked">Intermittent between 2010 - 2016</h2>
+                <div class="projects" id="dcm-projects">
+                    <project project-group="dcm"
+                             project-title="PARA 2016 Collection"
+                             project-icon="img/dcm-icon.gif"
+                             project-expanded="true">
+                        <ul>
+                            <li>
+                                Maintained legacy (est. 1989)
+                                <a href="http://www.jbase.com/">jBASE</a>
+                                system (GOTOs, GOSUBs type stuff)
+                            </li>
+                            <li>
+                                Maintained features relating to payroll,
+                                time-sheets, inventory, sales orders,
+                                purchase orders, waybills, rebates...
+                            </li>
+                            <li>
+                                Ensured processing of thousands of orders
+                                a day
+                            </li>
+                            <li>
+                                Got tough enough to handle undocumented source
+                                code with 3-character variable names in ALL CAPS
+                            </li>
+                        </ul>
+                    </project>
+                    <project project-group="dcm"
+                             project-title="Customer Site"
+                             project-icon="img/dcm-icon.gif">
+                        <ul>
+                            <li>Initially built on custom CMS by third-party</li>
+                            <li>Replicated site style in CakePHP templates for new features</li>
+                            <li>Helped maintain and update online invoice system</li>
+                            <li>Created and maintained online statement system</li>
+                            <li>Helped with content updates</li>
+                        </ul>
+                    </project>
+                    <project project-group="dcm"
+                             project-title="E-Commerce Site"
+                             project-icon="img/dcm-icon.gif">
+                        <ul>
+                            <li>Built with CakePHP & jQuery</li>
+                            <li>Developed site for online ordering</li>
+                            <li>Inventory was updated from jBASE system</li>
+                            <li>Accounts were pulled from Customer Site</li>
+                            <li>
+                                Orders were created and submitted to jBASE system
+                            </li>
+                        </ul>
+                    </project>
+                </div>
+            </portfolio-page-content>
+        </portfolio-page>
+        <div class="fine-print">
+            <div>Icons made by <a href="http://www.flaticon.com/authors/elegant-themes" title="Elegant Themes">Elegant Themes</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>

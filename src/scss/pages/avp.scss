@@ -1,0 +1,19 @@
+$avp-logo-bg-color: #fff;
+$avp-logo-border-color: #0081BF;
+
+.avp {
+  .avp-image {
+    padding: 5.5% 6% 6%;
+    box-shadow: 5px 5px 0 0 $avp-logo-border-color;
+    border-radius: 0;
+    background: $avp-logo-bg-color;
+  }
+
+  .project__logo {
+    background: $avp-logo-bg-color;
+    max-width: 38px;
+    max-height: 38px;
+    box-shadow: 2px 2px 0 0 $avp-logo-border-color;
+    padding: 5px;
+  }
+}

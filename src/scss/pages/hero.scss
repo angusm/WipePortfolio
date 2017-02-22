@@ -1,0 +1,54 @@
+@import '../mixins';
+@import '../colors';
+
+@include component-style('portfolio-page') {
+  &:nth-child(1) {
+    //background-image: url(../img/hero.JPG);
+    //background-position: 73% center;
+    //background-size: cover;
+    text-align: center;
+
+    @include component-style('picture-frame') {
+      background-image: url(../img/hero.JPG);
+      background-position: 83% 50%;
+      background-size: cover;
+    }
+
+    .contact-info {
+      font-size: 35px;
+    }
+
+    .contact-line {
+
+    }
+
+    .name {
+      @include rokkitt-font();
+      font-size: 100px;
+      line-height: 90px;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .social-links {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .social-link {
+      font-weight: 400;
+      align-items: center;
+      color: $color-a;
+      display: flex;
+      font-size: 35px;
+      margin: 15px;
+    }
+
+    .social-icon {
+      margin: -3px 15px 0 0;
+      width: 50px;
+    }
+  }
+}

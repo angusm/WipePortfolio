@@ -1,0 +1,80 @@
+@import "mixins";
+@import "components/decorative/picture-frame";
+
+.projects {
+  margin: 15px 0;
+}
+
+@include component-style('project') {
+  display: block;
+  margin: 15px 0;
+}
+
+.project__title {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+}
+
+.project__logo {
+  max-height: 50px;
+  max-width: 50px;
+  margin: 0 8px 0 0;
+}
+
+.project__details {
+  max-height: 0;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 20px;
+  overflow: hidden;
+  transition: max-height 0.5s, opacity 0.5s;
+
+  ul {
+    margin: 10px;
+
+    li {
+      list-style: square;
+    }
+  }
+}
+
+.project__link {
+  font-size: 15px;
+  position: relative;
+  z-index: 99;
+}
+
+.project__name-and-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.project__expand-button-container {
+  position: relative;
+}
+
+.project__expand-button {
+  @include absolute-fill();
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 0;
+
+  &:checked {
+    display: none;
+
+    & ~ .project__title {
+      cursor: default;
+    }
+
+    & ~ .project__details {
+      max-height: 200px;
+      opacity: 1;
+      transition: max-height 0.5s, opacity 0.5s;
+    }
+  }
+}

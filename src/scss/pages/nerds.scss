@@ -1,0 +1,49 @@
+@import "../colors";
+@import "../mixins";
+
+.nerds {
+  @include absolute-fill();
+
+  .dhx-logo {
+    background: $color-a;
+    left: 50%;
+
+    .ampersand-symbol-container {
+      left: 0;
+      .ampersand-symbol {
+        color: $color-b;
+        transform: translateX(-45%);
+      }
+    }
+  }
+
+  .nerds-logo {
+    right: 50%;
+
+    .ampersand-symbol-container {
+      right: 0;
+      .ampersand-symbol {
+        color: $color-a;
+        transform: translateX(55%);
+      }
+    }
+  }
+}
+
+.dhx-logo,
+.nerds-logo {
+  @include absolute-fill();
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+
+  .ampersand-symbol-container {
+    position: absolute;
+    font-size: 50px;
+  }
+
+  img {
+    width: 50%;
+  }
+}

@@ -1,5 +1,13 @@
-$image-border-width: 4px;
+@import "../../mixins";
+
+$image-border-width: 8px;
 $image-border-circle-radius: 25px;
+$picture-frame-border-color: #000;
+
+@include component-style('picture-frame') {
+  @include absolute-fill();
+  display: block;
+}
 
 .picture-frame__border,
 .picture-frame__corner {
@@ -7,7 +15,7 @@ $image-border-circle-radius: 25px;
 }
 
 .picture-frame__border {
-  background: black;
+  background: $picture-frame-border-color;
 }
 
 .picture-frame__border--left {
@@ -43,7 +51,7 @@ $image-border-circle-radius: 25px;
 }
 
 .picture-frame__corner {
-  border: $image-border-width solid black;
+  border: $image-border-width solid $picture-frame-border-color;
   border-radius: 2 * $image-border-circle-radius;
   width: 2 * $image-border-circle-radius;
   height: 2 * $image-border-circle-radius;
@@ -67,4 +75,8 @@ $image-border-circle-radius: 25px;
 .picture-frame__corner--top-left,
 .picture-frame__corner--bottom-left {
   left: -$image-border-circle-radius;
+}
+
+.picture-frame__content {
+  margin: $image-border-circle-radius * 2;
 }

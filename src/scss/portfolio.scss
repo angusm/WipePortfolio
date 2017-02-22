@@ -1,30 +1,102 @@
-.portfolio__image {
-  width: 90%;
+@import 'colors';
+@import 'mixins';
+@import "components/decorative/picture-frame";
+
+$hr-thickness: 5px;
+
+@include slant-grouping(4);
+
+@include component-style('portfolio-section') {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+
+@include component-style('portfolio-section-container') {
+  @include absolute-fill();
+  display: block;
   margin: 5%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
   overflow: hidden;
 }
 
-.portfolio__image-container {
-  width: 50%;
-  height: 100%;
-  position: relative;
+@include component-style('portfolio-content') {
+  @include absolute-fill();
+  margin: 50px;
 }
 
-.portfolio__page {
-  width: 100%;
+@include component-style('portfolio-page') {
+  display: block;
   height: 100%;
+  width: 100%;
+
+  @mixin page-coloring(
+    $page-color-a, $page-color-b, $float-direction, $link-color) {
+    background-color: $page-color-a;
+    color: $page-color-b;
+
+    hr,
+    .picture-frame__border {
+      background: $page-color-b;
+    }
+
+    .picture-frame__corner {
+      background: $page-color-a;
+      border-color: $page-color-b;
+    }
+
+    @include component-style('portfolio-section') {
+      float: $float-direction;
+    }
+
+    a {
+      color: $link-color;
+    }
+  }
+
+  &:nth-child(odd) {
+    @include page-coloring($color-b, $color-a, right, $link-color-b);
+  }
+
+  &:nth-child(even) {
+    @include page-coloring($color-a, $color-b, left, $link-color-a);
+  }
+}
+
+@include component-style('portfolio-page-image') {
+  @include absolute-fill();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $image-border-circle-radius * 2;
 }
 
 .portfolio {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
+  @include absolute-fill();
+  @include roboto-font();
+  font-size: 25px;
   height: 100%;
-  background: #EED;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
+  hr {
+    border: none;
+    height: $hr-thickness;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @include rokkitt-font();
+  }
+}
+
+.fine-print {
+  font-size: 10px;
 }
