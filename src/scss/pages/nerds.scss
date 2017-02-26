@@ -16,6 +16,7 @@
 }
 
 .nerds-logo {
-  width: 50%;
-  filter: drop-shadow(0 3px 1px #000)
+  @include absolute-fill();
+  filter: drop-shadow(0 3px 1px #000);
+  max-width: 100%;
 }

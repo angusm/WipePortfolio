@@ -1,4 +1,4 @@
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,7 +66,7 @@ picture-frame {
 .picture-frame__content {
   margin: 50px; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,13 +75,16 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
 
 #hero {
   text-align: center; }
-  #hero picture-frame {
+  #hero portfolio-page-image {
     background-image: url(../img/hero.JPG);
     background-position: 83% 50%;
     background-size: cover;
     filter: saturate(90%) contrast(110%) brightness(110%); }
   #hero .contact-info {
     font-size: 40px; }
+    @media (min-width: 720px) {
+      #hero .contact-info {
+        font-size: 25px; } }
     @media (min-width: 1024px) {
       #hero .contact-info {
         font-size: 20px; } }
@@ -90,6 +93,9 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
     font-weight: 300;
     letter-spacing: 5px;
     margin-top: 0; }
+    @media (min-width: 720px) {
+      #hero .name {
+        font-size: 70px; } }
     @media (min-width: 1024px) {
       #hero .name {
         font-size: 50px; } }
@@ -102,7 +108,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
     display: inline-block;
     margin-top: 20px;
     text-align: left; }
-    @media (min-width: 1024px) {
+    @media (min-width: 720px) {
       #hero .social-links {
         margin-top: 0; } }
   #hero .social-link {
@@ -112,6 +118,9 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
     display: flex;
     font-size: 40px;
     margin: 15px; }
+    @media (min-width: 720px) {
+      #hero .social-link {
+        font-size: 25px; } }
     @media (min-width: 1024px) {
       #hero .social-link {
         font-size: 20px; } }
@@ -121,6 +130,9 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
   #hero .social-icon {
     margin: -1px 15px 0 0;
     width: 60px; }
+    @media (min-width: 720px) {
+      #hero .social-icon {
+        width: 25px; } }
     @media (min-width: 1024px) {
       #hero .social-icon {
         width: 30px; } }
@@ -134,37 +146,30 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
   background-size: cover; }
 
 .rga-google {
-  align-items: center;
-  display: flex;
-  filter: drop-shadow(1px 1px 1px #000);
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-  width: 70%; }
+  filter: drop-shadow(1px 1px 1px #000); }
 
 .google-logo,
 .rga-logo {
-  width: 60%;
-  flex-grow: 1; }
+  width: 100%; }
 
 .rga-logo {
-  align-items: flex-start;
-  display: inline-flex;
-  justify-content: center;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  position: relative; }
 
 .rga-block {
   background: #e51837;
   display: inline-block;
-  margin: 0 2% 0 0;
-  padding-top: 16%;
-  width: 16%; }
+  margin: 2% 0 0 2%;
+  padding-top: 21%;
+  width: 21%; }
 
 .rga-type {
   color: #fff;
   display: inline-block;
-  width: 72%;
-  height: 46px; }
+  height: 100%;
+  position: absolute;
+  right: 2%;
+  width: 70%; }
 
 .at-symbol {
   color: #fff;
@@ -175,7 +180,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
 .google-logo {
   display: inline-block; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -193,8 +198,8 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
   justify-content: center; }
 
 .nerds-logo {
-  width: 50%;
-  filter: drop-shadow(0 3px 1px #000); }
+  filter: drop-shadow(0 3px 1px #000);
+  max-width: 100%; }
 
 #avp .avp-bg {
   background: url(../img/avp-bg.jpg);
@@ -202,11 +207,14 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
   background-size: cover; }
 
 #avp .avp-image {
+  align-items: center;
   background: #fff;
   border-radius: 0;
   box-shadow: 0 3px 1px 0 #000;
-  padding: 5.5% 6% 6%;
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: calc(90% - 3px); }
 
 .dcm-bg {
   background: url(../img/dcm-bg.jpg);
@@ -215,9 +223,10 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
 
 .dcm-logo {
   position: relative;
-  filter: drop-shadow(1px 1px 1px #000) brightness(0%); }
+  filter: drop-shadow(1px 1px 1px #000) brightness(0%);
+  width: 90%; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -285,7 +294,7 @@ picture-frame {
 .picture-frame__content {
   margin: 50px; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,18 +302,21 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
   bottom: 0; }
 
 .job__company {
-  bottom: 50px;
+  bottom: 20px;
   font-size: 40px;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%; }
+  @media (min-width: 720px) {
+    .job__company {
+      font-size: 25px; } }
   @media (min-width: 1024px) {
     .job__company {
       font-size: 20px; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 720px) {
   .job__title {
     font-size: 30px; } }
 
@@ -316,10 +328,33 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
 .job__time-worked {
   margin: 0; }
 
+.job__logo {
+  margin-top: -15%;
+  padding-top: 35%;
+  position: relative;
+  width: 35%; }
+  @media (min-width: 720px) {
+    .job__logo {
+      margin-top: -20px;
+      padding-top: 20%;
+      width: 20%; } }
+  @media (min-width: 1024px) {
+    .job__logo {
+      margin-top: -25%;
+      padding-top: 75%;
+      width: 75%; } }
+
+.job__logo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
+
 .job__time-worked {
   font-size: 35px;
   font-style: italic; }
-  @media (min-width: 1024px) {
+  @media (min-width: 720px) {
     .job__time-worked {
       font-size: 15px;
       font-style: normal; } }
@@ -327,14 +362,14 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-sect
     .job__time-worked {
       font-size: 25px; } }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -432,9 +467,9 @@ portfolio-page {
   flex-direction: column;
   height: calc(100% - 5vw);
   justify-content: center;
-  padding: 5%;
+  padding: 5% calc(5% + 50px) 5% 5%;
   position: relative;
-  width: 90%;
+  width: calc(90% - 50px);
   z-index: 50; }
   portfolio-page:nth-child(odd) {
     background-color: #000;
@@ -451,7 +486,7 @@ portfolio-page {
     portfolio-page:nth-child(odd) hr,
     portfolio-page:nth-child(odd) .picture-frame__border {
       background: #fff; }
-    portfolio-page:nth-child(odd) .portfolio-page-image {
+    portfolio-page:nth-child(odd) portfolio-page-image {
       background: #fff; }
     portfolio-page:nth-child(odd) .picture-frame__corner {
       background: #000;
@@ -477,7 +512,7 @@ portfolio-page {
     portfolio-page:nth-child(even) hr,
     portfolio-page:nth-child(even) .picture-frame__border {
       background: #000; }
-    portfolio-page:nth-child(even) .portfolio-page-image {
+    portfolio-page:nth-child(even) portfolio-page-image {
       background: #000; }
     portfolio-page:nth-child(even) .picture-frame__corner {
       background: #fff;
@@ -497,33 +532,24 @@ portfolio-section {
   overflow: hidden;
   position: relative;
   width: 90%; }
+  portfolio-section:nth-child(1) {
+    margin-top: 25px; }
   portfolio-section:nth-child(2) {
     flex: 2; }
-    portfolio-section:nth-child(2) portfolio-section-container {
-      margin: 0; }
   @media (min-width: 1024px) {
     portfolio-section {
       max-width: 500px;
       width: 40%; }
+      portfolio-section:nth-child(1) {
+        margin-top: 0; }
       portfolio-section:nth-child(2) {
         flex: 1;
         max-width: 750px;
-        width: 60%; }
-        portfolio-section:nth-child(2) portfolio-section-container {
-          margin: 3% 5%; } }
-  @media (min-width: 1360px) {
-    portfolio-section {
-      margin: 5%; }
-      portfolio-section:nth-child(2) portfolio-section-container {
-        margin: 3% 5%; } }
+        width: 60%; } }
 
 portfolio-section-container {
   display: block;
-  margin: 3% 5%;
   overflow: hidden; }
-  @media (min-width: 1360px) {
-    portfolio-section-container {
-      margin: 5%; } }
 
 portfolio-content {
   margin: 50px;
@@ -569,25 +595,25 @@ portfolio-page-image {
 .portfolio__navigation {
   align-items: center;
   display: flex;
+  font-size: 60px;
   height: 100%;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 100; }
   .portfolio__navigation ul li {
-    filter: drop-shadow(1px 1px 2px #777);
-    color: white; }
+    color: #999; }
     .portfolio__navigation ul li:hover {
-      color: #AAA; }
+      color: #ccc; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -667,6 +693,9 @@ picture-frame {
 project {
   display: block;
   margin: 25px 0; }
+  @media (min-width: 720px) {
+    project {
+      margin: 5px; } }
   @media (min-width: 1024px) {
     project {
       margin: 10px 0; } }
@@ -682,6 +711,9 @@ project {
   display: flex;
   font-size: 40px;
   height: 35px; }
+  @media (min-width: 720px) {
+    .project__title {
+      font-size: 20px; } }
   @media (min-width: 1024px) {
     .project__title {
       font-size: 20px; } }
@@ -695,6 +727,15 @@ project {
   .project__details .project__link {
     display: inline-block;
     margin-bottom: 15px; }
+  @media (min-width: 720px) {
+    .project__details,
+    .project__details .project__link {
+      font-size: 16px;
+      line-height: 16px; }
+      .project__details .project__link-arrow,
+      .project__details .project__link .project__link-arrow {
+        width: 16px;
+        height: 16px; } }
   @media (min-width: 1024px) {
     .project__details {
       font-size: 14px;
@@ -761,7 +802,7 @@ project {
       .project__expand-button:checked ~ .project__title .project__details-toggle-arrow {
         transform: rotate(90deg); }
     .project__expand-button:checked ~ .project__details {
-      max-height: 310px;
+      max-height: 345px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s; }
       @media (min-width: 1024px) {

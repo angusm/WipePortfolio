@@ -14,9 +14,9 @@ $large-breakpoint-section-margin: 5%;
   flex-direction: column;
   height: calc(100% - 5vw);
   justify-content: center;
-  padding: 5%;
+  padding: 5% calc(5% + 50px) 5% 5%;
   position: relative;
-  width: 90%;
+  width: calc(90% - 50px);
   z-index: 50;
 
   @mixin page-coloring(
@@ -55,7 +55,7 @@ $large-breakpoint-section-margin: 5%;
       background: $page-color-b;
     }
 
-    .portfolio-page-image {
+    @include component-style('portfolio-page-image') {
       background: $page-color-b;
     }
 
@@ -93,36 +93,26 @@ $large-breakpoint-section-margin: 5%;
   position: relative;
   width: 90%;
 
+  &:nth-child(1) {
+    margin-top: 25px;
+  }
+
   &:nth-child(2) {
     flex: 2;
-
-    @include component-style('portfolio-section-container') {
-      margin: 0;
-    }
   }
 
   @include breakpoint($m) {
     max-width: 500px;
     width: 40%;
 
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+
     &:nth-child(2) {
       flex: 1;
       max-width: 750px;
       width: 60%;
-
-      @include component-style('portfolio-section-container') {
-        margin: $medium-breakpoint-section-margin;
-      }
-    }
-  }
-
-  @include breakpoint($l) {
-    margin: $large-breakpoint-section-margin;
-
-    &:nth-child(2) {
-      @include component-style('portfolio-section-container') {
-        margin: $medium-breakpoint-section-margin;
-      }
     }
   }
 }
@@ -130,12 +120,7 @@ $large-breakpoint-section-margin: 5%;
 @include component-style('portfolio-section-container') {
   @include absolute-fill();
   display: block;
-  margin: $medium-breakpoint-section-margin;
   overflow: hidden;
-
-  @include breakpoint($l) {
-    margin: $large-breakpoint-section-margin;
-  }
 }
 
 @include component-style('portfolio-content') {
@@ -198,6 +183,7 @@ $large-breakpoint-section-margin: 5%;
 .portfolio__navigation {
   align-items: center;
   display: flex;
+  font-size: 60px;
   height: 100%;
   position: fixed;
   right: 0;
@@ -205,11 +191,10 @@ $large-breakpoint-section-margin: 5%;
   z-index: 100;
 
   ul li {
-    filter: drop-shadow(1px 1px 2px #777);
-    color: white;
+    color: #999;
 
     &:hover {
-      color: #AAA;
+      color: #ccc;
     }
   }
 }

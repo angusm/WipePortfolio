@@ -18,6 +18,10 @@
   display: block;
   margin: 25px 0;
 
+  @include breakpoint($s) {
+    margin: 5px;
+  }
+
   @include breakpoint($m) {
     margin: 10px 0;
   }
@@ -40,6 +44,10 @@
   font-size: 40px;
   height: 35px;
 
+  @include breakpoint($s) {
+    font-size: 20px;
+  }
+
   @include breakpoint($m) {
     font-size: 20px;
   }
@@ -55,6 +63,19 @@
   .project__link {
     display: inline-block;
     margin-bottom: 15px;
+  }
+
+  @include breakpoint($s) {
+    &,
+    & .project__link {
+      font-size: 16px;
+      line-height: 16px;
+
+      .project__link-arrow {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 
   @include breakpoint($m) {
@@ -150,7 +171,7 @@
     }
 
     & ~ .project__details {
-      max-height: 310px;
+      max-height: 345px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s;
 

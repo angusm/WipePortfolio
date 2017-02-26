@@ -4,7 +4,7 @@
 @import "mixins";
 
 .job__company {
-  bottom: $image-border-circle-radius * 2;
+  bottom: 20px;
   font-size: 40px;
   font-weight: 300;
   left: 0;
@@ -12,13 +12,17 @@
   text-align: center;
   width: 100%;
 
+  @include breakpoint($s) {
+    font-size: 25px;
+  }
+
   @include breakpoint($m) {
     font-size: 20px;
   }
 }
 
 .job__title {
-  @include breakpoint($m) {
+  @include breakpoint($s) {
     font-size: 30px;
   }
 
@@ -32,11 +36,42 @@
   margin: 0;
 }
 
+.job__logo {
+  $job__logo-size-standard: 35%;
+  margin-top: -15%;
+  padding-top: $job__logo-size-standard;
+  position: relative;
+  width: $job__logo-size-standard;
+
+  @include breakpoint($s) {
+    margin-top: -20px;
+    $job__logo-size-small: 20%;
+    padding-top: $job__logo-size-small;
+    width: $job__logo-size-small;
+  }
+
+  @include breakpoint($m) {
+    $job__logo-size-medium: 75%;
+    margin-top: -25%;
+    padding-top: $job__logo-size-medium;
+    width: $job__logo-size-medium;
+  }
+}
+
+.job__logo-container {
+  @include absolute-fill();
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
 .job__time-worked {
   font-size: 35px;
   font-style: italic;
 
-  @include breakpoint($m) {
+  @include breakpoint($s) {
     font-size: 15px;
     font-style: normal;
   }

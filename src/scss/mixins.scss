@@ -28,10 +28,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-@mixin rokkitt-font() {
-  font-family: 'Rokkitt', serif;
-}
-
 @mixin slant-grouping($numbers...) {
   $slant-offset: 3%;
   @each $number in $numbers {
