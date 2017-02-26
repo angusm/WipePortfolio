@@ -226,7 +226,6 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
 
 .dcm-logo {
   position: relative;
-  filter: brightness(0%);
   width: 90%; }
 
 picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
