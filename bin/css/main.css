@@ -1,11 +1,11 @@
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame {
+picture-frame, #hero picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -66,41 +66,41 @@ picture-frame, portfolio-page:nth-child(1) picture-frame {
 .picture-frame__content {
   margin: 50px; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-portfolio-page:nth-child(1) {
+#hero {
   text-align: center; }
-  portfolio-page:nth-child(1) picture-frame {
+  #hero picture-frame {
     background-image: url(../img/hero.JPG);
     background-position: 83% 50%;
     background-size: cover;
     filter: saturate(90%) contrast(110%) brightness(110%); }
-  portfolio-page:nth-child(1) .contact-info {
+  #hero .contact-info {
     font-size: 25px; }
-  portfolio-page:nth-child(1) .name {
+  #hero .name {
     font-weight: 300;
     letter-spacing: 5px;
     font-size: 80px;
     line-height: 80px;
     margin-top: 0; }
-  portfolio-page:nth-child(1) p {
+  #hero p {
     text-align: left; }
-  portfolio-page:nth-child(1) .social-links {
+  #hero .social-links {
     display: inline-block;
     text-align: left; }
-  portfolio-page:nth-child(1) .social-link {
+  #hero .social-link {
     font-weight: 400;
     align-items: center;
     color: #fff;
     display: flex;
     font-size: 25px;
     margin: 15px; }
-  portfolio-page:nth-child(1) .social-icon {
+  #hero .social-icon {
     margin: -1px 15px 0 0;
     width: 40px; }
 
@@ -147,7 +147,7 @@ portfolio-page:nth-child(1) {
 .google-logo {
   display: inline-block; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,14 +180,6 @@ picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .n
   padding: 5.5% 6% 6%;
   position: relative; }
 
-#avp .project__logo {
-  background: #fff;
-  box-shadow: 1px 1px 2px 0 #777;
-  max-width: 38px;
-  max-height: 38px;
-  margin: 0 11px 0 0;
-  padding: 3px; }
-
 .dcm-bg {
   background: url(../img/dcm-bg.jpg);
   filter: saturate(0) blur(2px) contrast(50%) brightness(25%);
@@ -197,14 +189,14 @@ picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .n
   position: relative;
   filter: drop-shadow(1px 1px 1px #000); }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame {
+picture-frame, #hero picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -281,21 +273,21 @@ picture-frame, portfolio-page:nth-child(1) picture-frame {
 .job__time-worked {
   font-size: 25px; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame {
+picture-frame, #hero picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -405,7 +397,9 @@ portfolio-page {
   display: flex;
   height: 100%;
   justify-content: center;
-  width: 100%; }
+  position: relative;
+  width: 100%;
+  z-index: 50; }
   portfolio-page:nth-child(odd) {
     background-color: #000;
     color: #fff;
@@ -463,21 +457,35 @@ portfolio-page-image {
 .fine-print {
   font-size: 10px; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+.portfolio__navigation {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  .portfolio__navigation ul li {
+    filter: drop-shadow(1px 1px 2px #777);
+    color: white; }
+    .portfolio__navigation ul li:hover {
+      color: #AAA; }
+
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, portfolio-page:nth-child(1) picture-frame {
+picture-frame, #hero picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -544,27 +552,14 @@ picture-frame, portfolio-page:nth-child(1) picture-frame {
 project {
   display: block;
   margin: 15px 0; }
-  project:hover .project__logo, project:hover .project__details-toggle-arrow {
-    transform: rotate(-3deg) scale(1.02); }
+  project:hover .project__details-toggle-arrow {
+    transform: rotate(-3deg) scale(1.05); }
 
 .project__title {
   align-items: center;
   cursor: pointer;
   display: flex;
   height: 35px; }
-
-.project__logo,
-.project__details-toggle-arrow {
-  transition: transform 300ms; }
-
-.project__logo {
-  height: 30px;
-  width: 30px;
-  margin: 0 8px 0 0; }
-
-.project__logo-img {
-  max-height: 100%;
-  max-width: 100%; }
 
 .project__details {
   max-height: 0;
@@ -573,15 +568,12 @@ project {
   line-height: 20px;
   overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s; }
-  .project__details ul {
-    margin: 10px; }
-    .project__details ul li {
-      list-style: square; }
 
 .project__details-toggle-arrow {
   height: 20px;
   margin: 0 10px;
   transform: rotate(0deg);
+  transition: transform 300ms;
   width: 20px; }
 
 .project__link {
@@ -617,6 +609,6 @@ project {
       .project__expand-button:checked ~ .project__title .project__details-toggle-arrow {
         transform: rotate(90deg); }
     .project__expand-button:checked ~ .project__details {
-      max-height: 200px;
+      max-height: 100px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s; }

@@ -10,7 +10,6 @@ projectModule.component(COMPONENT_NAME, {
         projectGroup: '@?',
         projectLink: '@?',
         projectTitle: '@?',
-        projectIcon: '@?',
         projectExpanded: '<?',
     },
     transclude: true,

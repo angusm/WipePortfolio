@@ -10,9 +10,8 @@
   margin: 15px 0;
 
   &:hover {
-    .project__logo,
     .project__details-toggle-arrow {
-      transform: rotate(-3deg) scale(1.02);
+      transform: rotate(-3deg) scale(1.05);
     }
   }
 }
@@ -24,22 +23,6 @@
   height: 35px;
 }
 
-.project__logo,
-.project__details-toggle-arrow {
-  transition: transform 300ms;
-}
-
-.project__logo {
-  height: 30px;
-  width: 30px;
-  margin: 0 8px 0 0;
-}
-
-.project__logo-img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
 .project__details {
   max-height: 0;
   opacity: 0;
@@ -47,20 +30,13 @@
   line-height: 20px;
   overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s;
-
-  ul {
-    margin: 10px;
-
-    li {
-      list-style: square;
-    }
-  }
 }
 
 .project__details-toggle-arrow {
   height: 20px;
   margin: 0 10px;
   transform: rotate(0deg);
+  transition: transform 300ms;
   width: 20px;
 }
 
@@ -108,7 +84,7 @@
     }
 
     & ~ .project__details {
-      max-height: 200px;
+      max-height: 100px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s;
     }

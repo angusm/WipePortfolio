@@ -5,9 +5,6 @@ export default `
         ng-checked="$ctrl.projectExpanded" 
         name="{{$ctrl.projectGroup}}">
     <label for="project" class="project__title">
-        <div class="project__logo">
-            <img class="project__logo-img" src="{{$ctrl.projectIcon}}">
-        </div>
         <div class="project__name-and-link">
             <div class="project__name">
                 {{$ctrl.projectTitle}}
