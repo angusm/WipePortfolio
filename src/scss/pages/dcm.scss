@@ -1,12 +1,12 @@
 .dcm-bg {
   @include absolute-fill();
-  background: url(../img/dcm-bg.jpg);
+  background: url(../img/dcm-bg.jpg) center bottom;
   filter: saturate(0) contrast(20%) brightness(175%);
   background-size: cover;
 }
 
 .dcm-logo {
   position: relative;
-  filter: drop-shadow(1px 1px 1px #000) brightness(0%);
+  filter: brightness(0%);
   width: 90%;
 }

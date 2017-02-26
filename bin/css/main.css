@@ -77,12 +77,15 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   text-align: center; }
   #hero portfolio-page-image {
     background-image: url(../img/hero.JPG);
-    background-position: 83% 50%;
+    background-position: 79% 50%;
     background-size: cover;
     filter: saturate(90%) contrast(110%) brightness(110%); }
+    @media (min-width: 1024px) {
+      #hero portfolio-page-image {
+        background-position: 83% 50%; } }
   #hero .contact-info {
     font-size: 40px; }
-    @media (min-width: 720px) {
+    @media false {
       #hero .contact-info {
         font-size: 25px; } }
     @media (min-width: 1024px) {
@@ -93,7 +96,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
     font-weight: 300;
     letter-spacing: 5px;
     margin-top: 0; }
-    @media (min-width: 720px) {
+    @media false {
       #hero .name {
         font-size: 70px; } }
     @media (min-width: 1024px) {
@@ -108,7 +111,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
     display: inline-block;
     margin-top: 20px;
     text-align: left; }
-    @media (min-width: 720px) {
+    @media false {
       #hero .social-links {
         margin-top: 0; } }
   #hero .social-link {
@@ -118,7 +121,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
     display: flex;
     font-size: 40px;
     margin: 15px; }
-    @media (min-width: 720px) {
+    @media false {
       #hero .social-link {
         font-size: 25px; } }
     @media (min-width: 1024px) {
@@ -130,7 +133,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   #hero .social-icon {
     margin: -1px 15px 0 0;
     width: 60px; }
-    @media (min-width: 720px) {
+    @media false {
       #hero .social-icon {
         width: 25px; } }
     @media (min-width: 1024px) {
@@ -141,12 +144,12 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
         width: 40px; } }
 
 .rga-bg {
-  background: url(../img/rga-bg.jpg);
+  background: url(../img/rga-bg.jpg) center center;
   filter: saturate(10%) brightness(35%);
   background-size: cover; }
 
 .rga-google {
-  filter: drop-shadow(1px 1px 1px #000); }
+  margin-top: 10%; }
 
 .google-logo,
 .rga-logo {
@@ -189,6 +192,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
 
 .nerds-bg {
   background: url(../img/nerds-bg.jpg);
+  background-position: right bottom;
   filter: saturate(0) contrast(10%) brightness(175%);
   background-size: cover; }
 
@@ -202,7 +206,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   max-width: 100%; }
 
 #avp .avp-bg {
-  background: url(../img/avp-bg.jpg);
+  background: url(../img/avp-bg.jpg) center center;
   filter: saturate(0) brightness(20%) contrast(110%);
   background-size: cover; }
 
@@ -210,20 +214,19 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   align-items: center;
   background: #fff;
   border-radius: 0;
-  box-shadow: 0 3px 1px 0 #000;
   display: flex;
   justify-content: center;
   width: 90%;
   height: calc(90% - 3px); }
 
 .dcm-bg {
-  background: url(../img/dcm-bg.jpg);
+  background: url(../img/dcm-bg.jpg) center bottom;
   filter: saturate(0) contrast(20%) brightness(175%);
   background-size: cover; }
 
 .dcm-logo {
   position: relative;
-  filter: drop-shadow(1px 1px 1px #000) brightness(0%);
+  filter: brightness(0%);
   width: 90%; }
 
 picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .job__logo-container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
@@ -303,24 +306,24 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
 
 .job__company {
   bottom: 20px;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%; }
-  @media (min-width: 720px) {
+  @media false {
     .job__company {
       font-size: 25px; } }
   @media (min-width: 1024px) {
     .job__company {
       font-size: 20px; } }
 
-@media (min-width: 720px) {
+@media false {
   .job__title {
     font-size: 30px; } }
 
-@media (min-width: 1360px) {
+@media (min-width: 1024px) {
   .job__title {
     font-size: 40px; } }
 
@@ -333,7 +336,7 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   padding-top: 35%;
   position: relative;
   width: 35%; }
-  @media (min-width: 720px) {
+  @media false {
     .job__logo {
       margin-top: -20px;
       padding-top: 20%;
@@ -352,13 +355,13 @@ picture-frame, .rga-bg, .nerds-bg, .nerds, .nerds-logo, #avp .avp-bg, .dcm-bg, .
   width: 100%; }
 
 .job__time-worked {
-  font-size: 35px;
+  font-size: 25px;
   font-style: italic; }
-  @media (min-width: 720px) {
+  @media false {
     .job__time-worked {
       font-size: 15px;
       font-style: normal; } }
-  @media (min-width: 1360px) {
+  @media (min-width: 1024px) {
     .job__time-worked {
       font-size: 25px; } }
 
@@ -560,6 +563,7 @@ portfolio-page-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 3px;
   padding: 50px; }
 
 .portfolio {
@@ -682,7 +686,7 @@ picture-frame {
   margin: 50px; }
 
 .projects {
-  margin: 22px 0; }
+  margin: 15px 0; }
   @media (min-width: 1024px) {
     .projects {
       margin: 10px 0; } }
@@ -692,8 +696,8 @@ picture-frame {
 
 project {
   display: block;
-  margin: 25px 0; }
-  @media (min-width: 720px) {
+  margin: 20px 0; }
+  @media false {
     project {
       margin: 5px; } }
   @media (min-width: 1024px) {
@@ -711,7 +715,7 @@ project {
   display: flex;
   font-size: 40px;
   height: 35px; }
-  @media (min-width: 720px) {
+  @media false {
     .project__title {
       font-size: 20px; } }
   @media (min-width: 1024px) {
@@ -727,7 +731,7 @@ project {
   .project__details .project__link {
     display: inline-block;
     margin-bottom: 15px; }
-  @media (min-width: 720px) {
+  @media false {
     .project__details,
     .project__details .project__link {
       font-size: 16px;

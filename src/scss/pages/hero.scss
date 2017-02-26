@@ -6,9 +6,13 @@
 
   @include component-style('portfolio-page-image') {
     background-image: url(../img/hero.JPG);
-    background-position: 83% 50%;
+    background-position: 79% 50%;
     background-size: cover;
     filter: saturate(90%) contrast(110%) brightness(110%);
+
+    @include breakpoint($m) {
+      background-position: 83% 50%;
+    }
   }
 
   .contact-info {

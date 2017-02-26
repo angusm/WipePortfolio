@@ -1,10 +1,9 @@
 $avp-logo-bg-color: #fff;
-$avp-logo-border-color: #000;
 
 #avp {
   .avp-bg {
     @include absolute-fill();
-    background: url(../img/avp-bg.jpg);
+    background: url(../img/avp-bg.jpg) center center;
     filter: saturate(0) brightness(20%) contrast(110%);
     background-size: cover;
   }
@@ -13,7 +12,6 @@ $avp-logo-border-color: #000;
     align-items: center;
     background: $avp-logo-bg-color;
     border-radius: 0;
-    box-shadow: 0 3px 1px 0 $avp-logo-border-color;
     display: flex;
     justify-content: center;
     width: 90%;

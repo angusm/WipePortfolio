@@ -3,13 +3,13 @@ $rga-block-size: 21%;
 
 .rga-bg {
   @include absolute-fill();
-  background: url(../img/rga-bg.jpg);
+  background: url(../img/rga-bg.jpg) center center;
   filter: saturate(10%) brightness(35%);
   background-size: cover;
 }
 
 .rga-google {
-  filter: drop-shadow(1px 1px 1px #000);
+  margin-top: 10%;
 }
 
 .google-logo,

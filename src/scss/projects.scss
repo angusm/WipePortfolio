@@ -3,7 +3,7 @@
 @import "components/decorative/picture-frame";
 
 .projects {
-  margin: 22px 0;
+  margin: 15px 0;
 
   @include breakpoint($m) {
     margin: 10px 0;
@@ -16,7 +16,7 @@
 
 @include component-style('project') {
   display: block;
-  margin: 25px 0;
+  margin: 20px 0;
 
   @include breakpoint($s) {
     margin: 5px;

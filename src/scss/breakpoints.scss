@@ -1,4 +1,4 @@
-$xl: 1920px;
-$l: 1360px;
-$m: 1024px;
-$s: 720px;
+$xl: (min-width: 1920px);
+$l: (min-width: 1360px);
+$m: (min-width: 1024px);
+$s: (min-width: 720px) and not (min-resolution: 2dppx);

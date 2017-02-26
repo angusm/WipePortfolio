@@ -4,6 +4,7 @@
 .nerds-bg {
   @include absolute-fill();
   background: url(../img/nerds-bg.jpg);
+  background-position: right bottom;
   filter: saturate(0) contrast(10%) brightness(175%);
   background-size: cover;
 }
