@@ -3,14 +3,14 @@
 .rga-bg {
   @include absolute-fill();
   background: url(../img/rga-bg.jpg);
-  filter: saturate(10%) blur(1px) contrast(50%) brightness(225%);
+  filter: saturate(10%) brightness(35%);
   background-size: cover;
 }
 
 .rga-google {
   align-items: center;
   display: flex;
-  filter: drop-shadow(1px 1px 1px #777);
+  filter: drop-shadow(1px 1px 1px #000);
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
@@ -19,31 +19,35 @@
 
 .google-logo,
 .rga-logo {
-  width: 50%;
+  width: 60%;
   flex-grow: 1;
 }
 
 .rga-logo {
   align-items: flex-start;
   display: inline-flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
 .rga-block {
-  $rga-block-size: 20%;
+  $rga-block-size: 16%;
   background: $rga-red;
   display: inline-block;
-  margin: 0.4% 7% 0 0;
+  margin: 0 2% 0 0;
   padding-top: $rga-block-size;
   width: $rga-block-size;
 }
 
 .rga-type {
+  color: $color-a;
   display: inline-block;
   width: 72%;
+  height: 46px;
 }
 
 .at-symbol {
+  color: $color-a;
   display: inline-block;
   font-size: 40px;
   margin: 0;

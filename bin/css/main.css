@@ -106,13 +106,13 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
 
 .rga-bg {
   background: url(../img/rga-bg.jpg);
-  filter: saturate(10%) blur(1px) contrast(50%) brightness(225%);
+  filter: saturate(10%) brightness(35%);
   background-size: cover; }
 
 .rga-google {
   align-items: center;
   display: flex;
-  filter: drop-shadow(1px 1px 1px #777);
+  filter: drop-shadow(1px 1px 1px #000);
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
@@ -120,26 +120,30 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
 
 .google-logo,
 .rga-logo {
-  width: 50%;
+  width: 60%;
   flex-grow: 1; }
 
 .rga-logo {
   align-items: flex-start;
   display: inline-flex;
+  justify-content: center;
   margin-bottom: 10px; }
 
 .rga-block {
   background: #e51837;
   display: inline-block;
-  margin: 0.4% 7% 0 0;
-  padding-top: 20%;
-  width: 20%; }
+  margin: 0 2% 0 0;
+  padding-top: 16%;
+  width: 16%; }
 
 .rga-type {
+  color: #fff;
   display: inline-block;
-  width: 72%; }
+  width: 72%;
+  height: 46px; }
 
 .at-symbol {
+  color: #fff;
   display: inline-block;
   font-size: 40px;
   margin: 0; }
@@ -156,7 +160,7 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
 
 .nerds-bg {
   background: url(../img/nerds-bg.jpg);
-  filter: saturate(0) blur(2px) contrast(50%) brightness(25%);
+  filter: saturate(0) contrast(10%) brightness(175%);
   background-size: cover; }
 
 .nerds {
@@ -166,28 +170,28 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
 
 .nerds-logo {
   width: 50%;
-  filter: drop-shadow(1px 1px 1px #000); }
+  filter: drop-shadow(0 3px 1px #000); }
 
 #avp .avp-bg {
   background: url(../img/avp-bg.jpg);
-  filter: saturate(0) blur(1px) contrast(50%) brightness(225%);
+  filter: saturate(0) brightness(20%) contrast(110%);
   background-size: cover; }
 
 #avp .avp-image {
   background: #fff;
   border-radius: 0;
-  box-shadow: 2px 2px 5px 0 #777;
+  box-shadow: 0 3px 1px 0 #000;
   padding: 5.5% 6% 6%;
   position: relative; }
 
 .dcm-bg {
   background: url(../img/dcm-bg.jpg);
-  filter: saturate(0) blur(2px) contrast(50%) brightness(25%);
+  filter: saturate(0) contrast(20%) brightness(175%);
   background-size: cover; }
 
 .dcm-logo {
   position: relative;
-  filter: drop-shadow(1px 1px 1px #000); }
+  filter: drop-shadow(1px 1px 1px #000) brightness(0%); }
 
 picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
@@ -397,6 +401,7 @@ portfolio-page {
   display: flex;
   height: 100%;
   justify-content: center;
+  overflow: auto;
   position: relative;
   width: 100%;
   z-index: 50; }
@@ -411,6 +416,8 @@ portfolio-page {
     portfolio-page:nth-child(odd) .picture-frame__corner {
       background: #000;
       border-color: #fff; }
+    portfolio-page:nth-child(odd) .job__company {
+      color: #000; }
     portfolio-page:nth-child(odd) a {
       color: #88F; }
   portfolio-page:nth-child(even) {
@@ -424,6 +431,8 @@ portfolio-page {
     portfolio-page:nth-child(even) .picture-frame__corner {
       background: #fff;
       border-color: #000; }
+    portfolio-page:nth-child(even) .job__company {
+      color: #fff; }
     portfolio-page:nth-child(even) a {
       color: #22C; }
 
