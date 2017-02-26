@@ -17,7 +17,8 @@
     }
 
     .name {
-      @include rokkitt-font();
+      font-weight: 300;
+      letter-spacing: 5px;
       font-size: 80px;
       line-height: 80px;
       margin-top: 0;

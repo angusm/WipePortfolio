@@ -2,12 +2,19 @@
 @import "components/decorative/picture-frame";
 
 .projects {
-  margin: 15px 0;
+  margin: 22px 0;
 }
 
 @include component-style('project') {
   display: block;
   margin: 15px 0;
+
+  &:hover {
+    .project__logo,
+    .project__details-toggle-arrow {
+      transform: rotate(-3deg) scale(1.02);
+    }
+  }
 }
 
 .project__title {
@@ -17,9 +24,14 @@
   height: 35px;
 }
 
+.project__logo,
+.project__details-toggle-arrow {
+  transition: transform 300ms;
+}
+
 .project__logo {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   margin: 0 8px 0 0;
 }
 
@@ -49,12 +61,7 @@
   height: 20px;
   margin: 0 10px;
   transform: rotate(0deg);
-  transition: transform 500ms;
   width: 20px;
-
-  &:hover {
-    transform: rotate(-10deg);
-  }
 }
 
 .project__link {

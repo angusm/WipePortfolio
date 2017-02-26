@@ -93,6 +93,7 @@ $hr-thickness: 5px;
     &:hover {
       transform: translate(-1px, -1px);
       text-decoration: underline;
+      filter: brightness(125%);
     }
   }
 
@@ -105,7 +106,7 @@ $hr-thickness: 5px;
   h1,
   h2,
   h3 {
-    @include rokkitt-font();
+    font-weight: 400;
   }
 }
 

@@ -83,7 +83,8 @@ portfolio-page:nth-child(1) {
   portfolio-page:nth-child(1) .contact-info {
     font-size: 25px; }
   portfolio-page:nth-child(1) .name {
-    font-family: 'Rokkitt', serif;
+    font-weight: 300;
+    letter-spacing: 5px;
     font-size: 80px;
     line-height: 80px;
     margin-top: 0; }
@@ -175,13 +176,13 @@ picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .n
 #avp .avp-image {
   background: #fff;
   border-radius: 0;
-  box-shadow: 2px 2px 5px 0 #005599;
+  box-shadow: 2px 2px 5px 0 #777;
   padding: 5.5% 6% 6%;
   position: relative; }
 
 #avp .project__logo {
   background: #fff;
-  box-shadow: 1px 1px 2px 0 #005599;
+  box-shadow: 1px 1px 2px 0 #777;
   max-width: 38px;
   max-height: 38px;
   margin: 0 11px 0 0;
@@ -193,7 +194,8 @@ picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .n
   background-size: cover; }
 
 .dcm-logo {
-  position: relative; }
+  position: relative;
+  filter: drop-shadow(1px 1px 1px #000); }
 
 picture-frame, portfolio-page:nth-child(1) picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
@@ -429,7 +431,7 @@ portfolio-page {
       background: #fff;
       border-color: #000; }
     portfolio-page:nth-child(even) a {
-      color: #00D; }
+      color: #22C; }
 
 portfolio-page-image {
   display: flex;
@@ -447,7 +449,8 @@ portfolio-page-image {
     transition: transform 500ms, text-shadow 500ms; }
     .portfolio a:hover {
       transform: translate(-1px, -1px);
-      text-decoration: underline; }
+      text-decoration: underline;
+      filter: brightness(125%); }
   .portfolio hr {
     border: none;
     height: 5px;
@@ -455,7 +458,7 @@ portfolio-page-image {
   .portfolio h1,
   .portfolio h2,
   .portfolio h3 {
-    font-family: 'Rokkitt', serif; }
+    font-weight: 400; }
 
 .fine-print {
   font-size: 10px; }
@@ -536,11 +539,13 @@ picture-frame, portfolio-page:nth-child(1) picture-frame {
   margin: 50px; }
 
 .projects {
-  margin: 15px 0; }
+  margin: 22px 0; }
 
 project {
   display: block;
   margin: 15px 0; }
+  project:hover .project__logo, project:hover .project__details-toggle-arrow {
+    transform: rotate(-3deg) scale(1.02); }
 
 .project__title {
   align-items: center;
@@ -548,9 +553,13 @@ project {
   display: flex;
   height: 35px; }
 
+.project__logo,
+.project__details-toggle-arrow {
+  transition: transform 300ms; }
+
 .project__logo {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   margin: 0 8px 0 0; }
 
 .project__logo-img {
@@ -573,10 +582,7 @@ project {
   height: 20px;
   margin: 0 10px;
   transform: rotate(0deg);
-  transition: transform 500ms;
   width: 20px; }
-  .project__details-toggle-arrow:hover {
-    transform: rotate(-10deg); }
 
 .project__link {
   font-size: 14px;
