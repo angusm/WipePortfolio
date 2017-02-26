@@ -1,0 +1,12 @@
+<div class="colour-block"
+     ng-style="getColourBlockStyle()">
+    <div class="code" ng-bind="swatch.code" ng-class="getFontColourCSSClass()"></div>
+    <div class="name-container">
+        <div class="name" ng-class="getFontColourCSSClass()">
+            <div class="swatch-name" ng-bind="swatch.name"></div>
+            <div class="swatch-code">
+                (<span ng-bind="swatch.code"></span>)
+            </div>
+        </div>
+    </div>
+</div>

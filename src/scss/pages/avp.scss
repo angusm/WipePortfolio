@@ -1,19 +1,28 @@
 $avp-logo-bg-color: #fff;
-$avp-logo-border-color: #0081BF;
+$avp-logo-border-color: #005599;
 
-.avp {
+#avp {
+  .avp-bg {
+    @include absolute-fill();
+    background: url(../img/avp-bg.jpg);
+    filter: saturate(0) blur(1px) contrast(50%) brightness(225%);
+    background-size: cover;
+  }
+
   .avp-image {
-    padding: 5.5% 6% 6%;
-    box-shadow: 5px 5px 0 0 $avp-logo-border-color;
-    border-radius: 0;
     background: $avp-logo-bg-color;
+    border-radius: 0;
+    box-shadow: 2px 2px 5px 0 $avp-logo-border-color;
+    padding: 5.5% 6% 6%;
+    position: relative;
   }
 
   .project__logo {
     background: $avp-logo-bg-color;
+    box-shadow: 1px 1px 2px 0 $avp-logo-border-color;
     max-width: 38px;
     max-height: 38px;
-    box-shadow: 2px 2px 0 0 $avp-logo-border-color;
-    padding: 5px;
+    margin: 0 11px 0 0;
+    padding: 3px;
   }
 }

@@ -2,11 +2,12 @@
 
 .job__company {
   bottom: $image-border-circle-radius * 2;
-  font-weight: 100;
+  font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%;
+  font-size: 20px;
 }
 
 .job__title,

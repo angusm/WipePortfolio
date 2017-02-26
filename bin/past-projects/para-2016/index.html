@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="para2016">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="para.css">
+    <title></title>
+</head>
+<body>
+
+    <div class="para2016" ng-controller="para2016Controller">
+        <div class="trend-buttons">
+            <trend-button ng-repeat="trend in trends"
+                          trend="trend"
+                          ng-click="selectTrend(trend)">
+            </trend-button>
+        </div>
+        <div class="trend-display-container">
+            <trend-group class="trend-display"
+                         ng-repeat="trend in trends"
+                         ng-class="{'selected-trend': trend == getSelectedTrend()}"
+                         trend="trend">
+            </trend-group>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.min.js"></script>
+</body>
+</html>

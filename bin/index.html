@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Angus MacDonald</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,500,500i,700|Rokkitt:700"
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700|Rokkitt:700"
           rel="stylesheet">
 </head>
 <body>
     <div class="portfolio">
-        <portfolio-page>
+        <portfolio-page id="hero">
             <portfolio-page-image></portfolio-page-image>
             <portfolio-page-content>
                 <h1 class="name">Angus MacDonald</h1>
@@ -31,8 +31,9 @@
                 </div>
             </portfolio-page-content>
         </portfolio-page>
-        <portfolio-page>
+        <portfolio-page id="rga">
             <portfolio-page-image>
+                <div class="rga-bg"></div>
                 <div class="rga-google">
                     <div class="rga-logo">
                         <div class="rga-block"></div>
@@ -50,76 +51,72 @@
                 <h2 class="job__time-worked">Mar. 2016 - Present</h2>
                 <div class="projects" id="projects">
                     <project project-group="rga"
+                             project-title="JS/HTML/CSS Readability"
+                             project-icon="img/google-g.png"
+                             project-expanded="true">
+                            <p>
+                                Presented reviewers with one of the
+                                contributions I've made to the Google code base,
+                                successfully demonstrating my ability and
+                                earning the permission to approve change lists.
+                            </p>
+                    </project>
+                    <project project-group="rga"
+                             project-title="Internal Projects"
+                             project-icon="img/google-g.png">
+                        <p>
+                            Worked on projects using, Django and Angular, for
+                            handling internal processes under the supervision of
+                            the CorpEng team.
+                        </p>
+                    </project>
+                    <project project-group="rga"
                              project-title="Duo Marketing Page"
                              project-link="https://duo.google.com"
-                             project-icon="img/duo.png"
-                             project-expanded="true">
-                        <ul>
-                            <li>Implemented batch animation update to avoid jank</li>
-                            <li>Implemented all effects with batch animation library</li>
-                            <li>Integrated effects with existing pagination component</li>
-                            <li>User-agent detection to direct to correct download page</li>
-                            <li>Page is responsive and compatible with evergreen browsers</li>
-                        </ul>
+                             project-icon="img/duo.png">
+                        <p>
+                            Built a batch animation library to avoid jank on the
+                            full page wipe effect without using scroll-jacking
+                            CSS animations.
+                        </p>
                     </project>
                     <project project-group="rga"
                              project-title="Chrome Version Selection"
                              project-link="https://www.google.com/chrome"
                              project-icon="img/chrome.png">
-                        <ul>
-                            <li>Updated version selection for OS and browser combinations</li>
-                            <li>Worked on
-                                <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
-                                <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
-                                and
-                                <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
-                                pages </li>
-                            <li>Generated the hundreds of combinations for QA</li>
-                            <li>Refactored legacy code where necessary</li>
-                        </ul>
+                        <p>
+                            Updated script that delivers the appropriate
+                            <a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel">dev</a>,
+                            <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
+                            <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
+                            or
+                            <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
+                            version of Chrome to user based on their OS, its
+                            version, whether it's 32 or 64-bit and the user's
+                            browser.
+                        </p>
                     </project>
                     <project project-group="rga"
-                             project-title="Maps Treks Responsive Update"
+                             project-title="Maps Treks Update"
                              project-link="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza"
                              project-icon="img/maps.png">
-                        <ul>
-                            <li>Adapted existing design to ensure proper responsiveness</li>
-                            <li>Worked to ensure changes did not effect related pages</li>
-                            <li>Adjusted javascript relating to embedded map</li>
-                            <li>
-                                Effected Treks include
-                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza/">Egypt</a>,
-                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/gombe-tanzania/">Tanzania</a>
-                                and
-                                <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/samburu-kenya/">Kenya</a>
-                            </li>
-                        </ul>
-                    </project>
-                    <project project-group="rga"
-                             project-title="Internal Projects"
-                             project-icon="img/google-g.png">
-                        <ul>
-                            <li>Worked on web application for internal use using Google's stack</li>
-                        </ul>
+                        <p>
+                            Updated the existing sites for
+                            <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza/">Egypt</a>,
+                            <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/gombe-tanzania/">Tanzania</a>
+                            and
+                            <a href="https://www.google.com/maps/about/behind-the-scenes/streetview/treks/samburu-kenya/">Kenya</a>
+                            to retroactively add responsive styles and features.
+                        </p>
                     </project>
                 </div>
             </portfolio-page-content>
         </portfolio-page>
-        <portfolio-page>
+        <portfolio-page id="nerds">
             <portfolio-page-image>
+                <div class="nerds-bg"></div>
                 <div class="nerds">
-                    <div class="nerds-logo">
-                        <img src="img/nerdcorps.png">
-                        <div class="ampersand-symbol-container">
-                            <h1 class="ampersand-symbol">&</h1>
-                        </div>
-                    </div>
-                    <div class="dhx-logo">
-                        <img src="img/dhx.svg">
-                        <div class="ampersand-symbol-container">
-                            <h1 class="ampersand-symbol">&</h1>
-                        </div>
-                    </div>
+                    <img class="nerds-logo" src="img/nerdcorps.png">
                 </div>
                 <div class="job__company">
                     Nerd Corps Entertainment / DHX Media
@@ -130,86 +127,66 @@
                 <h2 class="job__time-worked">Aug. 2014 - Feb. 2016</h2>
                 <div class="projects" id="nerd-projects">
                     <project project-group="nerds"
-                             project-title="Animation Scheduling App"
-                             project-icon="img/dhx.svg"
+                             project-title="Artemis"
+                             project-icon="img/nerdstar.png"
                              project-expanded="true">
-                        <ul>
-                            <li>Built with Django & Angular</li>
-                            <li>Prototyped initial version</li>
-                            <li>Mixed API calls to Shotgun with local DB</li>
-                            <li>Wrapped API in ORM emulating Django syntax</li>
-                            <li>Collaborated on architecture</li>
-                            <li>Estimated and scheduled tasks</li>
-                        </ul>
+                        <p>
+                            Used Django and Angular to build scheduling and
+                            estimation tools that connected to
+                            <a href="https://shotgunsoftware.com">Shotgun</a>.
+                            Proved viability, prototyped, architected,
+                            scheduled developers and wrapped the Shotgun
+                            API in an ORM that duplicated Django's to
+                            simplify dev.
+                        </p>
                     </project>
                     <project project-group="nerds"
-                             project-title="Media Review App"
+                             project-title="Muse"
                              project-icon="img/nerdstar.png">
-                        <ul>
-                            <li>Built with Django & Angular</li>
-                            <li>Collaborated on architecture decisions with teammates</li>
-                            <li>
-                                Prototyped & Built system for annotating and
-                                navigating video on a frame by frame basis, like
-                                the drawings on-screen during a sports game
-                            </li>
-                        </ul>
+                        <p>
+                            Built system for annotating video to provide
+                            animation feedback. Similar to drawings done on a
+                            televised sports replay. System was developed in
+                            Django & Angular.
+                        </p>
                     </project>
                     <project project-group="nerds"
-                             project-title="Kate & Mim-Mim Promotional Site"
+                             project-title="Kate & Mim-Mim Site"
                              project-link="http://www.kateandmimmim.ca"
                              project-icon="img/kateandmimmim.png">
-                        <ul>
-                            <li>Built with PHP & jQuery</li>
-                            <li>Styled pages to pixel perfection from given .psd</li>
-                            <li>Setup strings for localization within custom CMS</li>
-                            <li>Built responsive embedded game component</li>
-                            <li>Page is responsive and compatible with evergreen browsers</li>
-                        </ul>
+                        <p>
+                            Built responsive embedded game component that
+                            transferred from in-page embed to modal without
+                            losing game progress depending on the size of the
+                            browser or tablet orientation.
+                        </p>
                     </project>
                     <project project-group="nerds"
-                             project-title="Slugterra Promotional Site"
+                             project-title="Slugterra Site"
                              project-link="http://www.slugterra.com"
                              project-icon="img/slugterra.png">
-                        <ul>
-                            <li>Built with PHP, jQuery & Knockout</li>
-                            <li>Setup caching for localization</li>
-                            <li>Styled out localization issues</li>
-                            <li>Periodically added content</li>
-                            <li>Generated promotional codes for games</li>
-                        </ul>
+                        <p>
+                            Setup caching for localization and styled out
+                            issues relating to new locales in addition to
+                            content updates. Built with PHP, jQuery & Knockout.
+                        </p>
                     </project>
                     <project project-group="nerds"
-                             project-title="Merchandising Approval App"
+                             project-title="SPARCX"
                              project-icon="img/nerdstar.png">
-                        <ul>
-                            <li>Built with PHP & jQuery</li>
-                            <li>Wrote functionality relating to permissions</li>
-                        </ul>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="Pipeline App"
-                             project-icon="img/nerdstar.png">
-                        <ul>
-                            <li>Built with Perl, PHP & jQuery ~10 yrs before I started</li>
-                            <li>Added a feature for estimating previs sequences</li>
-                            <li>Maintained, updated and debugged code</li>
-                        </ul>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="And More..."
-                             project-icon="img/nerdstar.png">
-                        <ul>
-                            <li>Internal promotional sites</li>
-                            <li>Contract tracking application</li>
-                            <li>3D animation macro scripts</li>
-                        </ul>
+                        <p>
+                            Using Perl, PHP and jQuery, helped team maintain the
+                            pipeline management tool the company depended on
+                            that had been written ~10 years before I started
+                            there.
+                        </p>
                     </project>
                 </div>
             </portfolio-page-content>
         </portfolio-page>
-        <portfolio-page class="avp">
+        <portfolio-page id="avp">
             <portfolio-page-image>
+                <div class="avp-bg"></div>
                 <div class="avp-image">
                     <img class="avp-logo" src="img/avp.gif">
                 </div>
@@ -225,56 +202,43 @@
                              project-title="jBASE System"
                              project-icon="img/avp-icon.gif"
                              project-expanded="true">
-                        <ul>
-                            <li>
-                                Maintained legacy (est. 1989)
-                                <a href="http://www.jbase.com/">jBASE</a>
-                                system (GOTOs, GOSUBs type stuff)
-                            </li>
-                            <li>
-                                Maintained features relating to payroll,
-                                time-sheets, inventory, sales orders,
-                                purchase orders, waybills, rebates...
-                            </li>
-                            <li>
-                                Ensured processing of thousands of orders
-                                a day
-                            </li>
-                            <li>
-                                Got tough enough to handle undocumented source
-                                code with 3-character variable names in ALL CAPS
-                            </li>
-                        </ul>
+                        <p>
+                            Maintained a legacy system first established in
+                            1989. Features related to payroll, time-sheets,
+                            inventory, SOs, POs, waybills, rebates and more.
+                            Using GOTOs and 3-character variable names in
+                            ALL_CAPS the system processed thousands of orders
+                            a day.
+                        </p>
                     </project>
                     <project project-group="avp"
                              project-title="Customer Site"
                              project-icon="img/avp-icon.gif">
-                        <ul>
-                            <li>Initially built on custom CMS by third-party</li>
-                            <li>Replicated site style in CakePHP templates for new features</li>
-                            <li>Helped maintain and update online invoice system</li>
-                            <li>Created and maintained online statement system</li>
-                            <li>Helped with content updates</li>
-                        </ul>
+                        <p>
+                            Worked a CakePHP sub-site into an existing
+                            third-party CMS site by replicating templates. Added
+                            and maintained features relating to online
+                            statements and invoices connected to the jBASE
+                            system.
+                        </p>
                     </project>
                     <project project-group="avp"
                              project-title="E-Commerce Site"
                              project-icon="img/avp-icon.gif">
-                        <ul>
-                            <li>Built with CakePHP & jQuery</li>
-                            <li>Developed site for online ordering</li>
-                            <li>Inventory was updated from jBASE system</li>
-                            <li>Accounts were pulled from Customer Site</li>
-                            <li>
-                                Orders were created and submitted to jBASE system
-                            </li>
-                        </ul>
+                        <p>
+                            Developed an online ordering site with CakePHP and
+                            jQuery that was never able to be scheduled for
+                            QA and as such was never pushed live. Was to
+                            integrate with existing jBASE system and replace
+                            existing .NET based online ordering site.
+                        </p>
                     </project>
                 </div>
             </portfolio-page-content>
         </portfolio-page>
-        <portfolio-page>
+        <portfolio-page id="dcm">
             <portfolio-page-image>
+                <div class="dcm-bg"></div>
                 <div class="dcm">
                     <img class="dcm-logo" src="img/dcm.png">
                 </div>
@@ -287,53 +251,27 @@
                 <h2 class="job__time-worked">Intermittent between 2010 - 2016</h2>
                 <div class="projects" id="dcm-projects">
                     <project project-group="dcm"
-                             project-title="PARA 2016 Collection"
-                             project-icon="img/dcm-icon.gif"
+                             project-link="bin/past-projects/para-2016/index.html"
+                             project-title="PARA Paints Collections"
+                             project-icon="img/dcm.png"
                              project-expanded="true">
-                        <ul>
-                            <li>
-                                Maintained legacy (est. 1989)
-                                <a href="http://www.jbase.com/">jBASE</a>
-                                system (GOTOs, GOSUBs type stuff)
-                            </li>
-                            <li>
-                                Maintained features relating to payroll,
-                                time-sheets, inventory, sales orders,
-                                purchase orders, waybills, rebates...
-                            </li>
-                            <li>
-                                Ensured processing of thousands of orders
-                                a day
-                            </li>
-                            <li>
-                                Got tough enough to handle undocumented source
-                                code with 3-character variable names in ALL CAPS
-                            </li>
-                        </ul>
+                        <p>
+                            Created static content to be embedded in pages for
+                            para.com that adapted the designs of their
+                            brochures. Original site was not responsive and has
+                            been replaced. Link points to the 2016 collection
+                            that is no longer live.
+                        </p>
                     </project>
                     <project project-group="dcm"
-                             project-title="Customer Site"
-                             project-icon="img/dcm-icon.gif">
-                        <ul>
-                            <li>Initially built on custom CMS by third-party</li>
-                            <li>Replicated site style in CakePHP templates for new features</li>
-                            <li>Helped maintain and update online invoice system</li>
-                            <li>Created and maintained online statement system</li>
-                            <li>Helped with content updates</li>
-                        </ul>
-                    </project>
-                    <project project-group="dcm"
-                             project-title="E-Commerce Site"
-                             project-icon="img/dcm-icon.gif">
-                        <ul>
-                            <li>Built with CakePHP & jQuery</li>
-                            <li>Developed site for online ordering</li>
-                            <li>Inventory was updated from jBASE system</li>
-                            <li>Accounts were pulled from Customer Site</li>
-                            <li>
-                                Orders were created and submitted to jBASE system
-                            </li>
-                        </ul>
+                             project-title="Misc. Contracts"
+                             project-icon="img/dcm.png">
+                        <p>
+                            Helped with a small contract for Darwin Construction
+                            that was ultimately cancelled and occasional work
+                            for DCM's own site. None of this work is still
+                            live or has been retained.
+                        </p>
                     </project>
                 </div>
             </portfolio-page-content>
@@ -341,6 +279,7 @@
         <div class="fine-print">
             <div>Icons made by <a href="http://www.flaticon.com/authors/elegant-themes" title="Elegant Themes">Elegant Themes</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>

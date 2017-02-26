@@ -14,13 +14,18 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  height: 50px;
+  height: 35px;
 }
 
 .project__logo {
-  max-height: 50px;
-  max-width: 50px;
+  height: 35px;
+  width: 35px;
   margin: 0 8px 0 0;
+}
+
+.project__logo-img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .project__details {
@@ -40,15 +45,35 @@
   }
 }
 
+.project__details-toggle-arrow {
+  height: 20px;
+  margin: 0 10px;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+  width: 20px;
+
+  &:hover {
+    transform: rotate(-10deg);
+  }
+}
+
 .project__link {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   z-index: 99;
 }
 
 .project__name-and-link {
   display: flex;
+  flex: 1;
   flex-direction: column;
+}
+
+.project__name {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .project__expand-button-container {
@@ -69,6 +94,10 @@
 
     & ~ .project__title {
       cursor: default;
+
+      .project__details-toggle-arrow {
+        transform: rotate(90deg);
+      }
     }
 
     & ~ .project__details {

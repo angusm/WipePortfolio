@@ -1,10 +1,19 @@
 @import "../colors";
 
+.rga-bg {
+  @include absolute-fill();
+  background: url(../img/rga-bg.jpg);
+  filter: saturate(10%) blur(1px) contrast(50%) brightness(225%);
+  background-size: cover;
+}
+
 .rga-google {
   align-items: center;
   display: flex;
+  filter: drop-shadow(1px 1px 1px #777);
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
   width: 70%;
 }
 
@@ -17,6 +26,7 @@
 .rga-logo {
   align-items: flex-start;
   display: inline-flex;
+  margin-bottom: 10px;
 }
 
 .rga-block {
@@ -35,7 +45,7 @@
 
 .at-symbol {
   display: inline-block;
-  font-size: 120px;
+  font-size: 40px;
   margin: 0;
 }
 

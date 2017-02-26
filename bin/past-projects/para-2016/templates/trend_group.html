@@ -1,0 +1,12 @@
+<swatch ng-repeat="swatch in trend.swatches"
+        swatch="swatch"></swatch>
+<stock-photo ng-repeat="stockPhoto in trend.stockPhotos"
+             stock-photo="stockPhoto"></stock-photo>
+<room-photo ng-repeat="roomPhoto in trend.roomPhotos"
+            room-photo="roomPhoto"></room-photo>
+<div class="blurb" ng-style="getBlurbStyle()">
+    <div class="blurb-title"
+         ng-bind="trend.title"></div>
+    <div class="blurb-description"
+         ng-bind="trend.description"></div>
+</div>

@@ -3,29 +3,24 @@
 
 @include component-style('portfolio-page') {
   &:nth-child(1) {
-    //background-image: url(../img/hero.JPG);
-    //background-position: 73% center;
-    //background-size: cover;
     text-align: center;
 
     @include component-style('picture-frame') {
       background-image: url(../img/hero.JPG);
       background-position: 83% 50%;
       background-size: cover;
+      filter: saturate(90%) contrast(110%) brightness(110%);
     }
 
     .contact-info {
-      font-size: 35px;
-    }
-
-    .contact-line {
-
+      font-size: 25px;
     }
 
     .name {
       @include rokkitt-font();
-      font-size: 100px;
-      line-height: 90px;
+      font-size: 80px;
+      line-height: 80px;
+      margin-top: 0;
     }
 
     p {
@@ -42,13 +37,13 @@
       align-items: center;
       color: $color-a;
       display: flex;
-      font-size: 35px;
+      font-size: 25px;
       margin: 15px;
     }
 
     .social-icon {
-      margin: -3px 15px 0 0;
-      width: 50px;
+      margin: -1px 15px 0 0;
+      width: 40px;
     }
   }
 }

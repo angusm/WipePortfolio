@@ -9,10 +9,16 @@ $hr-thickness: 5px;
 @include component-style('portfolio-section') {
   display: inline-block;
   float: left;
-  height: 100%;
+  height: 75%;
+  max-width: 500px;
   overflow: hidden;
   position: relative;
-  width: 50%;
+  width: 40%;
+
+  &:nth-child(2) {
+    max-width: 750px;
+    width: 60%;
+  }
 }
 
 @include component-style('portfolio-section-container') {
@@ -28,14 +34,19 @@ $hr-thickness: 5px;
 }
 
 @include component-style('portfolio-page') {
-  display: block;
+  align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
   width: 100%;
 
   @mixin page-coloring(
-    $page-color-a, $page-color-b, $float-direction, $link-color) {
+    $page-color-a, $page-color-b, $flex-direction, $link-color) {
     background-color: $page-color-a;
     color: $page-color-b;
+    flex-direction: $flex-direction;
+    stroke: currentColor;
+    fill: currentColor;
 
     hr,
     .picture-frame__border {
@@ -47,21 +58,17 @@ $hr-thickness: 5px;
       border-color: $page-color-b;
     }
 
-    @include component-style('portfolio-section') {
-      float: $float-direction;
-    }
-
     a {
       color: $link-color;
     }
   }
 
   &:nth-child(odd) {
-    @include page-coloring($color-b, $color-a, right, $link-color-b);
+    @include page-coloring($color-b, $color-a, row, $link-color-b);
   }
 
   &:nth-child(even) {
-    @include page-coloring($color-a, $color-b, left, $link-color-a);
+    @include page-coloring($color-a, $color-b, row-reverse, $link-color-a);
   }
 }
 
@@ -82,6 +89,11 @@ $hr-thickness: 5px;
 
   a {
     text-decoration: none;
+    transition: transform 500ms, text-shadow 500ms;
+    &:hover {
+      transform: translate(-1px, -1px);
+      text-decoration: underline;
+    }
   }
 
   hr {
