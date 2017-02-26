@@ -1,13 +1,30 @@
+@import "breakpoints";
 @import "mixins";
 @import "components/decorative/picture-frame";
 
 .projects {
   margin: 22px 0;
+
+  @include breakpoint($m) {
+    margin: 10px 0;
+  }
+
+  @include breakpoint($l) {
+    margin: 20px 0;
+  }
 }
 
 @include component-style('project') {
   display: block;
-  margin: 15px 0;
+  margin: 25px 0;
+
+  @include breakpoint($m) {
+    margin: 10px 0;
+  }
+
+  @include breakpoint($l) {
+    margin: 15px 0;
+  }
 
   &:hover {
     .project__details-toggle-arrow {
@@ -20,16 +37,39 @@
   align-items: center;
   cursor: pointer;
   display: flex;
+  font-size: 40px;
   height: 35px;
+
+  @include breakpoint($m) {
+    font-size: 20px;
+  }
 }
 
 .project__details {
+  font-size: 32px;
   max-height: 0;
   opacity: 0;
-  font-size: 16px;
-  line-height: 20px;
   overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s;
+
+  .project__link {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  @include breakpoint($m) {
+    font-size: 14px;
+    line-height: 18px;
+
+    .project__link {
+      display: none;
+    }
+  }
+
+  @include breakpoint($l) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .project__details-toggle-arrow {
@@ -41,9 +81,36 @@
 }
 
 .project__link {
-  font-size: 14px;
+  $standard-project-link-font-size: 30px;
+
+  display: none;
+  font-size: $standard-project-link-font-size;
   position: relative;
   z-index: 99;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  .project__link-arrow {
+    height: $standard-project-link-font-size;
+    margin-left: 10px;
+    width: $standard-project-link-font-size;
+  }
+
+  @include breakpoint($m) {
+    $large-project-link-font-size: 14px;
+
+    display: inline-block;
+    font-size: $large-project-link-font-size;
+
+    .project__link-arrow {
+      margin-left: 5px;
+      height: $large-project-link-font-size;
+      width: $large-project-link-font-size;
+    }
+  }
 }
 
 .project__name-and-link {
@@ -56,7 +123,6 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
 }
 
 .project__expand-button-container {
@@ -84,9 +150,13 @@
     }
 
     & ~ .project__details {
-      max-height: 100px;
+      max-height: 310px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s;
+
+      @include breakpoint($m) {
+        max-height: 100px;
+      }
     }
   }
 }

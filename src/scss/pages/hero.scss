@@ -1,5 +1,6 @@
-@import '../mixins';
+@import '../breakpoints';
 @import '../colors';
+@import '../mixins';
 #hero {
   text-align: center;
 
@@ -11,15 +12,26 @@
   }
 
   .contact-info {
-    font-size: 25px;
+    font-size: 40px;
+
+    @include breakpoint($m) {
+      font-size: 20px;
+    }
   }
 
   .name {
+    font-size: 100px;
     font-weight: 300;
     letter-spacing: 5px;
-    font-size: 80px;
-    line-height: 80px;
     margin-top: 0;
+
+    @include breakpoint($m) {
+      font-size: 50px;
+    }
+
+    @include breakpoint($xl) {
+      font-size: 80px;
+    }
   }
 
   p {
@@ -28,7 +40,12 @@
 
   .social-links {
     display: inline-block;
+    margin-top: 20px;
     text-align: left;
+
+    @include breakpoint($m) {
+      margin-top: 0;
+    }
   }
 
   .social-link {
@@ -36,12 +53,26 @@
     align-items: center;
     color: $color-a;
     display: flex;
-    font-size: 25px;
+    font-size: 40px;
     margin: 15px;
+
+    @include breakpoint($m) {
+      font-size: 20px;
+    }
+    @include breakpoint($l) {
+      font-size: 25px;
+    }
   }
 
   .social-icon {
     margin: -1px 15px 0 0;
-    width: 40px;
+    width: 60px;
+
+    @include breakpoint($m) {
+      width: 30px;
+    }
+    @include breakpoint($l) {
+      width: 40px;
+    }
   }
 }

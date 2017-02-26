@@ -16,13 +16,26 @@ export default `
                ng-if="$ctrl.projectLink">
               <a target="_blank"
                href="{{$ctrl.projectLink}}">
-                Visit
+                Check it out
+                <svg class="project__link-arrow">
+                    <use xlink:href="img/chevron-right.svg#chevron-right"></use>
+                </svg>
               </a>
           </div>
         </div>
     </label>
     <div class="project__details">
         <ng-transclude></ng-transclude>
+            <div class="project__link"
+               ng-if="$ctrl.projectLink">
+              <a target="_blank"
+               href="{{$ctrl.projectLink}}">
+                Check it out
+                <svg class="project__link-arrow">
+                    <use xlink:href="img/chevron-right.svg#chevron-right"></use>
+                </svg>
+              </a>
+          </div>
     </div>
 </div>
 `;

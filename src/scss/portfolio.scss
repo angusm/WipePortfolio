@@ -1,58 +1,61 @@
+@import 'breakpoints';
 @import 'colors';
 @import 'mixins';
 @import "components/decorative/picture-frame";
 
-$hr-thickness: 5px;
+$medium-breakpoint-section-margin: 3% 5%;
+$large-breakpoint-section-margin: 5%;
 
 @include slant-grouping(4);
-
-@include component-style('portfolio-section') {
-  display: inline-block;
-  float: left;
-  height: 75%;
-  max-width: 500px;
-  overflow: hidden;
-  position: relative;
-  width: 40%;
-
-  &:nth-child(2) {
-    max-width: 750px;
-    width: 60%;
-  }
-}
-
-@include component-style('portfolio-section-container') {
-  @include absolute-fill();
-  display: block;
-  margin: 5%;
-  overflow: hidden;
-}
-
-@include component-style('portfolio-content') {
-  @include absolute-fill();
-  margin: 50px;
-}
 
 @include component-style('portfolio-page') {
   align-items: center;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  height: calc(100% - 5vw);
   justify-content: center;
-  overflow: auto;
+  padding: 5%;
   position: relative;
-  width: 100%;
+  width: 90%;
   z-index: 50;
 
   @mixin page-coloring(
     $page-color-a, $page-color-b, $flex-direction, $link-color) {
     background-color: $page-color-a;
     color: $page-color-b;
-    flex-direction: $flex-direction;
     stroke: currentColor;
     fill: currentColor;
 
+    @include breakpoint($m) {
+      flex-direction: $flex-direction;
+
+      @include component-style('portfolio-section') {
+        @if $flex-direction == row {
+          &:nth-child(1) {
+            margin-right: 0;
+          }
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
+
+        @if $flex-direction == row-reverse {
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          &:nth-child(2) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
     hr,
     .picture-frame__border {
+      background: $page-color-b;
+    }
+
+    .portfolio-page-image {
       background: $page-color-b;
     }
 
@@ -67,6 +70,8 @@ $hr-thickness: 5px;
 
     a {
       color: $link-color;
+      stroke: $link-color;
+      fill: $link-color;
     }
   }
 
@@ -77,6 +82,67 @@ $hr-thickness: 5px;
   &:nth-child(even) {
     @include page-coloring($color-a, $color-b, row-reverse, $link-color-a);
   }
+}
+
+@include component-style('portfolio-section') {
+  display: inline-block;
+  flex: 1;
+  float: left;
+  height: 75%;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+
+  &:nth-child(2) {
+    flex: 2;
+
+    @include component-style('portfolio-section-container') {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint($m) {
+    max-width: 500px;
+    width: 40%;
+
+    &:nth-child(2) {
+      flex: 1;
+      max-width: 750px;
+      width: 60%;
+
+      @include component-style('portfolio-section-container') {
+        margin: $medium-breakpoint-section-margin;
+      }
+    }
+  }
+
+  @include breakpoint($l) {
+    margin: $large-breakpoint-section-margin;
+
+    &:nth-child(2) {
+      @include component-style('portfolio-section-container') {
+        margin: $medium-breakpoint-section-margin;
+      }
+    }
+  }
+}
+
+@include component-style('portfolio-section-container') {
+  @include absolute-fill();
+  display: block;
+  margin: $medium-breakpoint-section-margin;
+  overflow: hidden;
+
+  @include breakpoint($l) {
+    margin: $large-breakpoint-section-margin;
+  }
+}
+
+@include component-style('portfolio-content') {
+  @include absolute-fill();
+  margin: 50px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @include component-style('portfolio-page-image') {
@@ -106,8 +172,16 @@ $hr-thickness: 5px;
 
   hr {
     border: none;
-    height: $hr-thickness;
+    height: 5px;
     position: relative;
+
+    @include breakpoint($m) {
+      height: 3px;
+    }
+
+    @include breakpoint($l) {
+      height: 5px;
+    }
   }
 
   h1,

@@ -1,13 +1,13 @@
-@mixin component-style($component-names...) {
-  %#{$component-names} {
+@mixin breakpoint($min-width) {
+  @media (min-width: $min-width) {
     @content;
   }
+}
+
+@mixin component-style($component-names...) {
   @each $component-name in $component-names {
-    //#{$component-name},
-    //[#{$component-name}],
-    //.#{$component-name} {
     #{$component-name} {
-      @extend %#{$component-names};
+      @content;
     }
   }
 }

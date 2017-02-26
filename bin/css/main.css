@@ -1,11 +1,11 @@
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame {
+picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -66,7 +66,7 @@ picture-frame, #hero picture-frame {
 .picture-frame__content {
   margin: 50px; }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -81,28 +81,52 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
     background-size: cover;
     filter: saturate(90%) contrast(110%) brightness(110%); }
   #hero .contact-info {
-    font-size: 25px; }
+    font-size: 40px; }
+    @media (min-width: 1024px) {
+      #hero .contact-info {
+        font-size: 20px; } }
   #hero .name {
+    font-size: 100px;
     font-weight: 300;
     letter-spacing: 5px;
-    font-size: 80px;
-    line-height: 80px;
     margin-top: 0; }
+    @media (min-width: 1024px) {
+      #hero .name {
+        font-size: 50px; } }
+    @media (min-width: 1920px) {
+      #hero .name {
+        font-size: 80px; } }
   #hero p {
     text-align: left; }
   #hero .social-links {
     display: inline-block;
+    margin-top: 20px;
     text-align: left; }
+    @media (min-width: 1024px) {
+      #hero .social-links {
+        margin-top: 0; } }
   #hero .social-link {
     font-weight: 400;
     align-items: center;
     color: #fff;
     display: flex;
-    font-size: 25px;
+    font-size: 40px;
     margin: 15px; }
+    @media (min-width: 1024px) {
+      #hero .social-link {
+        font-size: 20px; } }
+    @media (min-width: 1360px) {
+      #hero .social-link {
+        font-size: 25px; } }
   #hero .social-icon {
     margin: -1px 15px 0 0;
-    width: 40px; }
+    width: 60px; }
+    @media (min-width: 1024px) {
+      #hero .social-icon {
+        width: 30px; } }
+    @media (min-width: 1360px) {
+      #hero .social-icon {
+        width: 40px; } }
 
 .rga-bg {
   background: url(../img/rga-bg.jpg);
@@ -151,7 +175,7 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
 .google-logo {
   display: inline-block; }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
@@ -193,14 +217,14 @@ picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .d
   position: relative;
   filter: drop-shadow(1px 1px 1px #000) brightness(0%); }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame {
+picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -261,37 +285,63 @@ picture-frame, #hero picture-frame {
 .picture-frame__content {
   margin: 50px; }
 
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 .job__company {
   bottom: 50px;
+  font-size: 40px;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
-  width: 100%;
-  font-size: 20px; }
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .job__company {
+      font-size: 20px; } }
+
+@media (min-width: 1024px) {
+  .job__title {
+    font-size: 30px; } }
+
+@media (min-width: 1360px) {
+  .job__title {
+    font-size: 40px; } }
 
 .job__title,
 .job__time-worked {
   margin: 0; }
 
 .job__time-worked {
-  font-size: 25px; }
+  font-size: 35px;
+  font-style: italic; }
+  @media (min-width: 1024px) {
+    .job__time-worked {
+      font-size: 15px;
+      font-style: normal; } }
+  @media (min-width: 1360px) {
+    .job__time-worked {
+      font-size: 25px; } }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame {
+picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -376,42 +426,32 @@ picture-frame, #hero picture-frame {
   .slant-grouping--4 > *:nth-child(4) {
     right: -4%; }
 
-portfolio-section {
-  display: inline-block;
-  float: left;
-  height: 75%;
-  max-width: 500px;
-  overflow: hidden;
-  position: relative;
-  width: 40%; }
-  portfolio-section:nth-child(2) {
-    max-width: 750px;
-    width: 60%; }
-
-portfolio-section-container {
-  display: block;
-  margin: 5%;
-  overflow: hidden; }
-
-portfolio-content {
-  margin: 50px; }
-
 portfolio-page {
   align-items: center;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  height: calc(100% - 5vw);
   justify-content: center;
-  overflow: auto;
+  padding: 5%;
   position: relative;
-  width: 100%;
+  width: 90%;
   z-index: 50; }
   portfolio-page:nth-child(odd) {
     background-color: #000;
     color: #fff;
-    flex-direction: row;
     stroke: currentColor;
     fill: currentColor; }
-    portfolio-page:nth-child(odd) hr, portfolio-page:nth-child(odd) .picture-frame__border {
+    @media (min-width: 1024px) {
+      portfolio-page:nth-child(odd) {
+        flex-direction: row; }
+        portfolio-page:nth-child(odd) portfolio-section:nth-child(1) {
+          margin-right: 0; }
+        portfolio-page:nth-child(odd) portfolio-section:nth-child(2) {
+          margin-left: 0; } }
+    portfolio-page:nth-child(odd) hr,
+    portfolio-page:nth-child(odd) .picture-frame__border {
+      background: #fff; }
+    portfolio-page:nth-child(odd) .portfolio-page-image {
       background: #fff; }
     portfolio-page:nth-child(odd) .picture-frame__corner {
       background: #000;
@@ -419,14 +459,25 @@ portfolio-page {
     portfolio-page:nth-child(odd) .job__company {
       color: #000; }
     portfolio-page:nth-child(odd) a {
-      color: #88F; }
+      color: #88F;
+      stroke: #88F;
+      fill: #88F; }
   portfolio-page:nth-child(even) {
     background-color: #fff;
     color: #000;
-    flex-direction: row-reverse;
     stroke: currentColor;
     fill: currentColor; }
-    portfolio-page:nth-child(even) hr, portfolio-page:nth-child(even) .picture-frame__border {
+    @media (min-width: 1024px) {
+      portfolio-page:nth-child(even) {
+        flex-direction: row-reverse; }
+        portfolio-page:nth-child(even) portfolio-section:nth-child(1) {
+          margin-left: 0; }
+        portfolio-page:nth-child(even) portfolio-section:nth-child(2) {
+          margin-right: 0; } }
+    portfolio-page:nth-child(even) hr,
+    portfolio-page:nth-child(even) .picture-frame__border {
+      background: #000; }
+    portfolio-page:nth-child(even) .portfolio-page-image {
       background: #000; }
     portfolio-page:nth-child(even) .picture-frame__corner {
       background: #fff;
@@ -434,7 +485,50 @@ portfolio-page {
     portfolio-page:nth-child(even) .job__company {
       color: #fff; }
     portfolio-page:nth-child(even) a {
-      color: #22C; }
+      color: #22C;
+      stroke: #22C;
+      fill: #22C; }
+
+portfolio-section {
+  display: inline-block;
+  flex: 1;
+  float: left;
+  height: 75%;
+  overflow: hidden;
+  position: relative;
+  width: 90%; }
+  portfolio-section:nth-child(2) {
+    flex: 2; }
+    portfolio-section:nth-child(2) portfolio-section-container {
+      margin: 0; }
+  @media (min-width: 1024px) {
+    portfolio-section {
+      max-width: 500px;
+      width: 40%; }
+      portfolio-section:nth-child(2) {
+        flex: 1;
+        max-width: 750px;
+        width: 60%; }
+        portfolio-section:nth-child(2) portfolio-section-container {
+          margin: 3% 5%; } }
+  @media (min-width: 1360px) {
+    portfolio-section {
+      margin: 5%; }
+      portfolio-section:nth-child(2) portfolio-section-container {
+        margin: 3% 5%; } }
+
+portfolio-section-container {
+  display: block;
+  margin: 3% 5%;
+  overflow: hidden; }
+  @media (min-width: 1360px) {
+    portfolio-section-container {
+      margin: 5%; } }
+
+portfolio-content {
+  margin: 50px;
+  overflow-x: hidden;
+  overflow-y: auto; }
 
 portfolio-page-image {
   display: flex;
@@ -458,6 +552,12 @@ portfolio-page-image {
     border: none;
     height: 5px;
     position: relative; }
+    @media (min-width: 1024px) {
+      .portfolio hr {
+        height: 3px; } }
+    @media (min-width: 1360px) {
+      .portfolio hr {
+        height: 5px; } }
   .portfolio h1,
   .portfolio h2,
   .portfolio h3 {
@@ -480,21 +580,21 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #AAA; }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
+picture-frame, .rga-bg, .nerds-bg, .nerds, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-picture-frame, #hero picture-frame {
+picture-frame {
   display: block; }
 
 .picture-frame__border,
@@ -557,10 +657,22 @@ picture-frame, #hero picture-frame {
 
 .projects {
   margin: 22px 0; }
+  @media (min-width: 1024px) {
+    .projects {
+      margin: 10px 0; } }
+  @media (min-width: 1360px) {
+    .projects {
+      margin: 20px 0; } }
 
 project {
   display: block;
-  margin: 15px 0; }
+  margin: 25px 0; }
+  @media (min-width: 1024px) {
+    project {
+      margin: 10px 0; } }
+  @media (min-width: 1360px) {
+    project {
+      margin: 15px 0; } }
   project:hover .project__details-toggle-arrow {
     transform: rotate(-3deg) scale(1.05); }
 
@@ -568,15 +680,31 @@ project {
   align-items: center;
   cursor: pointer;
   display: flex;
+  font-size: 40px;
   height: 35px; }
+  @media (min-width: 1024px) {
+    .project__title {
+      font-size: 20px; } }
 
 .project__details {
+  font-size: 32px;
   max-height: 0;
   opacity: 0;
-  font-size: 16px;
-  line-height: 20px;
   overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s; }
+  .project__details .project__link {
+    display: inline-block;
+    margin-bottom: 15px; }
+  @media (min-width: 1024px) {
+    .project__details {
+      font-size: 14px;
+      line-height: 18px; }
+      .project__details .project__link {
+        display: none; } }
+  @media (min-width: 1360px) {
+    .project__details {
+      font-size: 16px;
+      line-height: 20px; } }
 
 .project__details-toggle-arrow {
   height: 20px;
@@ -586,9 +714,25 @@ project {
   width: 20px; }
 
 .project__link {
-  font-size: 14px;
+  display: none;
+  font-size: 30px;
   position: relative;
   z-index: 99; }
+  .project__link a {
+    display: flex;
+    align-items: center; }
+  .project__link .project__link-arrow {
+    height: 30px;
+    margin-left: 10px;
+    width: 30px; }
+  @media (min-width: 1024px) {
+    .project__link {
+      display: inline-block;
+      font-size: 14px; }
+      .project__link .project__link-arrow {
+        margin-left: 5px;
+        height: 14px;
+        width: 14px; } }
 
 .project__name-and-link {
   display: flex;
@@ -598,8 +742,7 @@ project {
 .project__name {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  font-size: 20px; }
+  justify-content: space-between; }
 
 .project__expand-button-container {
   position: relative; }
@@ -618,6 +761,9 @@ project {
       .project__expand-button:checked ~ .project__title .project__details-toggle-arrow {
         transform: rotate(90deg); }
     .project__expand-button:checked ~ .project__details {
-      max-height: 100px;
+      max-height: 310px;
       opacity: 1;
       transition: max-height 0.5s, opacity 0.5s; }
+      @media (min-width: 1024px) {
+        .project__expand-button:checked ~ .project__details {
+          max-height: 100px; } }
