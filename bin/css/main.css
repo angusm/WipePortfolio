@@ -32,18 +32,18 @@ picture-frame {
   left: 33px;
   right: 33px;
   height: 8px;
-  width: calc(100% - $image-border-circle-radius); }
+  width: calc(100% - 66px); }
 
 .picture-frame__border--left,
 .picture-frame__border--right {
   bottom: 33px;
   top: 33px;
-  height: calc(100% - $image-border-circle-radius);
+  height: calc(100% - 66px);
   width: 8px; }
 
 .picture-frame__corner {
   border: 8px solid #000;
-  border-radius: 50px;
+  border-radius: 45px;
   width: 50px;
   height: 50px; }
 
@@ -263,18 +263,18 @@ picture-frame {
   left: 33px;
   right: 33px;
   height: 8px;
-  width: calc(100% - $image-border-circle-radius); }
+  width: calc(100% - 66px); }
 
 .picture-frame__border--left,
 .picture-frame__border--right {
   bottom: 33px;
   top: 33px;
-  height: calc(100% - $image-border-circle-radius);
+  height: calc(100% - 66px);
   width: 8px; }
 
 .picture-frame__corner {
   border: 8px solid #000;
-  border-radius: 50px;
+  border-radius: 45px;
   width: 50px;
   height: 50px; }
 
@@ -406,18 +406,18 @@ picture-frame {
   left: 33px;
   right: 33px;
   height: 8px;
-  width: calc(100% - $image-border-circle-radius); }
+  width: calc(100% - 66px); }
 
 .picture-frame__border--left,
 .picture-frame__border--right {
   bottom: 33px;
   top: 33px;
-  height: calc(100% - $image-border-circle-radius);
+  height: calc(100% - 66px);
   width: 8px; }
 
 .picture-frame__corner {
   border: 8px solid #000;
-  border-radius: 50px;
+  border-radius: 45px;
   width: 50px;
   height: 50px; }
 
@@ -651,18 +651,18 @@ picture-frame {
   left: 33px;
   right: 33px;
   height: 8px;
-  width: calc(100% - $image-border-circle-radius); }
+  width: calc(100% - 66px); }
 
 .picture-frame__border--left,
 .picture-frame__border--right {
   bottom: 33px;
   top: 33px;
-  height: calc(100% - $image-border-circle-radius);
+  height: calc(100% - 66px);
   width: 8px; }
 
 .picture-frame__corner {
   border: 8px solid #000;
-  border-radius: 50px;
+  border-radius: 45px;
   width: 50px;
   height: 50px; }
 
