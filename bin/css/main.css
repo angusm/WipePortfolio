@@ -18,27 +18,27 @@
       #hero portfolio-page-image {
         background-position: 83% 50%; } }
   #hero .contact-info {
-    font-size: 40px; }
+    font-size: 40em / 30; }
     @media false {
       #hero .contact-info {
-        font-size: 25px; } }
+        font-size: 25em / 30; } }
     @media (min-width: 1024px) {
       #hero .contact-info {
-        font-size: 20px; } }
+        font-size: 20em / 30; } }
   #hero .name {
-    font-size: 100px;
+    font-size: 100em / 30;
     font-weight: 300;
     letter-spacing: 5px;
     margin-top: 0; }
     @media false {
       #hero .name {
-        font-size: 70px; } }
+        font-size: 70em / 30; } }
     @media (min-width: 1024px) {
       #hero .name {
-        font-size: 50px; } }
+        font-size: 50em / 30; } }
     @media (min-width: 1920px) {
       #hero .name {
-        font-size: 80px; } }
+        font-size: 80em / 30; } }
   #hero p {
     text-align: left; }
   #hero .social-links {
@@ -53,17 +53,17 @@
     align-items: center;
     color: #fff;
     display: flex;
-    font-size: 40px;
+    font-size: 40em / 30;
     margin: 15px; }
     @media false {
       #hero .social-link {
-        font-size: 25px; } }
+        font-size: 25em / 30; } }
     @media (min-width: 1024px) {
       #hero .social-link {
-        font-size: 20px; } }
+        font-size: 20em / 30; } }
     @media (min-width: 1360px) {
       #hero .social-link {
-        font-size: 25px; } }
+        font-size: 25em / 30; } }
   #hero .social-icon {
     margin: -1px 15px 0 0;
     width: 60px; }
@@ -111,7 +111,7 @@
 .at-symbol {
   color: #fff;
   display: inline-block;
-  font-size: 40px;
+  font-size: 40em / 30;
   margin: 0; }
 
 .google-logo {
@@ -146,7 +146,7 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 35px;
+  font-size: 35em / 30;
   font-weight: 300;
   left: 0;
   position: absolute;
@@ -154,18 +154,18 @@
   width: 100%; }
   @media false {
     .job__company {
-      font-size: 25px; } }
+      font-size: 25em / 30; } }
   @media (min-width: 1024px) {
     .job__company {
-      font-size: 20px; } }
+      font-size: 20em / 30; } }
 
 @media false {
   .job__title {
-    font-size: 30px; } }
+    font-size: 30em / 30; } }
 
 @media (min-width: 1024px) {
   .job__title {
-    font-size: 40px; } }
+    font-size: 40em / 30; } }
 
 .job__title,
 .job__time-worked {
@@ -194,15 +194,15 @@
   max-width: 150px; }
 
 .job__time-worked {
-  font-size: 25px;
+  font-size: 25em / 30;
   font-style: italic; }
   @media false {
     .job__time-worked {
-      font-size: 15px;
+      font-size: 15em / 30;
       font-style: normal; } }
   @media (min-width: 1024px) {
     .job__time-worked {
-      font-size: 25px; } }
+      font-size: 25em / 30; } }
 
 #avp .avp-bg {
   background: url(../img/avp-bg.jpg) center center;
@@ -239,7 +239,7 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 35px;
+  font-size: 35em / 30;
   font-weight: 300;
   left: 0;
   position: absolute;
@@ -247,18 +247,18 @@
   width: 100%; }
   @media false {
     .job__company {
-      font-size: 25px; } }
+      font-size: 25em / 30; } }
   @media (min-width: 1024px) {
     .job__company {
-      font-size: 20px; } }
+      font-size: 20em / 30; } }
 
 @media false {
   .job__title {
-    font-size: 30px; } }
+    font-size: 30em / 30; } }
 
 @media (min-width: 1024px) {
   .job__title {
-    font-size: 40px; } }
+    font-size: 40em / 30; } }
 
 .job__title,
 .job__time-worked {
@@ -287,15 +287,15 @@
   max-width: 150px; }
 
 .job__time-worked {
-  font-size: 25px;
+  font-size: 25em / 30;
   font-style: italic; }
   @media false {
     .job__time-worked {
-      font-size: 15px;
+      font-size: 15em / 30;
       font-style: normal; } }
   @media (min-width: 1024px) {
     .job__time-worked {
-      font-size: 25px; } }
+      font-size: 25em / 30; } }
 
 .rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__expand-button {
   position: absolute;
@@ -415,7 +415,7 @@ portfolio-page-image {
 
 .portfolio {
   font-family: 'Roboto', sans-serif;
-  font-size: 25px;
+  font-size: 25em / 30;
   height: 100%;
   width: 100%; }
   .portfolio a {
@@ -441,12 +441,12 @@ portfolio-page-image {
     font-weight: 400; }
 
 .fine-print {
-  font-size: 10px; }
+  font-size: 10em / 30; }
 
 .portfolio__navigation {
   align-items: center;
   display: flex;
-  font-size: 60px;
+  font-size: 60em / 30;
   height: 100%;
   position: fixed;
   right: 0;
@@ -494,17 +494,17 @@ project {
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 40px;
+  font-size: 40em / 30;
   height: 35px; }
   @media false {
     .project__title {
-      font-size: 20px; } }
+      font-size: 20em / 30; } }
   @media (min-width: 1024px) {
     .project__title {
-      font-size: 20px; } }
+      font-size: 20em / 30; } }
 
 .project__details {
-  font-size: 32px;
+  font-size: 32em / 30;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -515,7 +515,7 @@ project {
   @media false {
     .project__details,
     .project__details .project__link {
-      font-size: 16px;
+      font-size: 16em / 30;
       line-height: 16px; }
       .project__details .project__link-arrow,
       .project__details .project__link .project__link-arrow {
@@ -523,13 +523,13 @@ project {
         height: 16px; } }
   @media (min-width: 1024px) {
     .project__details {
-      font-size: 14px;
+      font-size: 14em / 30;
       line-height: 18px; }
       .project__details .project__link {
         display: none; } }
   @media (min-width: 1360px) {
     .project__details {
-      font-size: 16px;
+      font-size: 16em / 30;
       line-height: 20px; } }
 
 .project__details-toggle-arrow {

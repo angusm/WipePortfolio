@@ -106,7 +106,7 @@ $large-breakpoint-section-margin: 5%;
 .portfolio {
   @include absolute-fill();
   @include roboto-font();
-  font-size: 25px;
+  font-size: 25em / 30;
   height: 100%;
   width: 100%;
 
@@ -142,13 +142,13 @@ $large-breakpoint-section-margin: 5%;
 }
 
 .fine-print {
-  font-size: 10px;
+  font-size: 10em / 30;
 }
 
 .portfolio__navigation {
   align-items: center;
   display: flex;
-  font-size: 60px;
+  font-size: 60em / 30;
   height: 100%;
   position: fixed;
   right: 0;

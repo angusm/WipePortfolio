@@ -16,33 +16,33 @@
   }
 
   .contact-info {
-    font-size: 40px;
+    font-size: 40em / 30;
 
     @include breakpoint($s) {
-      font-size: 25px;
+      font-size: 25em / 30;
     }
 
     @include breakpoint($m) {
-      font-size: 20px;
+      font-size: 20em / 30;
     }
   }
 
   .name {
-    font-size: 100px;
+    font-size: 100em / 30;
     font-weight: 300;
     letter-spacing: 5px;
     margin-top: 0;
 
     @include breakpoint($s) {
-      font-size: 70px;
+      font-size: 70em / 30;
     }
 
     @include breakpoint($m) {
-      font-size: 50px;
+      font-size: 50em / 30;
     }
 
     @include breakpoint($xl) {
-      font-size: 80px;
+      font-size: 80em / 30;
     }
   }
 
@@ -65,19 +65,19 @@
     align-items: center;
     color: $color-a;
     display: flex;
-    font-size: 40px;
+    font-size: 40em / 30;
     margin: 15px;
 
     @include breakpoint($s) {
-      font-size: 25px;
+      font-size: 25em / 30;
     }
 
     @include breakpoint($m) {
-      font-size: 20px;
+      font-size: 20em / 30;
     }
 
     @include breakpoint($l) {
-      font-size: 25px;
+      font-size: 25em / 30;
     }
   }
 

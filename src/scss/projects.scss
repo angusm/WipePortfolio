@@ -40,20 +40,20 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 40px;
+  font-size: 40em / 30;
   height: 35px;
 
   @include breakpoint($s) {
-    font-size: 20px;
+    font-size: 20em / 30;
   }
 
   @include breakpoint($m) {
-    font-size: 20px;
+    font-size: 20em / 30;
   }
 }
 
 .project__details {
-  font-size: 32px;
+  font-size: 32em / 30;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -67,7 +67,7 @@
   @include breakpoint($s) {
     &,
     & .project__link {
-      font-size: 16px;
+      font-size: 16em / 30;
       line-height: 16px;
 
       .project__link-arrow {
@@ -78,7 +78,7 @@
   }
 
   @include breakpoint($m) {
-    font-size: 14px;
+    font-size: 14em / 30;
     line-height: 18px;
 
     .project__link {
@@ -87,7 +87,7 @@
   }
 
   @include breakpoint($l) {
-    font-size: 16px;
+    font-size: 16em / 30;
     line-height: 20px;
   }
 }

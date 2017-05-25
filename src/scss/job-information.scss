@@ -6,7 +6,7 @@ $job__logo-image-max-size: 150px;
 
 .job__company {
   bottom: 20px;
-  font-size: 35px;
+  font-size: 35em / 30;
   font-weight: 300;
   left: 0;
   position: absolute;
@@ -14,21 +14,21 @@ $job__logo-image-max-size: 150px;
   width: 100%;
 
   @include breakpoint($s) {
-    font-size: 25px;
+    font-size: 25em / 30;
   }
 
   @include breakpoint($m) {
-    font-size: 20px;
+    font-size: 20em / 30;
   }
 }
 
 .job__title {
   @include breakpoint($s) {
-    font-size: 30px;
+    font-size: 30em / 30;
   }
 
   @include breakpoint($m) {
-    font-size: 40px;
+    font-size: 40em / 30;
   }
 }
 
@@ -67,15 +67,15 @@ $job__logo-image-max-size: 150px;
 }
 
 .job__time-worked {
-  font-size: 25px;
+  font-size: 25em / 30;
   font-style: italic;
 
   @include breakpoint($s) {
-    font-size: 15px;
+    font-size: 15em / 30;
     font-style: normal;
   }
 
   @include breakpoint($m) {
-    font-size: 25px;
+    font-size: 25em / 30;
   }
 }
