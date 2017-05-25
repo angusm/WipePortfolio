@@ -1,5 +1,5 @@
 export default `
-<picture-frame>
+<portfolio-image-container>
     <ng-transclude></ng-transclude>
-</picture-frame>
+</portfolio-image-container>
 `;

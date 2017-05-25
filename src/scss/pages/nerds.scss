@@ -9,15 +9,6 @@
   background-size: cover;
 }
 
-.nerds {
-  @include absolute-fill();
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .nerds-logo {
-  @include absolute-fill();
   filter: drop-shadow(0 3px 1px #000);
-  max-width: 100%;
 }

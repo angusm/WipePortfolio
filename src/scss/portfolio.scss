@@ -1,7 +1,6 @@
 @import 'breakpoints';
 @import 'colors';
 @import 'mixins';
-@import "components/decorative/picture-frame";
 
 $medium-breakpoint-section-margin: 3% 5%;
 $large-breakpoint-section-margin: 5%;
@@ -9,59 +8,41 @@ $large-breakpoint-section-margin: 5%;
 @include slant-grouping(4);
 
 @include component-style('portfolio-page') {
-  align-items: center;
-  display: flex;
+  @include flex-center();
   flex-direction: column;
-  height: calc(100% - 5vw);
-  justify-content: center;
-  padding: 5% calc(5% + 50px) 5% 5%;
+  height: calc(100% - 10vw);
+  padding: 5%;
   position: relative;
-  width: calc(90% - 50px);
+  width: 90%;
   z-index: 50;
 
-  @mixin page-coloring(
-    $page-color-a, $page-color-b, $flex-direction, $link-color) {
+  @include breakpoint($m) {
+    flex-direction: row;
+  }
+
+  @mixin page-coloring($page-color-a, $page-color-b, $link-color) {
     background-color: $page-color-a;
     color: $page-color-b;
     stroke: currentColor;
     fill: currentColor;
 
     @include breakpoint($m) {
-      flex-direction: $flex-direction;
-
       @include component-style('portfolio-section') {
-        @if $flex-direction == row {
-          &:nth-child(1) {
-            margin-right: 0;
-          }
-          &:nth-child(2) {
-            margin-left: 0;
-          }
+        &:nth-child(1) {
+          margin-right: 0;
         }
-
-        @if $flex-direction == row-reverse {
-          &:nth-child(1) {
-            margin-left: 0;
-          }
-          &:nth-child(2) {
-            margin-right: 0;
-          }
+        &:nth-child(2) {
+          margin-left: 0;
         }
       }
     }
 
-    hr,
-    .picture-frame__border {
+    hr {
       background: $page-color-b;
     }
 
     @include component-style('portfolio-page-image') {
       background: $page-color-b;
-    }
-
-    .picture-frame__corner {
-      background: $page-color-a;
-      border-color: $page-color-b;
     }
 
     .job__company {
@@ -76,44 +57,29 @@ $large-breakpoint-section-margin: 5%;
   }
 
   &:nth-child(odd) {
-    @include page-coloring($color-b, $color-a, row, $link-color-b);
+    @include page-coloring($color-b, $color-a, $link-color-b);
   }
 
   &:nth-child(even) {
-    @include page-coloring($color-a, $color-b, row-reverse, $link-color-a);
+    @include page-coloring($color-a, $color-b, $link-color-a);
   }
 }
 
 @include component-style('portfolio-section') {
+  $portfolio-section-mobile-max-side-length: calc(50vh - 10vw);
   display: inline-block;
   flex: 1;
-  float: left;
-  height: 75%;
-  overflow: hidden;
+  max-height: $portfolio-section-mobile-max-side-length;
+  max-width: $portfolio-section-mobile-max-side-length;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
-  width: 90%;
-
-  &:nth-child(1) {
-    margin-top: 25px;
-  }
-
-  &:nth-child(2) {
-    flex: 2;
-  }
+  width: 100%;
 
   @include breakpoint($m) {
-    max-width: 500px;
-    width: 40%;
-
-    &:nth-child(1) {
-      margin-top: 0;
-    }
-
-    &:nth-child(2) {
-      flex: 1;
-      max-width: 750px;
-      width: 60%;
-    }
+    max-width: none;
+    padding-top: 100%;
+    width: 50%;
   }
 }
 
@@ -125,7 +91,6 @@ $large-breakpoint-section-margin: 5%;
 
 @include component-style('portfolio-content') {
   @include absolute-fill();
-  margin: 50px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -136,7 +101,6 @@ $large-breakpoint-section-margin: 5%;
   align-items: center;
   justify-content: center;
   margin: 3px;
-  padding: $image-border-circle-radius * 2;
 }
 
 .portfolio {

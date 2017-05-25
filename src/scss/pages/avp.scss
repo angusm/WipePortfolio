@@ -1,3 +1,5 @@
+@import '../job-information';
+
 $avp-logo-bg-color: #fff;
 
 #avp {
@@ -11,10 +13,12 @@ $avp-logo-bg-color: #fff;
   .avp-image {
     align-items: center;
     background: $avp-logo-bg-color;
-    border-radius: 0;
     display: flex;
     justify-content: center;
-    width: 90%;
-    height: calc(90% - 3px);
+  }
+
+  .avp-logo {
+    max-width: $job__logo-image-max-size - 20px;
+    height: auto;
   }
 }

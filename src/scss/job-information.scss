@@ -1,7 +1,8 @@
-@import "components/decorative/picture-frame";
 @import "breakpoints";
 @import "colors";
 @import "mixins";
+
+$job__logo-image-max-size: 150px;
 
 .job__company {
   bottom: 20px;
@@ -38,13 +39,11 @@
 
 .job__logo {
   $job__logo-size-standard: 35%;
-  margin-top: -15%;
   padding-top: $job__logo-size-standard;
   position: relative;
   width: $job__logo-size-standard;
 
   @include breakpoint($s) {
-    margin-top: -20px;
     $job__logo-size-small: 20%;
     padding-top: $job__logo-size-small;
     width: $job__logo-size-small;
@@ -52,7 +51,6 @@
 
   @include breakpoint($m) {
     $job__logo-size-medium: 75%;
-    margin-top: -25%;
     padding-top: $job__logo-size-medium;
     width: $job__logo-size-medium;
   }
@@ -60,11 +58,12 @@
 
 .job__logo-container {
   @include absolute-fill();
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  @include flex-center();
+}
+
+.job__logo-image {
+  height: auto;
+  max-width: $job__logo-image-max-size;
 }
 
 .job__time-worked {
