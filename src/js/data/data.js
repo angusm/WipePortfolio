@@ -1,3 +1,7 @@
-/**
- * Created by angus on 2017-05-24.
- */
+import getRGAData from './pages/rga';
+
+const allData = [
+    getRGAData(),
+];
+
+export default allData;

@@ -390,13 +390,13 @@ portfolio-section {
   max-height: calc(50vh - 10vw);
   max-width: calc(50vh - 10vw);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-top: 50%;
   position: relative;
   width: 100%; }
   @media (min-width: 1024px) {
     portfolio-section {
       max-width: none;
-      padding-top: 100%;
       width: 50%; } }
 
 portfolio-section-container {

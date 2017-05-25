@@ -72,13 +72,13 @@ $large-breakpoint-section-margin: 5%;
   max-height: $portfolio-section-mobile-max-side-length;
   max-width: $portfolio-section-mobile-max-side-length;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-top: 50%;
   position: relative;
   width: 100%;
 
   @include breakpoint($m) {
     max-width: none;
-    padding-top: 100%;
     width: 50%;
   }
 }
