@@ -8,6 +8,7 @@ projectModule.component(COMPONENT_NAME, {
     template: template,
     bindings: {
         projectGroup: '@?',
+        projectIcon: '@?',
         projectLink: '@?',
         projectTitle: '@?',
         projectExpanded: '<?',

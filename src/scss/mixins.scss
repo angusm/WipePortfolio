@@ -26,6 +26,14 @@
   @extend %absolute-fill;
 }
 
+@mixin absolute-position-square($size) {
+  position: absolute;
+  height: $size;
+  left: (100% - $size) / 2;
+  top: (100% - $size) / 2;
+  width: $size;
+}
+
 @mixin flex-center() {
   align-items: center;
   display: flex;

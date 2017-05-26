@@ -17,6 +17,7 @@ const getRGAData = () => {
         timeWorked: 'Mar 2016 - Present',
         projects: [
             {
+                icon: 'img/icons/google-g.png',
                 title: 'JS/HTML/CSS Readabilities',
                 paragraphs: [
                     `
@@ -27,6 +28,7 @@ const getRGAData = () => {
                 ],
             },
             {
+                icon: 'img/icons/google-g.png',
                 title: 'Chrome Version Selection',
                 projectLink: 'https://www.google.com/chrome',
                 paragraphs: [
@@ -43,6 +45,7 @@ const getRGAData = () => {
                 ],
             },
             {
+                icon: 'img/icons/google-g.png',
                 title: 'Internal Projects',
                 paragraphs: [
                     `
@@ -52,6 +55,7 @@ const getRGAData = () => {
                 ],
             },
             {
+                icon: 'img/icons/google-g.png',
                 title: 'Duo Marketing Page',
                 projectLink: 'https://duo.google.com',
                 paragraphs: [
@@ -62,6 +66,7 @@ const getRGAData = () => {
                 ],
             },
             {
+                icon: 'img/icons/google-g.png',
                 title: 'Maps Treks Update',
                 projectLink: 'https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza',
                 paragraphs: [

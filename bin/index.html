@@ -48,7 +48,8 @@
                 <div class="projects" id="projects">
                     <project ng-repeat="project in page.projects"
                              project-group="{{ page.code }}"
-                             project-title="{{ project.title }}">
+                             project-title="{{ project.title }}"
+                             project-icon="{{ project.icon }}">
                             <p ng-repeat="paragraph in project.paragraphs"
                                ng-bind-html="paragraph"></p>
                     </project>
