@@ -13,6 +13,10 @@ const portfolioPageModule = angular.module(COMPONENT_NAME, [
 
 portfolioPageModule.component(COMPONENT_NAME, {
     template: template,
+    bindings: {
+        jobTitle: '@?',
+        jobTimeWorked: '@?',
+    },
     transclude: {
         portfolioPageImage: 'portfolioPageImage',
         portfolioPageContent: 'portfolioPageContent',

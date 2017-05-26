@@ -27,6 +27,22 @@ const getRGAData = () => {
                 ],
             },
             {
+                title: 'Chrome Version Selection',
+                projectLink: 'https://www.google.com/chrome',
+                paragraphs: [
+                    `
+                Updated script that delivers the appropriate
+                <a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel">dev</a>,
+                <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
+                <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
+                or
+                <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
+                version of Chrome to user based on their OS, its
+                version, whether it's 32 or 64-bit and the user's
+                browser.`,
+                ],
+            },
+            {
                 title: 'Internal Projects',
                 paragraphs: [
                     `
@@ -43,22 +59,6 @@ const getRGAData = () => {
                 Built a batch animation library to avoid jank on the
                 full page wipe effect without using scroll-jacking
                 CSS animations.`,
-                ],
-            },
-            {
-                title: 'Chrome Version Selection',
-                projectLink: 'https://www.google.com/chrome',
-                paragraphs: [
-                    `
-                Updated script that delivers the appropriate
-                <a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel">dev</a>,
-                <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
-                <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
-                or
-                <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
-                version of Chrome to user based on their OS, its
-                version, whether it's 32 or 64-bit and the user's
-                browser.`,
                 ],
             },
             {

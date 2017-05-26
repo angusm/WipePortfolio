@@ -19,11 +19,17 @@ gulp.task('js', () => {
     // app.js is your main JS file with all your module inclusions
     return browserify({entries: './src/js/main.js', debug: true})
         .transform("babelify", { presets: ["es2015"] })
+        .on('error', handleError)
         .bundle()
+        .on('error', handleError)
         .pipe(source('main.min.js'))
+        .on('error', handleError)
         .pipe(buffer())
+        .on('error', handleError)
         .pipe(sourcemaps.init())
+        .on('error', handleError)
         .pipe(uglify())
+        .on('error', handleError)
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./bin/js/'))
         .pipe(browserSync.stream());
@@ -38,6 +44,7 @@ gulp.task('html', () => {
 gulp.task('css', () => {
     return gulp.src('./src/scss/main.scss')
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
+        .on('error', handleError)
         .pipe(gulp.dest('./bin/css'))
         .pipe(browserSync.stream());
 });

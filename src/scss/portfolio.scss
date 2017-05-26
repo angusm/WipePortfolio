@@ -7,18 +7,11 @@ $large-breakpoint-section-margin: 5%;
 
 @include slant-grouping(4);
 
-@include component-style('portfolio-page') {
-  @include flex-center();
-  flex-direction: column;
-  height: calc(100% - 10vw);
-  padding: 5%;
-  position: relative;
-  width: 90%;
-  z-index: 50;
 
-  @include breakpoint($m) {
-    flex-direction: row;
-  }
+@include component-style('portfolio-page') {
+  display: block;
+  height: 100%;
+  width: 100%;
 
   @mixin page-coloring($page-color-a, $page-color-b, $link-color) {
     background-color: $page-color-a;
@@ -37,16 +30,28 @@ $large-breakpoint-section-margin: 5%;
       }
     }
 
+    $job-information-margin: 10px;
+
+    .job__title {
+      margin: $job-information-margin $job-information-margin auto;
+    }
+
+    .job__time-worked {
+      margin: auto $job-information-margin $job-information-margin;
+    }
+
+    .job__company,
+    .job__time-worked,
+    .job__title {
+      color: $page-color-a;
+    }
+
     hr {
-      background: $page-color-b;
+      background: $page-color-a;
     }
 
     @include component-style('portfolio-page-image') {
       background: $page-color-b;
-    }
-
-    .job__company {
-      color: $page-color-a;
     }
 
     a {
@@ -62,6 +67,20 @@ $large-breakpoint-section-margin: 5%;
 
   &:nth-child(even) {
     @include page-coloring($color-a, $color-b, $link-color-a);
+  }
+}
+
+.portfolio-page-container {
+  @include flex-center();
+  flex-direction: column;
+  height: calc(100% - 10vw);
+  padding: 5%;
+  position: relative;
+  width: 90%;
+  z-index: 50;
+
+  @include breakpoint($m) {
+    flex-direction: row;
   }
 }
 
@@ -100,7 +119,6 @@ $large-breakpoint-section-margin: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3px;
 }
 
 .portfolio {

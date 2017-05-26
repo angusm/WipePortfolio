@@ -1,5 +1,5 @@
 export default `
-<div class="project__expand-button-container">
+<div class="project__container">
     <input type="radio"
         class="project__expand-button"
         ng-checked="$ctrl.projectExpanded" 

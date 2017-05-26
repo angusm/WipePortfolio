@@ -2,31 +2,80 @@
 @import "mixins";
 
 .projects {
-  margin: 15px 0;
-
   @include breakpoint($m) {
-    margin: 10px 0;
   }
-
   @include breakpoint($l) {
-    margin: 20px 0;
   }
+}
+
+@function get-square-size($square-number) {
+  $square-size: 100%;
+  $breakpoint: 0;
+  @for $i from 1 through $square-number {
+    @if $i > $breakpoint {
+      $breakpoint: $breakpoint + $i;
+      $square-size: $square-size / 2;
+    }
+  }
+  @return $square-size;
+}
+
+@function get-square-left-pos($square-number) {
+  $set-pos: 0;
+  $square-size: 100%;
+  $breakpoint: 0;
+  $left-start: -100%;
+
+  @for $i from 1 through $square-number {
+    $set-pos: $set-pos + 1;
+    @if $i > $breakpoint {
+      $set-pos: 0;
+      $breakpoint: $breakpoint + $i;
+      $left-start: $left-start + $square-size;
+      $square-size: $square-size / 2;
+    }
+  }
+  @return $left-start - ($set-pos * $square-size * 2);
+}
+
+@function get-square-top-pos($square-number) {
+  $set-pos: 0;
+  $square-size: 100%;
+  $breakpoint: 0;
+
+  @for $i from 1 through $square-number {
+    $set-pos: $set-pos + 1;
+    @if $i > $breakpoint {
+      $set-pos: 0;
+      $breakpoint: $breakpoint + $i;
+      $square-size: $square-size / 2;
+    }
+  }
+  @return $set-pos * $square-size * 2;
 }
 
 @include component-style('project') {
   display: block;
-  margin: 20px 0;
+  position: absolute;
 
-  @include breakpoint($s) {
-    margin: 5px;
+  &:hover {
+    opacity: .5;
   }
 
-  @include breakpoint($m) {
-    margin: 10px 0;
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      width: get-square-size($i);
+      height: get-square-size($i);
+      left: get-square-left-pos($i);
+      top: get-square-top-pos($i);
+    }
   }
 
-  @include breakpoint($l) {
-    margin: 15px 0;
+  &:nth-child(odd) {
+    background: red;
+  }
+  &:nth-child(even) {
+    background: blue;
   }
 
   &:hover {
@@ -34,6 +83,10 @@
       transform: rotate(-3deg) scale(1.05);
     }
   }
+}
+
+.project__container {
+  @include absolute-fill();
 }
 
 .project__title {
@@ -143,10 +196,6 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-
-.project__expand-button-container {
-  position: relative;
 }
 
 .project__expand-button {
