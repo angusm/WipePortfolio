@@ -6,7 +6,6 @@
   cursor: pointer;
   margin: 0;
   opacity: 0;
-  position: relative;
   z-index: 100;
 }
 
@@ -57,13 +56,50 @@
 }
 
 @include component-style('project') {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  @include standard-transition();
   display: block;
   position: absolute;
 
   &:hover {
+    z-index: 1000;
+
+    .project__container {
+      transform: scale(1.05);
+    }
+
     .project__icon img {
       transform: rotate(360deg) scale(1.2, 1.2);
+    }
+  }
+
+  .project__toggle:checked {
+    z-index: 1001;
+
+    & + .project__container {
+      z-index: 1000;
+      transform: scale(1);
+
+      .project__icon {
+        height: 0;
+        left: 0;
+        margin: 1.5%;
+        padding-top: 5%;
+        top: 0;
+        width: 5%;
+
+        img {
+          &,
+          &:hover {
+            height: 100%;
+            left: 0;
+            max-height: 100px;
+            max-width: 100px;
+            transform: rotate(0deg) scale(1);
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 
@@ -79,36 +115,18 @@
       width: get-square-size($i);
 
       .project__toggle:checked {
-        z-index: 1001;
-
-        & + .project__container {
-          z-index: 1000;
-        }
         &,
         & + .project__container {
-          $left-offset: $left / $square-size;
+          $left-offset: $left / $square-size + 100% / $square-size;
           $top-offset: $top / $square-size;
           $scale: 100% / $square-size;
 
           height: 100% * $scale;
           left: -100% * $left-offset;
           top: -100% * $top-offset;
-          width: 100% * $scale;
+          width: 100% * $scale + 100% * 100% / $square-size;
         }
       }
-    }
-  }
-
-  &:nth-child(odd) .project__container {
-    background: red;
-  }
-  &:nth-child(even) .project__container {
-    background: blue;
-  }
-
-  &:hover {
-    .project__details-toggle-arrow {
-      transform: rotate(-3deg) scale(1.05);
     }
   }
 }
@@ -117,16 +135,18 @@
   @include absolute-fill();
   cursor: pointer;
   margin: 0;
+  overflow: hidden;
   transition: all .5s;
 }
 
 .project__icon {
   @include absolute-fill();
+  @include standard-transition();
   pointer-events: none;
 
   img {
-    transition: all .75s;
     @include absolute-position-square(30%);
+    @include standard-transition();
   }
 }
 
@@ -150,7 +170,6 @@
   font-size: 32em / 30;
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s;
 
   .project__link {

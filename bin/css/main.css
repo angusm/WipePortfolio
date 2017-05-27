@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,7 +117,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +135,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,7 +229,7 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,7 +299,7 @@
     .job__time-worked {
       font-size: 25em / 30; } }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -331,6 +331,9 @@
     right: -1%; }
   .slant-grouping--4 > *:nth-child(4) {
     right: -4%; }
+
+portfolio-page-content {
+  display: block; }
 
 portfolio-page {
   display: block;
@@ -408,8 +411,6 @@ portfolio-section {
   flex: 1;
   max-height: calc(50vh - 10vw);
   max-width: calc(50vh - 10vw);
-  overflow-x: hidden;
-  overflow-y: auto;
   padding-top: 50%;
   position: relative;
   width: 100%; }
@@ -419,12 +420,7 @@ portfolio-section {
       width: 50%; } }
 
 portfolio-section-container {
-  display: block;
-  overflow: hidden; }
-
-portfolio-content {
-  overflow-x: hidden;
-  overflow-y: auto; }
+  display: block; }
 
 portfolio-page-image {
   display: flex;
@@ -475,7 +471,7 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -488,261 +484,220 @@ portfolio-page-image {
   cursor: pointer;
   margin: 0;
   opacity: 0;
-  position: relative;
   z-index: 100; }
 
 project {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  transition: all 0.75s;
   display: block;
   position: absolute; }
-  project:hover .project__icon img {
-    transform: rotate(360deg) scale(1.2, 1.2); }
+  project:hover {
+    z-index: 1000; }
+    project:hover .project__container {
+      transform: scale(1.05); }
+    project:hover .project__icon img {
+      transform: rotate(360deg) scale(1.2, 1.2); }
+  project .project__toggle:checked {
+    z-index: 1001; }
+    project .project__toggle:checked + .project__container {
+      z-index: 1000;
+      transform: scale(1); }
+      project .project__toggle:checked + .project__container .project__icon {
+        height: 0;
+        left: 0;
+        margin: 1.5%;
+        padding-top: 5%;
+        top: 0;
+        width: 5%; }
+        project .project__toggle:checked + .project__container .project__icon img, project .project__toggle:checked + .project__container .project__icon img:hover {
+          height: 100%;
+          left: 0;
+          max-height: 100px;
+          max-width: 100px;
+          transform: rotate(0deg) scale(1);
+          top: 0;
+          width: 100%; }
   project:nth-child(1) {
     height: 50%;
     left: 0%;
     top: 0%;
     width: 50%; }
-    project:nth-child(1) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(1) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(1) .project__toggle:checked,
-      project:nth-child(1) .project__toggle:checked + .project__container {
-        height: 200%;
-        left: 0%;
-        top: 0%;
-        width: 200%; }
+    project:nth-child(1) .project__toggle:checked,
+    project:nth-child(1) .project__toggle:checked + .project__container {
+      height: 200%;
+      left: -200%;
+      top: 0%;
+      width: 400%; }
   project:nth-child(2) {
     height: 25%;
     left: 50%;
     top: 0%;
     width: 25%; }
-    project:nth-child(2) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(2) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(2) .project__toggle:checked,
-      project:nth-child(2) .project__toggle:checked + .project__container {
-        height: 400%;
-        left: -200%;
-        top: 0%;
-        width: 400%; }
+    project:nth-child(2) .project__toggle:checked,
+    project:nth-child(2) .project__toggle:checked + .project__container {
+      height: 400%;
+      left: -600%;
+      top: 0%;
+      width: 800%; }
   project:nth-child(3) {
     height: 25%;
     left: 0%;
     top: 50%;
     width: 25%; }
-    project:nth-child(3) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(3) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(3) .project__toggle:checked,
-      project:nth-child(3) .project__toggle:checked + .project__container {
-        height: 400%;
-        left: 0%;
-        top: -200%;
-        width: 400%; }
+    project:nth-child(3) .project__toggle:checked,
+    project:nth-child(3) .project__toggle:checked + .project__container {
+      height: 400%;
+      left: -400%;
+      top: -200%;
+      width: 800%; }
   project:nth-child(4) {
     height: 12.5%;
     left: 75%;
     top: 0%;
     width: 12.5%; }
-    project:nth-child(4) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(4) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(4) .project__toggle:checked,
-      project:nth-child(4) .project__toggle:checked + .project__container {
-        height: 800%;
-        left: -600%;
-        top: 0%;
-        width: 800%; }
+    project:nth-child(4) .project__toggle:checked,
+    project:nth-child(4) .project__toggle:checked + .project__container {
+      height: 800%;
+      left: -1400%;
+      top: 0%;
+      width: 1600%; }
   project:nth-child(5) {
     height: 12.5%;
     left: 50%;
     top: 25%;
     width: 12.5%; }
-    project:nth-child(5) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(5) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(5) .project__toggle:checked,
-      project:nth-child(5) .project__toggle:checked + .project__container {
-        height: 800%;
-        left: -400%;
-        top: -200%;
-        width: 800%; }
+    project:nth-child(5) .project__toggle:checked,
+    project:nth-child(5) .project__toggle:checked + .project__container {
+      height: 800%;
+      left: -1200%;
+      top: -200%;
+      width: 1600%; }
   project:nth-child(6) {
     height: 12.5%;
     left: 25%;
     top: 50%;
     width: 12.5%; }
-    project:nth-child(6) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(6) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(6) .project__toggle:checked,
-      project:nth-child(6) .project__toggle:checked + .project__container {
-        height: 800%;
-        left: -200%;
-        top: -400%;
-        width: 800%; }
+    project:nth-child(6) .project__toggle:checked,
+    project:nth-child(6) .project__toggle:checked + .project__container {
+      height: 800%;
+      left: -1000%;
+      top: -400%;
+      width: 1600%; }
   project:nth-child(7) {
     height: 12.5%;
     left: 0%;
     top: 75%;
     width: 12.5%; }
-    project:nth-child(7) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(7) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(7) .project__toggle:checked,
-      project:nth-child(7) .project__toggle:checked + .project__container {
-        height: 800%;
-        left: 0%;
-        top: -600%;
-        width: 800%; }
+    project:nth-child(7) .project__toggle:checked,
+    project:nth-child(7) .project__toggle:checked + .project__container {
+      height: 800%;
+      left: -800%;
+      top: -600%;
+      width: 1600%; }
   project:nth-child(8) {
     height: 6.25%;
     left: 87.5%;
     top: 0%;
     width: 6.25%; }
-    project:nth-child(8) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(8) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(8) .project__toggle:checked,
-      project:nth-child(8) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -1400%;
-        top: 0%;
-        width: 1600%; }
+    project:nth-child(8) .project__toggle:checked,
+    project:nth-child(8) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -3000%;
+      top: 0%;
+      width: 3200%; }
   project:nth-child(9) {
     height: 6.25%;
     left: 75%;
     top: 12.5%;
     width: 6.25%; }
-    project:nth-child(9) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(9) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(9) .project__toggle:checked,
-      project:nth-child(9) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -1200%;
-        top: -200%;
-        width: 1600%; }
+    project:nth-child(9) .project__toggle:checked,
+    project:nth-child(9) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -2800%;
+      top: -200%;
+      width: 3200%; }
   project:nth-child(10) {
     height: 6.25%;
     left: 62.5%;
     top: 25%;
     width: 6.25%; }
-    project:nth-child(10) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(10) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(10) .project__toggle:checked,
-      project:nth-child(10) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -1000%;
-        top: -400%;
-        width: 1600%; }
+    project:nth-child(10) .project__toggle:checked,
+    project:nth-child(10) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -2600%;
+      top: -400%;
+      width: 3200%; }
   project:nth-child(11) {
     height: 6.25%;
     left: 50%;
     top: 37.5%;
     width: 6.25%; }
-    project:nth-child(11) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(11) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(11) .project__toggle:checked,
-      project:nth-child(11) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -800%;
-        top: -600%;
-        width: 1600%; }
+    project:nth-child(11) .project__toggle:checked,
+    project:nth-child(11) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -2400%;
+      top: -600%;
+      width: 3200%; }
   project:nth-child(12) {
     height: 6.25%;
     left: 37.5%;
     top: 50%;
     width: 6.25%; }
-    project:nth-child(12) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(12) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(12) .project__toggle:checked,
-      project:nth-child(12) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -600%;
-        top: -800%;
-        width: 1600%; }
+    project:nth-child(12) .project__toggle:checked,
+    project:nth-child(12) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -2200%;
+      top: -800%;
+      width: 3200%; }
   project:nth-child(13) {
     height: 6.25%;
     left: 25%;
     top: 62.5%;
     width: 6.25%; }
-    project:nth-child(13) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(13) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(13) .project__toggle:checked,
-      project:nth-child(13) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -400%;
-        top: -1000%;
-        width: 1600%; }
+    project:nth-child(13) .project__toggle:checked,
+    project:nth-child(13) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -2000%;
+      top: -1000%;
+      width: 3200%; }
   project:nth-child(14) {
     height: 6.25%;
     left: 12.5%;
     top: 75%;
     width: 6.25%; }
-    project:nth-child(14) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(14) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(14) .project__toggle:checked,
-      project:nth-child(14) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: -200%;
-        top: -1200%;
-        width: 1600%; }
+    project:nth-child(14) .project__toggle:checked,
+    project:nth-child(14) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -1800%;
+      top: -1200%;
+      width: 3200%; }
   project:nth-child(15) {
     height: 6.25%;
     left: 0%;
     top: 87.5%;
     width: 6.25%; }
-    project:nth-child(15) .project__toggle:checked {
-      z-index: 1001; }
-      project:nth-child(15) .project__toggle:checked + .project__container {
-        z-index: 1000; }
-      project:nth-child(15) .project__toggle:checked,
-      project:nth-child(15) .project__toggle:checked + .project__container {
-        height: 1600%;
-        left: 0%;
-        top: -1400%;
-        width: 1600%; }
-  project:nth-child(odd) .project__container {
-    background: red; }
-  project:nth-child(even) .project__container {
-    background: blue; }
-  project:hover .project__details-toggle-arrow {
-    transform: rotate(-3deg) scale(1.05); }
+    project:nth-child(15) .project__toggle:checked,
+    project:nth-child(15) .project__toggle:checked + .project__container {
+      height: 1600%;
+      left: -1600%;
+      top: -1400%;
+      width: 3200%; }
 
 .project__container {
   cursor: pointer;
   margin: 0;
+  overflow: hidden;
   transition: all .5s; }
 
 .project__icon {
+  transition: all 0.75s;
   pointer-events: none; }
   .project__icon img {
-    transition: all .75s;
     position: absolute;
     height: 30%;
     left: 35%;
     top: 35%;
-    width: 30%; }
+    width: 30%;
+    transition: all 0.75s; }
 
 .project__title {
   align-items: center;
@@ -761,7 +716,6 @@ project {
   font-size: 32em / 30;
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
   transition: max-height 0.5s, opacity 0.5s; }
   .project__details .project__link {
     display: inline-block;
@@ -823,3 +777,59 @@ project {
   align-items: center;
   display: flex;
   justify-content: space-between; }
+
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio, .project__toggle, .project__container, .project__icon, .ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
+.ocean-1 .bg, .ocean-2 .bg, .ocean-3 .bg, .old-wood-1 .bg, .old-wood-2 .bg, .old-wood-3 .bg, .rock-1 .bg, .rock-2 .bg, .rock-3 .bg, .rock-4 .bg, .trunk-1 .bg, .trunk-2 .bg, .trunk-3 .bg, .trunk-4 .bg {
+  background-size: 3840px 2160px;
+  background-attachment: fixed;
+  filter: saturate(10%) brightness(35%); }
+
+.ocean-1 {
+  background-image: url("../img/textures/ocean-1.jpg"); }
+
+.ocean-2 {
+  background-image: url("../img/textures/ocean-2.jpg"); }
+
+.ocean-3 {
+  background-image: url("../img/textures/ocean-3.jpg"); }
+
+.old-wood-1 {
+  background-image: url("../img/textures/old-wood-1.jpg"); }
+
+.old-wood-2 {
+  background-image: url("../img/textures/old-wood-2.jpg"); }
+
+.old-wood-3 {
+  background-image: url("../img/textures/old-wood-3.jpg"); }
+
+.rock-1 {
+  background-image: url("../img/textures/rock-1.jpg"); }
+
+.rock-2 {
+  background-image: url("../img/textures/rock-2.jpg"); }
+
+.rock-3 {
+  background-image: url("../img/textures/rock-3.jpg"); }
+
+.rock-4 {
+  background-image: url("../img/textures/rock-4.jpg"); }
+
+.trunk-1 {
+  background-image: url("../img/textures/trunk-1.jpg"); }
+
+.trunk-2 {
+  background-image: url("../img/textures/trunk-2.jpg"); }
+
+.trunk-3 {
+  background-image: url("../img/textures/trunk-3.jpg"); }
+
+.trunk-4 {
+  background-image: url("../img/textures/trunk-4.jpg"); }

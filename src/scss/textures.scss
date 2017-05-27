@@ -1,0 +1,34 @@
+@import "mixins";
+
+$textures: (
+  ('ocean', 3),
+  ('old-wood', 3),
+  ('rock', 4),
+  ('trunk', 4),
+);
+
+%texture-background {
+  background-size: 3840px 2160px;
+  background-attachment: fixed;
+  filter: saturate(10%) brightness(35%);
+}
+
+@mixin texture-background() {
+  .bg {
+    @include absolute-fill();
+    @extend %texture-background;
+  }
+}
+
+@each $texture-set in $textures {
+  $texture-name: nth($texture-set, 1);
+  $texture-count: nth($texture-set, 2);
+  @for $texture-num from 1 through $texture-count {
+    $texture-file: #{$texture-name}-#{$texture-num};
+    $texture-file-full-path: '../img/textures/' + $texture-file + '.jpg';
+    .#{$texture-file} {
+      background-image: url($texture-file-full-path);
+      @include texture-background();
+    }
+  }
+}

@@ -85,3 +85,13 @@
     }
   }
 }
+
+$transition-time: .75s;
+
+@mixin standard-transition() {
+  transition: all $transition-time;
+}
+
+@mixin transition-delay() {
+  transition-delay: $transition-time;
+}

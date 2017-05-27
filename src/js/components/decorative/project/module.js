@@ -10,6 +10,7 @@ projectModule.component(COMPONENT_NAME, {
         projectGroup: '@?',
         projectIcon: '@?',
         projectLink: '@?',
+        projectTexture: '@?',
         projectTitle: '@?',
         projectExpanded: '<?',
     },

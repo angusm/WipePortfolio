@@ -3,7 +3,8 @@ export default `
        class="project__toggle"
        ng-checked="$ctrl.projectExpanded"  
        name="{{ $ctrl.projectGroup }}">
-<div class="project__container">
+<div class="project__container" ng-class="$ctrl.projectTexture">
+    <div class="bg"></div>
     <div class="project__icon">
         <img src="{{ $ctrl.projectIcon }}">
     </div>

@@ -7,6 +7,9 @@ $large-breakpoint-section-margin: 5%;
 
 @include slant-grouping(4);
 
+@include component-style('portfolio-page-content') {
+  display: block;
+}
 
 @include component-style('portfolio-page') {
   display: block;
@@ -90,8 +93,6 @@ $large-breakpoint-section-margin: 5%;
   flex: 1;
   max-height: $portfolio-section-mobile-max-side-length;
   max-width: $portfolio-section-mobile-max-side-length;
-  overflow-x: hidden;
-  overflow-y: auto;
   padding-top: 50%;
   position: relative;
   width: 100%;
@@ -105,13 +106,10 @@ $large-breakpoint-section-margin: 5%;
 @include component-style('portfolio-section-container') {
   @include absolute-fill();
   display: block;
-  overflow: hidden;
 }
 
 @include component-style('portfolio-content') {
   @include absolute-fill();
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 @include component-style('portfolio-page-image') {
