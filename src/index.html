@@ -48,81 +48,9 @@
                 <div class="projects" id="projects">
                     <project ng-repeat="project in page.projects"
                              project-group="{{ page.code }}"
-                             project-title="{{ project.title }}"
-                             project-icon="{{ project.icon }}"
-                             project-texture="{{ project.texture }}">
+                             project-title="{{ project.title }}">
                             <p ng-repeat="paragraph in project.paragraphs"
                                ng-bind-html="paragraph"></p>
-                    </project>
-                </div>
-            </portfolio-page-content>
-        </portfolio-page>
-        <portfolio-page id="nerds">
-            <portfolio-page-image>
-                <div class="nerds-bg"></div>
-                <div class="job__logo">
-                    <div class="job__logo-container">
-                        <img class="job__logo-image nerds-logo" src="img/nerdstar.png">
-                    </div>
-                </div>
-                <div class="job__company">
-                    Nerd Corps Entertainment / DHX Media
-                </div>
-            </portfolio-page-image>
-            <portfolio-page-content>
-                <h1 class="job__title">Developer</h1>
-                <h2 class="job__time-worked">Aug. 2014 - Feb. 2016</h2>
-                <hr>
-                <div class="projects" id="nerd-projects">
-                    <project project-group="nerds"
-                             project-title="Artemis"
-                             project-expanded="true">
-                        <p>
-                            Used Django and Angular to build scheduling and
-                            estimation tools that connected to
-                            <a href="https://shotgunsoftware.com">Shotgun</a>.
-                            Proved viability, prototyped, architected,
-                            scheduled developers and wrapped the Shotgun
-                            API in an ORM that duplicated Django's to
-                            simplify dev.
-                        </p>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="Muse">
-                        <p>
-                            Built system for annotating video to provide
-                            animation feedback. Similar to drawings done on a
-                            televised sports replay. System was developed in
-                            Django & Angular.
-                        </p>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="Kate & Mim-Mim Site"
-                             project-link="http://www.kateandmimmim.ca">
-                        <p>
-                            Built responsive embedded game component that
-                            transferred from in-page embed to modal without
-                            losing game progress depending on the size of the
-                            browser or tablet orientation.
-                        </p>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="Slugterra Site"
-                             project-link="http://www.slugterra.com">
-                        <p>
-                            Setup caching for localization and styled out
-                            issues relating to new locales in addition to
-                            content updates. Built with PHP, jQuery & Knockout.
-                        </p>
-                    </project>
-                    <project project-group="nerds"
-                             project-title="SPARCX">
-                        <p>
-                            Using Perl, PHP and jQuery, helped team maintain the
-                            pipeline management tool the company depended on
-                            that had been written ~10 years before I started
-                            there.
-                        </p>
                     </project>
                 </div>
             </portfolio-page-content>

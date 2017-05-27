@@ -3,6 +3,7 @@ export default `
        class="project__toggle"
        ng-checked="$ctrl.projectExpanded"  
        name="{{ $ctrl.projectGroup }}">
+<label class="project__toggle-label">X</label>
 <div class="project__container" ng-class="$ctrl.projectTexture">
     <div class="project__title">
         <div class="project__title-line"

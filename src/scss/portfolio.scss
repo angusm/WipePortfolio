@@ -61,6 +61,24 @@ $large-breakpoint-section-margin: 5%;
 
   &:nth-child(odd) {
     @include page-coloring($color-b, $color-a, $link-color-b);
+    $dark-colors: (
+            #F02,
+            #F8F8F8,
+            #FFF,
+            #DDD,
+            #E8E8E8,
+            #EEE,
+            #D8D8D8,
+    );
+
+    @include component-style('project') {
+      @for $i from 1 through $max-project-count {
+        &:nth-child(#{$i}) .project__container {
+          background-color: nth($dark-colors, $i % length($dark-colors) + 1);
+          color: $color-b;
+        }
+      }
+    }
   }
 
   &:nth-child(even) {

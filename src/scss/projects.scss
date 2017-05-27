@@ -10,6 +10,25 @@ $fractal-size-factor: .5;
   margin: 0;
   opacity: 0;
   z-index: 100;
+
+  &:hover {
+    z-index: 1001;
+    & ~ .project__container {
+      z-index: 1000;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.project__toggle-label {
+  @include standard-transition();
+  @include transition-delay();
+  height: 5%;
+  opacity: 0;
+  position: absolute;
+  right: $standard-margin;
+  top: $standard-margin;
+  width: 5%;
 }
 
 @function get-square-size($square-number) {
@@ -59,33 +78,36 @@ $fractal-size-factor: .5;
 }
 
 @include component-style('project') {
+  @include absolute-fill();
   @include standard-transition();
   display: block;
-  position: absolute;
-
-  &:hover {
-    z-index: 1000;
-
-    .project__container {
-      transform: scale(1.05);
-    }
-
-    .project__icon img {
-      transform: rotate(360deg) scale(1.2, 1.2);
-    }
-  }
+  pointer-events: none;
 
   .project__toggle:checked {
-    z-index: 1001;
+    &,
+    & + .project__toggle-label {
+      width: 5% !important;
+      height: 5% !important;
+      left: auto !important;
+      right: $standard-margin !important;
+      top: $standard-margin !important;
+      bottom: auto !important;
+      z-index: 1001;
+    }
 
-    & + .project__container {
-      z-index: 1000;
+    & + .project__toggle-label {
+      opacity: 1;
+    }
+
+    & ~ .project__container {
+      @include absolute-fill();
       transform: scale(1);
       transition: left $transition-time,
         top $transition-time,
         width $transition-time,
         height $transition-time,
         transform $transition-time;
+      z-index: 1000;
 
       .project__title {
         font-size: 1.5em;
@@ -124,30 +146,20 @@ $fractal-size-factor: .5;
 
   @for $i from 1 through $max-project-count {
     &:nth-child(#{$i}) {
-      $square-size: get-square-size($i);
-      $left: get-square-left-pos($i);
-      $top: get-square-top-pos($i);
-
-      height: get-square-size($i);
-      left: get-square-left-pos($i);
-      top: get-square-top-pos($i);
-      width: get-square-size($i);
-
-      .project__toggle:checked {
-        &,
-        & + .project__container {
-          $left-offset: $left / $square-size; // + 100% / $square-size;
-          $top-offset: $top / $square-size;
-          $scale: 100% / $square-size;
-
-          height: 100% * $scale;
-          left: -100% * $left-offset;
-          top: -100% * $top-offset;
-          width: 100% * $scale; // + 100% * 100% / $square-size;
-        }
+      .project__toggle,
+      .project__container {
+        height: get-square-size($i);
+        left: get-square-left-pos($i);
+        top: get-square-top-pos($i);
+        width: get-square-size($i);
       }
     }
   }
+}
+
+.project__container,
+.project__toggle {
+  pointer-events: all;
 }
 
 .project__container {
@@ -157,7 +169,6 @@ $fractal-size-factor: .5;
     width $transition-time $transition-time,
     height $transition-time $transition-time,
     transform $transition-time;
-  cursor: pointer;
   margin: 0;
   overflow: hidden;
 }
@@ -177,28 +188,15 @@ $fractal-size-factor: .5;
 
 .project__details {
   @include standard-transition();
-  font-size: 1em;
+  font-size: .8em;
   margin: $standard-margin;
   opacity: 0;
-  transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, $standard-margin, 0);
   transition-delay: 0s;
 
   .project__link {
     display: inline-block;
     margin-bottom: 15px;
-  }
-
-  @include breakpoint($s) {
-    &,
-    & .project__link {
-      font-size: 16em / 30;
-      line-height: 16px;
-
-      .project__link-arrow {
-        width: 16px;
-        height: 16px;
-      }
-    }
   }
 
   @include breakpoint($m) {
