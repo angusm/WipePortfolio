@@ -4,14 +4,12 @@ export default `
        ng-checked="$ctrl.projectExpanded"  
        name="{{ $ctrl.projectGroup }}">
 <div class="project__container" ng-class="$ctrl.projectTexture">
-    <div class="bg"></div>
-    <div class="project__icon">
-        <img src="{{ $ctrl.projectIcon }}">
+    <div class="project__title">
+        <div class="project__title-line"
+             ng-repeat="line in $ctrl.getProjectTitleLines()">
+            {{ line }}
+        </div>
     </div>
-    <span>{{ $ctrl.projectTitle }}</span>
-    <svg class="project__details-toggle-arrow">
-        <use xlink:href="img/chevron-right.svg#chevron-right"></use>
-    </svg>
     <div class="project__link"
        ng-if="$ctrl.projectLink">
       <a target="_blank"

@@ -2,7 +2,7 @@
 @import "mixins";
 
 $max-project-count: 15;
-$fractal-size-factor: .543;
+$fractal-size-factor: .5;
 
 .project__toggle {
   @include absolute-fill();
@@ -81,6 +81,22 @@ $fractal-size-factor: .543;
     & + .project__container {
       z-index: 1000;
       transform: scale(1);
+      transition: left $transition-time,
+        top $transition-time,
+        width $transition-time,
+        height $transition-time,
+        transform $transition-time;
+
+      .project__title {
+        font-size: 1.5em;
+        transition-delay: 0s;
+      }
+
+      .project__details {
+        @include transition-delay();
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
 
       .project__icon {
         height: 0;
@@ -120,14 +136,14 @@ $fractal-size-factor: .543;
       .project__toggle:checked {
         &,
         & + .project__container {
-          $left-offset: $left / $square-size + 100% / $square-size;
+          $left-offset: $left / $square-size; // + 100% / $square-size;
           $top-offset: $top / $square-size;
           $scale: 100% / $square-size;
 
           height: 100% * $scale;
           left: -100% * $left-offset;
           top: -100% * $top-offset;
-          width: 100% * $scale + 100% * 100% / $square-size;
+          width: 100% * $scale; // + 100% * 100% / $square-size;
         }
       }
     }
@@ -136,44 +152,36 @@ $fractal-size-factor: .543;
 
 .project__container {
   @include absolute-fill();
+  transition: left $transition-time $transition-time,
+    top $transition-time $transition-time,
+    width $transition-time $transition-time,
+    height $transition-time $transition-time,
+    transform $transition-time;
   cursor: pointer;
   margin: 0;
   overflow: hidden;
-  transition: all .5s;
-}
-
-.project__icon {
-  @include absolute-fill();
-  @include standard-transition();
-  pointer-events: none;
-
-  img {
-    @include absolute-position-square(30%);
-    @include standard-transition();
-  }
 }
 
 .project__title {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  font-size: 40em / 30;
-  height: 35px;
-
-  @include breakpoint($s) {
-    font-size: 20em / 30;
-  }
+  @include standard-transition();
+  font-size: .8em;
+  text-align: center;
+  margin: $standard-margin 0 0;
 
   @include breakpoint($m) {
-    font-size: 20em / 30;
+    display: block;
+    text-align: left;
+    margin: $standard-margin;
   }
 }
 
 .project__details {
-  font-size: 32em / 30;
-  max-height: 0;
+  @include standard-transition();
+  font-size: 1em;
+  margin: $standard-margin;
   opacity: 0;
-  transition: max-height 0.5s, opacity 0.5s;
+  transform: translate3d(0, 20px, 0);
+  transition-delay: 0s;
 
   .project__link {
     display: inline-block;
@@ -206,14 +214,6 @@ $fractal-size-factor: .543;
     font-size: 16em / 30;
     line-height: 20px;
   }
-}
-
-.project__details-toggle-arrow {
-  height: 20px;
-  margin: 0 10px;
-  transform: rotate(0deg);
-  transition: transform 300ms;
-  width: 20px;
 }
 
 .project__link {

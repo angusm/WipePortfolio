@@ -1,3 +1,5 @@
+$standard-margin: 10px;
+
 @mixin breakpoint($media-query) {
   @media #{$media-query} {
     @content;
@@ -86,7 +88,7 @@
   }
 }
 
-$transition-time: .75s;
+$transition-time: .35s;
 
 @mixin standard-transition() {
   transition: all $transition-time;

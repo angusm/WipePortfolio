@@ -15,6 +15,12 @@ projectModule.component(COMPONENT_NAME, {
         projectExpanded: '<?',
     },
     transclude: true,
+    controller: class Project {
+        constructor() {}
+        getProjectTitleLines() {
+            return this.projectTitle.split(' ');
+        }
+    }
 });
 
 export default projectModule;

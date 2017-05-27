@@ -19,7 +19,6 @@ const getRGAData = () => {
             {
                 icon: 'img/icons/google-g.png',
                 title: 'JS/HTML/CSS Readabilities',
-                texture: 'trunk-1',
                 paragraphs: [
                     `
                 Presented reviewers with contributions made to
@@ -31,7 +30,6 @@ const getRGAData = () => {
             {
                 icon: 'img/icons/google-g.png',
                 title: 'Chrome Version Selection',
-                texture: 'ocean-2',
                 projectLink: 'https://www.google.com/chrome',
                 paragraphs: [
                     `
@@ -49,7 +47,6 @@ const getRGAData = () => {
             {
                 icon: 'img/icons/google-g.png',
                 title: 'Internal Projects',
-                texture: 'rock-1',
                 paragraphs: [
                     `
                 Worked on projects using, Django and Angular, for
@@ -59,8 +56,7 @@ const getRGAData = () => {
             },
             {
                 icon: 'img/icons/google-g.png',
-                title: 'Duo Marketing Page',
-                texture: 'old-wood-1',
+                title: 'Duo',
                 projectLink: 'https://duo.google.com',
                 paragraphs: [
                     `
@@ -71,8 +67,7 @@ const getRGAData = () => {
             },
             {
                 icon: 'img/icons/google-g.png',
-                title: 'Maps Treks Update',
-                texture: 'ocean-1',
+                title: 'Maps Treks',
                 projectLink: 'https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza',
                 paragraphs: [
                     `

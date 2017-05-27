@@ -34,7 +34,7 @@ $large-breakpoint-section-margin: 5%;
       }
     }
 
-    $job-information-margin: 10px;
+    $job-information-margin: $standard-margin;
 
     .job__title {
       margin: $job-information-margin $job-information-margin auto;
