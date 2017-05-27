@@ -1,6 +1,9 @@
 @import "breakpoints";
 @import "mixins";
 
+$max-project-count: 15;
+$fractal-size-factor: .543;
+
 .project__toggle {
   @include absolute-fill();
   cursor: pointer;
@@ -15,7 +18,7 @@
   @for $i from 1 through $square-number {
     @if $i > $breakpoint {
       $breakpoint: $breakpoint + $i;
-      $square-size: $square-size / 2;
+      $square-size: $square-size * $fractal-size-factor;
     }
   }
   @return $square-size;
@@ -33,10 +36,10 @@
       $set-pos: 0;
       $breakpoint: $breakpoint + $i;
       $left-start: $left-start + $square-size;
-      $square-size: $square-size / 2;
+      $square-size: $square-size * $fractal-size-factor;
     }
   }
-  @return $left-start - ($set-pos * $square-size * 2);
+  @return $left-start - ($set-pos * $square-size / $fractal-size-factor);
 }
 
 @function get-square-top-pos($square-number) {
@@ -49,10 +52,10 @@
     @if $i > $breakpoint {
       $set-pos: 0;
       $breakpoint: $breakpoint + $i;
-      $square-size: $square-size / 2;
+      $square-size: $square-size * $fractal-size-factor;
     }
   }
-  @return $set-pos * $square-size * 2;
+  @return $set-pos * $square-size / $fractal-size-factor;
 }
 
 @include component-style('project') {
@@ -103,7 +106,7 @@
     }
   }
 
-  @for $i from 1 through 15 {
+  @for $i from 1 through $max-project-count {
     &:nth-child(#{$i}) {
       $square-size: get-square-size($i);
       $left: get-square-left-pos($i);

@@ -1,6 +1,7 @@
 @import 'breakpoints';
 @import 'colors';
 @import 'mixins';
+@import 'projects';
 
 $medium-breakpoint-section-margin: 3% 5%;
 $large-breakpoint-section-margin: 5%;
@@ -18,7 +19,7 @@ $large-breakpoint-section-margin: 5%;
 
   @mixin page-coloring($page-color-a, $page-color-b, $link-color) {
     background-color: $page-color-a;
-    color: $page-color-b;
+    color: $page-color-a;
     stroke: currentColor;
     fill: currentColor;
 
@@ -43,19 +44,13 @@ $large-breakpoint-section-margin: 5%;
       margin: auto $job-information-margin $job-information-margin;
     }
 
-    .job__company,
-    .job__time-worked,
-    .job__title {
-      color: $page-color-a;
-    }
-
     hr {
       background: $page-color-a;
     }
 
     @include component-style('portfolio-page-image') {
       background: $page-color-b;
-    }
+  }
 
     a {
       color: $link-color;
@@ -70,6 +65,24 @@ $large-breakpoint-section-margin: 5%;
 
   &:nth-child(even) {
     @include page-coloring($color-a, $color-b, $link-color-a);
+    $dark-colors: (
+            #F02,
+            #080808,
+            #333,
+            #222,
+            #282828,
+            #111,
+            #181818,
+    );
+
+    @include component-style('project') {
+      @for $i from 1 through $max-project-count {
+        &:nth-child(#{$i}) .project__container {
+          background-color: nth($dark-colors, $i % length($dark-colors) + 1);
+          color: $color-a;
+        }
+      }
+    }
   }
 }
 
