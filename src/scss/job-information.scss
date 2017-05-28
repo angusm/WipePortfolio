@@ -6,20 +6,12 @@ $job__logo-image-max-size: 150px;
 
 .job__company {
   bottom: 20px;
-  font-size: 35em / 30;
+  font-size: 1.25em;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%;
-
-  @include breakpoint($s) {
-    font-size: 25em / 30;
-  }
-
-  @include breakpoint($m) {
-    font-size: 20em / 30;
-  }
 }
 
 .job__title {

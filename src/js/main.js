@@ -9,7 +9,6 @@ let portfolioModule = angular.module('portfolio', [
 
 class PortfolioController {
     constructor($sce) {
-        console.log($sce);
         this.pages = allData.map((page) => {
             const pageCopy = {};
             Object.keys(page).forEach((pageKey) => {
@@ -19,10 +18,12 @@ class PortfolioController {
                         break;
                     case 'projects':
                         pageCopy[pageKey] = page[pageKey].map((project) => {
-                            project.paragraphs =
-                                project.paragraphs.map((paragraph) => {
-                                    return $sce.trustAsHtml(paragraph);
-                                });
+                            if (project.paragraphs) {
+                                project.paragraphs =
+                                    project.paragraphs.map((paragraph) => {
+                                        return $sce.trustAsHtml(paragraph);
+                                    });
+                            }
                             return project;
                         });
                         break;
@@ -32,7 +33,6 @@ class PortfolioController {
             });
             return pageCopy;
         });
-        console.log(this.pages);
     }
 }
 

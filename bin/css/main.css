@@ -146,18 +146,12 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 35em / 30;
+  font-size: 1.25em;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%; }
-  @media false {
-    .job__company {
-      font-size: 25em / 30; } }
-  @media (min-width: 1024px) {
-    .job__company {
-      font-size: 20em / 30; } }
 
 @media false {
   .job__title {
@@ -241,18 +235,12 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 35em / 30;
+  font-size: 1.25em;
   font-weight: 300;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%; }
-  @media false {
-    .job__company {
-      font-size: 25em / 30; } }
-  @media (min-width: 1024px) {
-    .job__company {
-      font-size: 20em / 30; } }
 
 @media false {
   .job__title {

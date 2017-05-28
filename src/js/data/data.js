@@ -3,6 +3,20 @@ import getNerdsData from './pages/nerds';
 import getAVPData from './pages/avp';
 import getDCMData from './pages/dcm';
 
+const PROJECT_LENGTH = 14;
+
+const getEmptyProject = () => {
+    return {};
+};
+
+const padProjects = (data) => {
+    data.projects = [getEmptyProject()].concat(data.projects);
+    while (data.projects.length < PROJECT_LENGTH) {
+        data.projects.push(getEmptyProject());
+    }
+    return data;
+};
+
 const allData = [
     getRGAData(),
     getNerdsData(),
@@ -10,4 +24,6 @@ const allData = [
     getDCMData(),
 ];
 
-export default allData;
+const paddedData = allData.map((dataSet) => padProjects(dataSet));
+
+export default paddedData;
