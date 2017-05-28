@@ -14,16 +14,6 @@ $job__logo-image-max-size: 150px;
   width: 100%;
 }
 
-.job__title {
-  @include breakpoint($s) {
-    font-size: 30em / 30;
-  }
-
-  @include breakpoint($m) {
-    font-size: 40em / 30;
-  }
-}
-
 .job__title,
 .job__time-worked {
   margin: 0;
@@ -61,15 +51,9 @@ $job__logo-image-max-size: 150px;
 }
 
 .job__time-worked {
-  font-size: 25em / 30;
   font-style: italic;
 
   @include breakpoint($s) {
-    font-size: 15em / 30;
     font-style: normal;
-  }
-
-  @include breakpoint($m) {
-    font-size: 25em / 30;
   }
 }
