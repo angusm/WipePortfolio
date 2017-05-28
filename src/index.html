@@ -32,7 +32,7 @@
             </portfolio-page-content>
         </portfolio-page>
         <portfolio-page ng-repeat="page in p.pages"
-                        ng-attr="{id: page.code}"
+                        ng-attr-id="{{ page.code }}"
                         job-title="{{ page.title }}"
                         job-time-worked="{{ page.timeWorked }}">
             <portfolio-page-image>
@@ -55,108 +55,13 @@
                 </div>
             </portfolio-page-content>
         </portfolio-page>
-        <portfolio-page id="avp">
-            <portfolio-page-image>
-                <div class="avp-bg"></div>
-                <div class="job__logo">
-                    <div class="job__logo-container">
-                        <div class="avp-image job__logo-image">
-                            <img class="avp-logo" src="img/avp.gif">
-                        </div>
-                    </div>
-                </div>
-                <div class="job__company">
-                    Associated Veterinary Purchasing
-                </div>
-            </portfolio-page-image>
-            <portfolio-page-content>
-                <h1 class="job__title">Developer</h1>
-                <h2 class="job__time-worked">Aug. 2014 - Feb. 2016</h2>
-                <hr>
-                <div class="projects" id="avp-projects">
-                    <project project-group="avp"
-                             project-title="jBASE System"
-                             project-expanded="true">
-                        <p>
-                            Maintained a legacy system first established in
-                            1989. Features related to payroll, time-sheets,
-                            inventory, SOs, POs, waybills, rebates and more.
-                            Using GOTOs and 3-character variable names in
-                            ALL_CAPS the system processed thousands of orders
-                            a day.
-                        </p>
-                    </project>
-                    <project project-group="avp"
-                             project-title="Customer Site">
-                        <p>
-                            Worked a CakePHP sub-site into an existing
-                            third-party CMS site by replicating templates. Added
-                            and maintained features relating to online
-                            statements and invoices connected to the jBASE
-                            system.
-                        </p>
-                    </project>
-                    <project project-group="avp"
-                             project-title="Ecommerce Site">
-                        <p>
-                            Developed an online ordering site with CakePHP and
-                            jQuery that was never able to be scheduled for
-                            QA and as such was never pushed live. Was to
-                            integrate with existing jBASE system and replace
-                            existing .NET based online ordering site.
-                        </p>
-                    </project>
-                </div>
-            </portfolio-page-content>
-        </portfolio-page>
-        <portfolio-page id="dcm">
-            <portfolio-page-image>
-                <div class="dcm-bg"></div>
-                <div class="job__logo">
-                    <div class="job__logo-container">
-                        <img class="job__logo-image dcm-logo" src="img/dcm.png">
-                    </div>
-                </div>
-                <div class="job__company">
-                    DCM Studios
-                </div>
-            </portfolio-page-image>
-            <portfolio-page-content>
-                <h1 class="job__title">Contractor</h1>
-                <h2 class="job__time-worked">Intermittent between 2010 - 2016</h2>
-                <hr>
-                <div class="projects" id="dcm-projects">
-                    <project project-group="dcm"
-                             project-link="past-projects/para-2016/index.html"
-                             project-title="PARA Paints Collections"
-                             project-expanded="true">
-                        <p>
-                            Created static content to be embedded in pages for
-                            para.com that adapted the designs of their
-                            brochures. Original site was not responsive and has
-                            been replaced. Link points to the 2016 collection
-                            that is no longer live.
-                        </p>
-                    </project>
-                    <project project-group="dcm"
-                             project-title="Misc. Contracts">
-                        <p>
-                            Helped with a small contract for Darwin Construction
-                            that was ultimately cancelled and occasional work
-                            for DCM's own site. None of this work is still
-                            live or has been retained.
-                        </p>
-                    </project>
-                </div>
-            </portfolio-page-content>
-        </portfolio-page>
         <div class="portfolio__navigation">
             <ul>
                 <a href="#hero"><li></li></a>
-                <a href="#rga"><li></li></a>
-                <a href="#nerds"><li></li></a>
-                <a href="#avp"><li></li></a>
-                <a href="#dcm"><li></li></a>
+                <a ng-repeat="page in p.pages"
+                   ng-attr-href="#{{ page.code }}">
+                    <li></li>
+                </a>
             </ul>
         </div>
         <div class="fine-print">

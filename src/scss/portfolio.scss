@@ -62,12 +62,12 @@ $large-breakpoint-section-margin: 5%;
   &:nth-child(odd) {
     @include page-coloring($color-b, $color-a, $link-color-b);
     $dark-colors: (
-            #F02,
+            #C8C8C8,
             #F8F8F8,
-            #FFF,
-            #DDD,
+            #FFFFFF,
+            #DFDFDF,
             #E8E8E8,
-            #EEE,
+            #EFEFEF,
             #D8D8D8,
     );
 
@@ -84,13 +84,16 @@ $large-breakpoint-section-margin: 5%;
   &:nth-child(even) {
     @include page-coloring($color-a, $color-b, $link-color-a);
     $dark-colors: (
-            #F02,
+            #202020,
+            #000000,
+            #484848,
+            #303030,
             #080808,
-            #333,
-            #222,
             #282828,
-            #111,
+            #101010,
             #181818,
+            #383838,
+            #404040,
     );
 
     @include component-style('project') {
@@ -148,6 +151,7 @@ $large-breakpoint-section-margin: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .portfolio {

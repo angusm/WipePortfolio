@@ -8,7 +8,7 @@ const getNerdsData = () => {
                 <img class="job__logo-image nerds-logo" src="img/nerdstar.png">
             </div>
         </div>`,
-        title: 'Developer',
+        title: 'Jr. Software Developer',
         timeWorked: 'Aug. 2014 - Feb. 2016',
         projects: [
             {
@@ -35,7 +35,17 @@ const getNerdsData = () => {
                 ],
             },
             {
-                title: 'Kate and Mim-Mim',
+                title: 'SPARCX',
+                paragraphs: [
+                    `
+                            Using Perl, PHP and jQuery, helped team maintain the
+                            pipeline management tool the company depended on
+                            that had been written ~10 years before I started
+                            there..`,
+                ],
+            },
+            {
+                title: 'KMM',
                 projectLink: "http://www.kateandmimmim.ca",
                 paragraphs: [
                     `
@@ -46,23 +56,13 @@ const getNerdsData = () => {
                 ],
             },
             {
-                title: 'Slugterra',
+                title: 'Slug',
                 projectLink: 'http://www.slugterra.com',
                 paragraphs: [
                     `
                             Setup caching for localization and styled out
                             issues relating to new locales in addition to
                             content updates. Built with PHP, jQuery & Knockout.`,
-                ],
-            },
-            {
-                title: 'SPARCX',
-                paragraphs: [
-                    `
-                            Using Perl, PHP and jQuery, helped team maintain the
-                            pipeline management tool the company depended on
-                            that had been written ~10 years before I started
-                            there..`,
                 ],
             },
         ]

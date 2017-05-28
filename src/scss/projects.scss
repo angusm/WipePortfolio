@@ -1,7 +1,7 @@
 @import "breakpoints";
 @import "mixins";
 
-$max-project-count: 15;
+$max-project-count: 25;
 $fractal-size-factor: .5;
 
 .project__toggle {
@@ -13,9 +13,24 @@ $fractal-size-factor: .5;
 
   &:hover {
     z-index: 1001;
-    & ~ .project__container {
+    ~ .project__container {
       z-index: 1000;
       transform: scale(1.05);
+    }
+  }
+}
+
+@include component-style('portfolio-page') {
+  &:nth-child(even) {
+    .project__toggle:hover ~ .project__container,
+    .project__container:hover {
+      filter: contrast(75%) brightness(120%);
+    }
+  }
+  &:nth-child(odd) {
+    .project__toggle:hover ~ .project__container,
+    .project__container:hover {
+      filter: contrast(75%) brightness(80%);
     }
   }
 }
