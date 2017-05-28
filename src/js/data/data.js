@@ -3,7 +3,7 @@ import getNerdsData from './pages/nerds';
 import getAVPData from './pages/avp';
 import getDCMData from './pages/dcm';
 
-const PROJECT_LENGTH = 14;
+const PROJECT_LENGTH = 6;
 
 const getEmptyProject = () => {
     return {};

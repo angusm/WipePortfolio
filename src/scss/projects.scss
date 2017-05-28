@@ -1,11 +1,11 @@
 @import "breakpoints";
 @import "mixins";
 
-$max-project-count: 25;
+$total-project-count: 14;
 $fractal-size-factor: .5;
 
 .project__toggle {
-  @include absolute-fill();
+  position: absolute;
   cursor: pointer;
   margin: 0;
   opacity: 0;
@@ -47,18 +47,20 @@ $fractal-size-factor: .5;
 }
 
 @function get-square-size($square-number) {
-  $square-size: 100%;
-  $breakpoint: 0;
+  $square-size: 100% * $fractal-size-factor;
+  $breakpoint: 2;
+  $current-set-size: 2;
   @for $i from 1 through $square-number {
     @if $i > $breakpoint {
-      $breakpoint: $breakpoint + $i;
+      $current-set-size: $current-set-size * 2;
+      $breakpoint: $breakpoint + $current-set-size;
       $square-size: $square-size * $fractal-size-factor;
     }
   }
   @return $square-size;
 }
 
-@function get-square-left-pos($square-number) {
+@function get-square-x-pos($square-number) {
   $set-pos: 0;
   $square-size: 100%;
   $breakpoint: 0;
@@ -76,7 +78,7 @@ $fractal-size-factor: .5;
   @return $left-start - ($set-pos * $square-size / $fractal-size-factor);
 }
 
-@function get-square-top-pos($square-number) {
+@function get-square-y-pos($square-number) {
   $set-pos: 0;
   $square-size: 100%;
   $breakpoint: 0;
@@ -97,6 +99,37 @@ $fractal-size-factor: .5;
   @include standard-transition();
   display: block;
   pointer-events: none;
+
+  &:nth-child(1) {
+    display: none;
+  }
+
+  @for $i from 1 through $total-project-count {
+    &:nth-child(#{$i}) {
+      .project__toggle,
+      .project__container {
+        $square-size: get-square-size($i);
+        height: $square-size;
+        width: $square-size;
+
+        @if ($i % 2 == 0) {
+          $x-pos: get-square-x-pos($i / 2);
+          $y-pos: get-square-y-pos($i / 2);
+          left: $x-pos;
+          top: $y-pos;
+
+        }
+        @if ($i % 2 == 1) {
+          $x-pos: 100% + get-square-x-pos(($i + 1) / 2);
+          $y-pos: get-square-y-pos(($i + 1) / 2);
+          left: 100% - $x-pos - $square-size;
+          right: 100% + get-square-x-pos(($i + 1) / 2);
+          top: 100% - $y-pos - $square-size;
+          bottom: $y-pos;
+        }
+      }
+    }
+  }
 
   .project__toggle:checked {
     &,
@@ -158,18 +191,6 @@ $fractal-size-factor: .5;
       }
     }
   }
-
-  @for $i from 1 through $max-project-count {
-    &:nth-child(#{$i}) {
-      .project__toggle,
-      .project__container {
-        height: get-square-size($i);
-        left: get-square-left-pos($i);
-        top: get-square-top-pos($i);
-        width: get-square-size($i);
-      }
-    }
-  }
 }
 
 .project__container,
@@ -178,14 +199,13 @@ $fractal-size-factor: .5;
 }
 
 .project__container {
-  @include absolute-fill();
+  position: absolute;
   transition: left $transition-time $transition-time,
     top $transition-time $transition-time,
     width $transition-time $transition-time,
     height $transition-time $transition-time,
     transform $transition-time;
   margin: 0;
-  overflow: hidden;
 }
 
 .project__title {

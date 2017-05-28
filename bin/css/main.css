@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -83,7 +83,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -101,7 +101,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -177,7 +177,7 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,7 +229,7 @@
     .job__time-worked {
       font-style: normal; } }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -238,7 +238,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -248,6 +248,7 @@
   height: 100%; }
 
 .project__toggle {
+  position: absolute;
   cursor: pointer;
   margin: 0;
   opacity: 0;
@@ -280,6 +281,106 @@ project {
   transition: all 0.35s;
   display: block;
   pointer-events: none; }
+  project:nth-child(1) {
+    display: none; }
+  project:nth-child(1) .project__toggle,
+  project:nth-child(1) .project__container {
+    height: 50%;
+    width: 50%;
+    left: -50%;
+    right: 100%;
+    top: 50%;
+    bottom: 0%; }
+  project:nth-child(2) .project__toggle,
+  project:nth-child(2) .project__container {
+    height: 50%;
+    width: 50%;
+    left: 0%;
+    top: 0%; }
+  project:nth-child(3) .project__toggle,
+  project:nth-child(3) .project__container {
+    height: 25%;
+    width: 25%;
+    left: -75%;
+    right: 150%;
+    top: 75%;
+    bottom: 0%; }
+  project:nth-child(4) .project__toggle,
+  project:nth-child(4) .project__container {
+    height: 25%;
+    width: 25%;
+    left: 50%;
+    top: 0%; }
+  project:nth-child(5) .project__toggle,
+  project:nth-child(5) .project__container {
+    height: 25%;
+    width: 25%;
+    left: -25%;
+    right: 100%;
+    top: 25%;
+    bottom: 50%; }
+  project:nth-child(6) .project__toggle,
+  project:nth-child(6) .project__container {
+    height: 25%;
+    width: 25%;
+    left: 0%;
+    top: 50%; }
+  project:nth-child(7) .project__toggle,
+  project:nth-child(7) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -87.5%;
+    right: 175%;
+    top: 87.5%;
+    bottom: 0%; }
+  project:nth-child(8) .project__toggle,
+  project:nth-child(8) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 75%;
+    top: 0%; }
+  project:nth-child(9) .project__toggle,
+  project:nth-child(9) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -62.5%;
+    right: 150%;
+    top: 62.5%;
+    bottom: 25%; }
+  project:nth-child(10) .project__toggle,
+  project:nth-child(10) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 50%;
+    top: 25%; }
+  project:nth-child(11) .project__toggle,
+  project:nth-child(11) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -37.5%;
+    right: 125%;
+    top: 37.5%;
+    bottom: 50%; }
+  project:nth-child(12) .project__toggle,
+  project:nth-child(12) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 25%;
+    top: 50%; }
+  project:nth-child(13) .project__toggle,
+  project:nth-child(13) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -12.5%;
+    right: 100%;
+    top: 12.5%;
+    bottom: 75%; }
+  project:nth-child(14) .project__toggle,
+  project:nth-child(14) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 0%;
+    top: 75%; }
   project .project__toggle:checked,
   project .project__toggle:checked + .project__toggle-label {
     width: 5% !important;
@@ -317,165 +418,15 @@ project {
         transform: rotate(0deg) scale(1);
         top: 0;
         width: 100%; }
-  project:nth-child(1) .project__toggle,
-  project:nth-child(1) .project__container {
-    height: 50%;
-    left: 0%;
-    top: 0%;
-    width: 50%; }
-  project:nth-child(2) .project__toggle,
-  project:nth-child(2) .project__container {
-    height: 25%;
-    left: 50%;
-    top: 0%;
-    width: 25%; }
-  project:nth-child(3) .project__toggle,
-  project:nth-child(3) .project__container {
-    height: 25%;
-    left: 0%;
-    top: 50%;
-    width: 25%; }
-  project:nth-child(4) .project__toggle,
-  project:nth-child(4) .project__container {
-    height: 12.5%;
-    left: 75%;
-    top: 0%;
-    width: 12.5%; }
-  project:nth-child(5) .project__toggle,
-  project:nth-child(5) .project__container {
-    height: 12.5%;
-    left: 50%;
-    top: 25%;
-    width: 12.5%; }
-  project:nth-child(6) .project__toggle,
-  project:nth-child(6) .project__container {
-    height: 12.5%;
-    left: 25%;
-    top: 50%;
-    width: 12.5%; }
-  project:nth-child(7) .project__toggle,
-  project:nth-child(7) .project__container {
-    height: 12.5%;
-    left: 0%;
-    top: 75%;
-    width: 12.5%; }
-  project:nth-child(8) .project__toggle,
-  project:nth-child(8) .project__container {
-    height: 6.25%;
-    left: 87.5%;
-    top: 0%;
-    width: 6.25%; }
-  project:nth-child(9) .project__toggle,
-  project:nth-child(9) .project__container {
-    height: 6.25%;
-    left: 75%;
-    top: 12.5%;
-    width: 6.25%; }
-  project:nth-child(10) .project__toggle,
-  project:nth-child(10) .project__container {
-    height: 6.25%;
-    left: 62.5%;
-    top: 25%;
-    width: 6.25%; }
-  project:nth-child(11) .project__toggle,
-  project:nth-child(11) .project__container {
-    height: 6.25%;
-    left: 50%;
-    top: 37.5%;
-    width: 6.25%; }
-  project:nth-child(12) .project__toggle,
-  project:nth-child(12) .project__container {
-    height: 6.25%;
-    left: 37.5%;
-    top: 50%;
-    width: 6.25%; }
-  project:nth-child(13) .project__toggle,
-  project:nth-child(13) .project__container {
-    height: 6.25%;
-    left: 25%;
-    top: 62.5%;
-    width: 6.25%; }
-  project:nth-child(14) .project__toggle,
-  project:nth-child(14) .project__container {
-    height: 6.25%;
-    left: 12.5%;
-    top: 75%;
-    width: 6.25%; }
-  project:nth-child(15) .project__toggle,
-  project:nth-child(15) .project__container {
-    height: 6.25%;
-    left: 0%;
-    top: 87.5%;
-    width: 6.25%; }
-  project:nth-child(16) .project__toggle,
-  project:nth-child(16) .project__container {
-    height: 3.125%;
-    left: 93.75%;
-    top: 0%;
-    width: 3.125%; }
-  project:nth-child(17) .project__toggle,
-  project:nth-child(17) .project__container {
-    height: 3.125%;
-    left: 87.5%;
-    top: 6.25%;
-    width: 3.125%; }
-  project:nth-child(18) .project__toggle,
-  project:nth-child(18) .project__container {
-    height: 3.125%;
-    left: 81.25%;
-    top: 12.5%;
-    width: 3.125%; }
-  project:nth-child(19) .project__toggle,
-  project:nth-child(19) .project__container {
-    height: 3.125%;
-    left: 75%;
-    top: 18.75%;
-    width: 3.125%; }
-  project:nth-child(20) .project__toggle,
-  project:nth-child(20) .project__container {
-    height: 3.125%;
-    left: 68.75%;
-    top: 25%;
-    width: 3.125%; }
-  project:nth-child(21) .project__toggle,
-  project:nth-child(21) .project__container {
-    height: 3.125%;
-    left: 62.5%;
-    top: 31.25%;
-    width: 3.125%; }
-  project:nth-child(22) .project__toggle,
-  project:nth-child(22) .project__container {
-    height: 3.125%;
-    left: 56.25%;
-    top: 37.5%;
-    width: 3.125%; }
-  project:nth-child(23) .project__toggle,
-  project:nth-child(23) .project__container {
-    height: 3.125%;
-    left: 50%;
-    top: 43.75%;
-    width: 3.125%; }
-  project:nth-child(24) .project__toggle,
-  project:nth-child(24) .project__container {
-    height: 3.125%;
-    left: 43.75%;
-    top: 50%;
-    width: 3.125%; }
-  project:nth-child(25) .project__toggle,
-  project:nth-child(25) .project__container {
-    height: 3.125%;
-    left: 37.5%;
-    top: 56.25%;
-    width: 3.125%; }
 
 .project__container,
 .project__toggle {
   pointer-events: all; }
 
 .project__container {
+  position: absolute;
   transition: left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, transform 0.35s;
-  margin: 0;
-  overflow: hidden; }
+  margin: 0; }
 
 .project__title {
   transition: all 0.35s;
@@ -628,39 +579,6 @@ portfolio-page {
     portfolio-page:nth-child(odd) project:nth-child(14) .project__container {
       background-color: #C8C8C8;
       color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(15) .project__container {
-      background-color: #F8F8F8;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(16) .project__container {
-      background-color: #FFFFFF;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(17) .project__container {
-      background-color: #DFDFDF;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(18) .project__container {
-      background-color: #E8E8E8;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(19) .project__container {
-      background-color: #EFEFEF;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(20) .project__container {
-      background-color: #D8D8D8;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(21) .project__container {
-      background-color: #C8C8C8;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(22) .project__container {
-      background-color: #F8F8F8;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(23) .project__container {
-      background-color: #FFFFFF;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(24) .project__container {
-      background-color: #DFDFDF;
-      color: #000; }
-    portfolio-page:nth-child(odd) project:nth-child(25) .project__container {
-      background-color: #E8E8E8;
-      color: #000; }
   portfolio-page:nth-child(even) {
     background-color: #fff;
     color: #fff;
@@ -727,39 +645,6 @@ portfolio-page {
       color: #fff; }
     portfolio-page:nth-child(even) project:nth-child(14) .project__container {
       background-color: #080808;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(15) .project__container {
-      background-color: #282828;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(16) .project__container {
-      background-color: #101010;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(17) .project__container {
-      background-color: #181818;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(18) .project__container {
-      background-color: #383838;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(19) .project__container {
-      background-color: #404040;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(20) .project__container {
-      background-color: #202020;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(21) .project__container {
-      background-color: #000000;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(22) .project__container {
-      background-color: #484848;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(23) .project__container {
-      background-color: #303030;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(24) .project__container {
-      background-color: #080808;
-      color: #fff; }
-    portfolio-page:nth-child(even) project:nth-child(25) .project__container {
-      background-color: #282828;
       color: #fff; }
 
 .portfolio-page-container {
@@ -845,7 +730,7 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -855,6 +740,7 @@ portfolio-page-image {
   height: 100%; }
 
 .project__toggle {
+  position: absolute;
   cursor: pointer;
   margin: 0;
   opacity: 0;
@@ -887,6 +773,106 @@ project {
   transition: all 0.35s;
   display: block;
   pointer-events: none; }
+  project:nth-child(1) {
+    display: none; }
+  project:nth-child(1) .project__toggle,
+  project:nth-child(1) .project__container {
+    height: 50%;
+    width: 50%;
+    left: -50%;
+    right: 100%;
+    top: 50%;
+    bottom: 0%; }
+  project:nth-child(2) .project__toggle,
+  project:nth-child(2) .project__container {
+    height: 50%;
+    width: 50%;
+    left: 0%;
+    top: 0%; }
+  project:nth-child(3) .project__toggle,
+  project:nth-child(3) .project__container {
+    height: 25%;
+    width: 25%;
+    left: -75%;
+    right: 150%;
+    top: 75%;
+    bottom: 0%; }
+  project:nth-child(4) .project__toggle,
+  project:nth-child(4) .project__container {
+    height: 25%;
+    width: 25%;
+    left: 50%;
+    top: 0%; }
+  project:nth-child(5) .project__toggle,
+  project:nth-child(5) .project__container {
+    height: 25%;
+    width: 25%;
+    left: -25%;
+    right: 100%;
+    top: 25%;
+    bottom: 50%; }
+  project:nth-child(6) .project__toggle,
+  project:nth-child(6) .project__container {
+    height: 25%;
+    width: 25%;
+    left: 0%;
+    top: 50%; }
+  project:nth-child(7) .project__toggle,
+  project:nth-child(7) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -87.5%;
+    right: 175%;
+    top: 87.5%;
+    bottom: 0%; }
+  project:nth-child(8) .project__toggle,
+  project:nth-child(8) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 75%;
+    top: 0%; }
+  project:nth-child(9) .project__toggle,
+  project:nth-child(9) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -62.5%;
+    right: 150%;
+    top: 62.5%;
+    bottom: 25%; }
+  project:nth-child(10) .project__toggle,
+  project:nth-child(10) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 50%;
+    top: 25%; }
+  project:nth-child(11) .project__toggle,
+  project:nth-child(11) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -37.5%;
+    right: 125%;
+    top: 37.5%;
+    bottom: 50%; }
+  project:nth-child(12) .project__toggle,
+  project:nth-child(12) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 25%;
+    top: 50%; }
+  project:nth-child(13) .project__toggle,
+  project:nth-child(13) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: -12.5%;
+    right: 100%;
+    top: 12.5%;
+    bottom: 75%; }
+  project:nth-child(14) .project__toggle,
+  project:nth-child(14) .project__container {
+    height: 12.5%;
+    width: 12.5%;
+    left: 0%;
+    top: 75%; }
   project .project__toggle:checked,
   project .project__toggle:checked + .project__toggle-label {
     width: 5% !important;
@@ -924,165 +910,15 @@ project {
         transform: rotate(0deg) scale(1);
         top: 0;
         width: 100%; }
-  project:nth-child(1) .project__toggle,
-  project:nth-child(1) .project__container {
-    height: 50%;
-    left: 0%;
-    top: 0%;
-    width: 50%; }
-  project:nth-child(2) .project__toggle,
-  project:nth-child(2) .project__container {
-    height: 25%;
-    left: 50%;
-    top: 0%;
-    width: 25%; }
-  project:nth-child(3) .project__toggle,
-  project:nth-child(3) .project__container {
-    height: 25%;
-    left: 0%;
-    top: 50%;
-    width: 25%; }
-  project:nth-child(4) .project__toggle,
-  project:nth-child(4) .project__container {
-    height: 12.5%;
-    left: 75%;
-    top: 0%;
-    width: 12.5%; }
-  project:nth-child(5) .project__toggle,
-  project:nth-child(5) .project__container {
-    height: 12.5%;
-    left: 50%;
-    top: 25%;
-    width: 12.5%; }
-  project:nth-child(6) .project__toggle,
-  project:nth-child(6) .project__container {
-    height: 12.5%;
-    left: 25%;
-    top: 50%;
-    width: 12.5%; }
-  project:nth-child(7) .project__toggle,
-  project:nth-child(7) .project__container {
-    height: 12.5%;
-    left: 0%;
-    top: 75%;
-    width: 12.5%; }
-  project:nth-child(8) .project__toggle,
-  project:nth-child(8) .project__container {
-    height: 6.25%;
-    left: 87.5%;
-    top: 0%;
-    width: 6.25%; }
-  project:nth-child(9) .project__toggle,
-  project:nth-child(9) .project__container {
-    height: 6.25%;
-    left: 75%;
-    top: 12.5%;
-    width: 6.25%; }
-  project:nth-child(10) .project__toggle,
-  project:nth-child(10) .project__container {
-    height: 6.25%;
-    left: 62.5%;
-    top: 25%;
-    width: 6.25%; }
-  project:nth-child(11) .project__toggle,
-  project:nth-child(11) .project__container {
-    height: 6.25%;
-    left: 50%;
-    top: 37.5%;
-    width: 6.25%; }
-  project:nth-child(12) .project__toggle,
-  project:nth-child(12) .project__container {
-    height: 6.25%;
-    left: 37.5%;
-    top: 50%;
-    width: 6.25%; }
-  project:nth-child(13) .project__toggle,
-  project:nth-child(13) .project__container {
-    height: 6.25%;
-    left: 25%;
-    top: 62.5%;
-    width: 6.25%; }
-  project:nth-child(14) .project__toggle,
-  project:nth-child(14) .project__container {
-    height: 6.25%;
-    left: 12.5%;
-    top: 75%;
-    width: 6.25%; }
-  project:nth-child(15) .project__toggle,
-  project:nth-child(15) .project__container {
-    height: 6.25%;
-    left: 0%;
-    top: 87.5%;
-    width: 6.25%; }
-  project:nth-child(16) .project__toggle,
-  project:nth-child(16) .project__container {
-    height: 3.125%;
-    left: 93.75%;
-    top: 0%;
-    width: 3.125%; }
-  project:nth-child(17) .project__toggle,
-  project:nth-child(17) .project__container {
-    height: 3.125%;
-    left: 87.5%;
-    top: 6.25%;
-    width: 3.125%; }
-  project:nth-child(18) .project__toggle,
-  project:nth-child(18) .project__container {
-    height: 3.125%;
-    left: 81.25%;
-    top: 12.5%;
-    width: 3.125%; }
-  project:nth-child(19) .project__toggle,
-  project:nth-child(19) .project__container {
-    height: 3.125%;
-    left: 75%;
-    top: 18.75%;
-    width: 3.125%; }
-  project:nth-child(20) .project__toggle,
-  project:nth-child(20) .project__container {
-    height: 3.125%;
-    left: 68.75%;
-    top: 25%;
-    width: 3.125%; }
-  project:nth-child(21) .project__toggle,
-  project:nth-child(21) .project__container {
-    height: 3.125%;
-    left: 62.5%;
-    top: 31.25%;
-    width: 3.125%; }
-  project:nth-child(22) .project__toggle,
-  project:nth-child(22) .project__container {
-    height: 3.125%;
-    left: 56.25%;
-    top: 37.5%;
-    width: 3.125%; }
-  project:nth-child(23) .project__toggle,
-  project:nth-child(23) .project__container {
-    height: 3.125%;
-    left: 50%;
-    top: 43.75%;
-    width: 3.125%; }
-  project:nth-child(24) .project__toggle,
-  project:nth-child(24) .project__container {
-    height: 3.125%;
-    left: 43.75%;
-    top: 50%;
-    width: 3.125%; }
-  project:nth-child(25) .project__toggle,
-  project:nth-child(25) .project__container {
-    height: 3.125%;
-    left: 37.5%;
-    top: 56.25%;
-    width: 3.125%; }
 
 .project__container,
 .project__toggle {
   pointer-events: all; }
 
 .project__container {
+  position: absolute;
   transition: left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, transform 0.35s;
-  margin: 0;
-  overflow: hidden; }
+  margin: 0; }
 
 .project__title {
   transition: all 0.35s;

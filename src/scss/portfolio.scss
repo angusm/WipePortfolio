@@ -77,7 +77,7 @@ $large-breakpoint-section-margin: 5%;
     );
 
     @include component-style('project') {
-      @for $i from 1 through $max-project-count {
+      @for $i from 1 through $total-project-count {
         &:nth-child(#{$i}) .project__container {
           background-color: nth($dark-colors, $i % length($dark-colors) + 1);
           color: $color-b;
@@ -102,7 +102,7 @@ $large-breakpoint-section-margin: 5%;
     );
 
     @include component-style('project') {
-      @for $i from 1 through $max-project-count {
+      @for $i from 1 through $total-project-count {
         &:nth-child(#{$i}) .project__container {
           background-color: nth($dark-colors, $i % length($dark-colors) + 1);
           color: $color-a;
