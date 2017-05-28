@@ -1,7 +1,7 @@
 const getNerdsData = () => {
     return {
         code: 'nerds',
-        company: 'Nerd Corps Entertainment / DHX Media',
+        company: 'Nerd Corps / DHX Media',
         logo: `
         <div class="job__logo">
             <div class="job__logo-container">

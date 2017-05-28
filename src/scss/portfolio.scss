@@ -34,6 +34,11 @@ $large-breakpoint-section-margin: 5%;
       }
     }
 
+    .job__title,
+    .job__time-worked {
+      color: $page-color-b;
+    }
+
     $job-information-margin: $standard-margin;
 
     .job__title {
@@ -45,7 +50,7 @@ $large-breakpoint-section-margin: 5%;
     }
 
     hr {
-      background: $page-color-a;
+      background: $page-color-b;
     }
 
     @include component-style('portfolio-page-image') {
@@ -147,11 +152,14 @@ $large-breakpoint-section-margin: 5%;
 }
 
 @include component-style('portfolio-page-image') {
-  @include absolute-fill();
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
 }
 
 .portfolio {

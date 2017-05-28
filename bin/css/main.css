@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,7 +117,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +135,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,6 +173,7 @@
   position: relative; }
 
 .job__logo {
+  margin-top: -13%;
   padding-top: 35%;
   position: relative;
   width: 35%; }
@@ -229,7 +230,7 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -267,6 +268,7 @@
   position: relative; }
 
 .job__logo {
+  margin-top: -13%;
   padding-top: 35%;
   position: relative;
   width: 35%; }
@@ -299,7 +301,7 @@
     .job__time-worked {
       font-size: 25em / 30; } }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -308,7 +310,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -651,12 +653,15 @@ portfolio-page {
         margin-right: 0; }
       portfolio-page:nth-child(odd) portfolio-section:nth-child(2) {
         margin-left: 0; } }
+    portfolio-page:nth-child(odd) .job__title,
+    portfolio-page:nth-child(odd) .job__time-worked {
+      color: #fff; }
     portfolio-page:nth-child(odd) .job__title {
       margin: 10px 10px auto; }
     portfolio-page:nth-child(odd) .job__time-worked {
       margin: auto 10px 10px; }
     portfolio-page:nth-child(odd) hr {
-      background: #000; }
+      background: #fff; }
     portfolio-page:nth-child(odd) portfolio-page-image {
       background: #fff; }
     portfolio-page:nth-child(odd) a {
@@ -748,12 +753,15 @@ portfolio-page {
         margin-right: 0; }
       portfolio-page:nth-child(even) portfolio-section:nth-child(2) {
         margin-left: 0; } }
+    portfolio-page:nth-child(even) .job__title,
+    portfolio-page:nth-child(even) .job__time-worked {
+      color: #000; }
     portfolio-page:nth-child(even) .job__title {
       margin: 10px 10px auto; }
     portfolio-page:nth-child(even) .job__time-worked {
       margin: auto 10px 10px; }
     portfolio-page:nth-child(even) hr {
-      background: #fff; }
+      background: #000; }
     portfolio-page:nth-child(even) portfolio-page-image {
       background: #000; }
     portfolio-page:nth-child(even) a {
@@ -869,7 +877,12 @@ portfolio-section-container {
 portfolio-page-image {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%; }
 
 .portfolio {
   font-family: 'Roboto', sans-serif;
@@ -915,7 +928,7 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, portfolio-page-image, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, .project__toggle, project, project .project__toggle:checked ~ .project__container, .project__container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
