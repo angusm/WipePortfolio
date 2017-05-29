@@ -10,7 +10,7 @@ export default `
             <h2 class="job__time-worked"
                 ng-bind-html="$ctrl.jobTimeWorked"
                 ng-if="$ctrl.jobTimeWorked"></h2>
-            <hr ng-if="$ctrl.jobTitle && $ctrl.jobTimeWorked">
+            <hr class="job__line" ng-if="$ctrl.jobTitle && $ctrl.jobTimeWorked">
         </portfolio-image>
     </portfolio-section>
     <portfolio-section>

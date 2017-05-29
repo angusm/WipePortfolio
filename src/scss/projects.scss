@@ -14,8 +14,7 @@ $fractal-size-factor: .5;
   &:hover {
     z-index: 1001;
     ~ .project__container {
-      filter: contrast(80%) brightness(102%);
-      transform: scale(1.05);
+      filter: contrast(80%) brightness(115%);
       z-index: 1000;
     }
   }
@@ -90,6 +89,8 @@ $fractal-size-factor: .5;
   pointer-events: none;
 
   &.project--empty {
+    z-index: 0;
+
     .project__toggle {
       display: none;
     }
@@ -115,8 +116,8 @@ $fractal-size-factor: .5;
           $y-pos: get-square-y-pos($i / 2);
           left: $x-pos;
           top: $y-pos;
-
         }
+
         @if ($i % 2 == 1) {
           $x-pos: 100% + get-square-x-pos(($i + 1) / 2);
           $y-pos: get-square-y-pos(($i + 1) / 2);
@@ -150,21 +151,21 @@ $fractal-size-factor: .5;
     }
 
     & ~ .project__container {
-      $expanded-project-container-padding: 15%;
+      $expanded-project-container-padding: 5%;
       @include absolute-fill();
+      height: 100% - ($expanded-project-container-padding * 2);
       left: -100%;
-      height: initial;
-      width: 200% - ($expanded-project-container-padding * 2);
+      padding: $expanded-project-container-padding;
       transform: scale(1);
       transition: filter $transition-time,
+        background-color $transition-time,
         left $transition-time,
         top $transition-time,
         width $transition-time,
         height $transition-time,
-        padding $transition-time,
-        transform $transition-time * 2;
+        padding $transition-time;
+      width: 200% - ($expanded-project-container-padding * 2);
       z-index: 1000;
-      padding: $expanded-project-container-padding;
 
       .project__title {
         font-size: 1.5em;
@@ -215,13 +216,15 @@ $fractal-size-factor: .5;
 .project__container {
   position: absolute;
   transition: filter $transition-time,
+    background-color $transition-time,
     left $transition-time $transition-time,
     top $transition-time $transition-time,
     width $transition-time $transition-time,
     height $transition-time $transition-time,
-    padding $transition-time $transition-time,
-    transform $transition-time * 2;
+    padding $transition-time $transition-time;
   margin: 0;
+  overflow: hidden;
+  z-index: 20;
 }
 
 .project__title {
@@ -294,4 +297,9 @@ $fractal-size-factor: .5;
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.project__full-bleed-link {
+  @include absolute-fill();
+  display: block;
 }

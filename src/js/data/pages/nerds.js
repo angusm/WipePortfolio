@@ -46,7 +46,7 @@ const getNerdsData = () => {
             },
             {
                 title: 'KMM',
-                projectLink: "http://www.kateandmimmim.ca",
+                link: "http://www.kateandmimmim.ca",
                 paragraphs: [
                     `
                             Built responsive embedded game component that
@@ -57,7 +57,7 @@ const getNerdsData = () => {
             },
             {
                 title: 'Slug',
-                projectLink: 'http://www.slugterra.com',
+                link: 'http://www.slugterra.com',
                 paragraphs: [
                     `
                             Setup caching for localization and styled out

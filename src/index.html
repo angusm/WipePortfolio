@@ -27,7 +27,7 @@
                     <project ng-repeat="project in page.projects"
                              ng-class="{'project--empty': project.isEmpty}"
                              project-group="{{ page.code }}"
-                             project-title="{{ project.title }}">
+                             project="project">
                             <p ng-repeat="paragraph in project.paragraphs"
                                ng-bind-html="paragraph"></p>
                     </project>
@@ -36,7 +36,6 @@
         </portfolio-page>
         <div class="portfolio__navigation">
             <ul>
-                <a href="#hero"><li></li></a>
                 <a ng-repeat="page in p.pages"
                    ng-attr-href="#{{ page.code }}">
                     <li></li>

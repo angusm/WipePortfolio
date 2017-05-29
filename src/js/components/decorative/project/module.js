@@ -8,15 +8,23 @@ projectModule.component(COMPONENT_NAME, {
     template: template,
     bindings: {
         projectGroup: '@?',
-        projectLink: '@?',
-        projectTitle: '@?',
-        projectExpanded: '<?',
+        project: '<',
     },
     transclude: true,
     controller: class Project {
-        constructor() {}
+        constructor() {
+            this.project = this.project || {};
+        }
         getProjectTitleLines() {
-            return this.projectTitle.split(' ');
+            return this.project.title ?
+                this.project.title.split(' ') : [];
+        }
+
+        isOnlyALink() {
+            console.log(!this.project.paragraphs &&
+                this.project.link);
+            return !this.project.paragraphs &&
+                    this.project.link;
         }
     }
 });

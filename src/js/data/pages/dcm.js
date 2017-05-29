@@ -13,7 +13,7 @@ const getDCMData = () => {
         projects: [
             {
                 title: 'Para Paints',
-                projectLink: 'past-projects/para-2016/index.html',
+                link: 'past-projects/para-2016/index.html',
                 paragraphs: [
                     `
                             Created static content to be embedded in pages for

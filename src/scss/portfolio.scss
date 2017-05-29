@@ -17,7 +17,8 @@ $large-breakpoint-section-margin: 5%;
   height: 100%;
   width: 100%;
 
-  @mixin page-coloring($page-color-a, $page-color-b, $link-color) {
+  @mixin page-coloring(
+    $page-color-a, $page-color-b, $link-color-a, $link-color-b) {
     background-color: $page-color-a;
     color: $page-color-a;
     stroke: currentColor;
@@ -39,33 +40,41 @@ $large-breakpoint-section-margin: 5%;
       color: $page-color-b;
     }
 
-    $job-information-margin: $standard-margin;
-
-    .job__title {
-      margin: $job-information-margin $job-information-margin auto;
-    }
-
-    .job__time-worked {
-      margin: auto $job-information-margin $job-information-margin;
-    }
-
-    hr {
+    .job__line {
       background: $page-color-b;
     }
 
     @include component-style('portfolio-page-image') {
       background: $page-color-b;
-  }
+    }
 
+    .project__container {
+      a {
+        color: $link-color-a;
+        stroke: $link-color-a;
+        fill: $link-color-a;
+      }
+    }
     a {
-      color: $link-color;
-      stroke: $link-color;
-      fill: $link-color;
+      color: $link-color-b;
+      stroke: $link-color-b;
+      fill: $link-color-b;
     }
   }
 
+  $job-info-margin-percentage: 2.5%;
+  $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
+
+  .job__title {
+    margin: $job-info-margin $job-info-margin auto;
+  }
+
+  .job__time-worked {
+    margin: auto $job-info-margin $standard-margin;
+  }
+
   &:nth-child(odd) {
-    @include page-coloring($color-b, $color-a, $link-color-b);
+    @include page-coloring($color-b, $color-a, $link-color-a, $link-color-b);
     $dark-colors: (
             #DFDFDF,
             #E4E4E4,
@@ -77,6 +86,10 @@ $large-breakpoint-section-margin: 5%;
     );
 
     @include component-style('project') {
+      .project__toggle:checked ~ .project__container {
+        background-color: #F8F8F8 !important;
+      }
+
       @for $i from 1 through $total-project-count {
         &:nth-child(#{$i}) .project__container {
           background-color: nth($dark-colors, $i % length($dark-colors) + 1);
@@ -87,7 +100,7 @@ $large-breakpoint-section-margin: 5%;
   }
 
   &:nth-child(even) {
-    @include page-coloring($color-a, $color-b, $link-color-a);
+    @include page-coloring($color-a, $color-b, $link-color-b, $link-color-a);
     $dark-colors: (
             #202020,
             #000000,
@@ -100,6 +113,10 @@ $large-breakpoint-section-margin: 5%;
             #383838,
             #404040,
     );
+
+    .project__toggle:checked ~ .project__container {
+      background-color: #080808 !important;
+    }
 
     @include component-style('project') {
       @for $i from 1 through $total-project-count {
@@ -170,26 +187,12 @@ $large-breakpoint-section-margin: 5%;
 
   a {
     text-decoration: none;
-    transition: transform 500ms, text-shadow 500ms;
-    &:hover {
-      transform: translate(-1px, -1px);
-      text-decoration: underline;
-      filter: brightness(125%);
-    }
+    transition: margin $transition-time, text-shadow $transition-time;
   }
-
-  hr {
-    border: none;
-    height: 5px;
-    position: relative;
-
-    @include breakpoint($m) {
-      height: 3px;
-    }
-
-    @include breakpoint($l) {
-      height: 5px;
-    }
+  .project__link a:hover {
+    margin: -1px 0 0 -1px;
+    text-decoration: underline;
+    filter: brightness(125%);
   }
 
   h1,
@@ -201,6 +204,20 @@ $large-breakpoint-section-margin: 5%;
 
 .fine-print {
   font-size: .25em;
+}
+
+.job__line {
+  border: none;
+  height: 5px;
+  position: relative;
+
+  @include breakpoint($m) {
+    height: 3px;
+  }
+
+  @include breakpoint($l) {
+    height: 5px;
+  }
 }
 
 .portfolio__navigation {

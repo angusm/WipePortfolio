@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,7 +86,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -104,7 +104,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +180,7 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,7 +232,7 @@
     .job__time-worked {
       font-style: normal; } }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -241,7 +241,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -259,8 +259,7 @@
   .project__toggle:hover {
     z-index: 1001; }
     .project__toggle:hover ~ .project__container {
-      filter: contrast(80%) brightness(102%);
-      transform: scale(1.05);
+      filter: contrast(80%) brightness(115%);
       z-index: 1000; }
 
 .project__toggle-label {
@@ -282,10 +281,12 @@ project {
   transition: all 0.35s;
   display: block;
   pointer-events: none; }
-  project.project--empty .project__toggle {
-    display: none; }
-  project.project--empty .project__container {
-    filter: contrast(80%); }
+  project.project--empty {
+    z-index: 0; }
+    project.project--empty .project__toggle {
+      display: none; }
+    project.project--empty .project__container {
+      filter: contrast(80%); }
   project:nth-child(1) {
     display: none; }
   project:nth-child(1) .project__toggle,
@@ -400,13 +401,13 @@ project {
   project .project__toggle:checked:hover ~ .project__container {
     filter: brightness(100%) contrast(100%); }
   project .project__toggle:checked ~ .project__container {
+    height: 90%;
     left: -100%;
-    height: initial;
-    width: 170%;
+    padding: 5%;
     transform: scale(1);
-    transition: filter 0.35s, left 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s, transform 0.7s;
-    z-index: 1000;
-    padding: 15%; }
+    transition: filter 0.35s, background-color 0.35s, left 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s;
+    width: 190%;
+    z-index: 1000; }
     project .project__toggle:checked ~ .project__container .project__title {
       font-size: 1.5em;
       transition-delay: 0s; }
@@ -439,8 +440,10 @@ project {
 
 .project__container {
   position: absolute;
-  transition: filter 0.35s, left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s, transform 0.7s;
-  margin: 0; }
+  transition: filter 0.35s, background-color 0.35s, left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s;
+  margin: 0;
+  overflow: hidden;
+  z-index: 20; }
 
 .project__title {
   transition: all 0.35s;
@@ -495,6 +498,9 @@ project {
   display: flex;
   justify-content: space-between; }
 
+.project__full-bleed-link {
+  display: block; }
+
 .slant-grouping--4:hover > *:nth-child(1) {
   left: 0; }
 
@@ -526,6 +532,10 @@ portfolio-page {
   display: block;
   height: 100%;
   width: 100%; }
+  portfolio-page .job__title {
+    margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
+  portfolio-page .job__time-worked {
+    margin: auto calc(2.5% + 10px) 10px; }
   portfolio-page:nth-child(odd) {
     background-color: #000;
     color: #000;
@@ -539,18 +549,20 @@ portfolio-page {
     portfolio-page:nth-child(odd) .job__title,
     portfolio-page:nth-child(odd) .job__time-worked {
       color: #fff; }
-    portfolio-page:nth-child(odd) .job__title {
-      margin: 10px 10px auto; }
-    portfolio-page:nth-child(odd) .job__time-worked {
-      margin: auto 10px 10px; }
-    portfolio-page:nth-child(odd) hr {
+    portfolio-page:nth-child(odd) .job__line {
       background: #fff; }
     portfolio-page:nth-child(odd) portfolio-page-image {
       background: #fff; }
+    portfolio-page:nth-child(odd) .project__container a {
+      color: #22C;
+      stroke: #22C;
+      fill: #22C; }
     portfolio-page:nth-child(odd) a {
       color: #88F;
       stroke: #88F;
       fill: #88F; }
+    portfolio-page:nth-child(odd) project .project__toggle:checked ~ .project__container {
+      background-color: #F8F8F8 !important; }
     portfolio-page:nth-child(odd) project:nth-child(1) .project__container {
       background-color: #E4E4E4;
       color: #000; }
@@ -606,18 +618,20 @@ portfolio-page {
     portfolio-page:nth-child(even) .job__title,
     portfolio-page:nth-child(even) .job__time-worked {
       color: #000; }
-    portfolio-page:nth-child(even) .job__title {
-      margin: 10px 10px auto; }
-    portfolio-page:nth-child(even) .job__time-worked {
-      margin: auto 10px 10px; }
-    portfolio-page:nth-child(even) hr {
+    portfolio-page:nth-child(even) .job__line {
       background: #000; }
     portfolio-page:nth-child(even) portfolio-page-image {
       background: #000; }
+    portfolio-page:nth-child(even) .project__container a {
+      color: #88F;
+      stroke: #88F;
+      fill: #88F; }
     portfolio-page:nth-child(even) a {
       color: #22C;
       stroke: #22C;
       fill: #22C; }
+    portfolio-page:nth-child(even) .project__toggle:checked ~ .project__container {
+      background-color: #080808 !important; }
     portfolio-page:nth-child(even) project:nth-child(1) .project__container {
       background-color: #000000;
       color: #fff; }
@@ -707,21 +721,11 @@ portfolio-page-image {
   width: 100%; }
   .portfolio a {
     text-decoration: none;
-    transition: transform 500ms, text-shadow 500ms; }
-    .portfolio a:hover {
-      transform: translate(-1px, -1px);
-      text-decoration: underline;
-      filter: brightness(125%); }
-  .portfolio hr {
-    border: none;
-    height: 5px;
-    position: relative; }
-    @media (min-width: 1024px) {
-      .portfolio hr {
-        height: 3px; } }
-    @media (min-width: 1360px) {
-      .portfolio hr {
-        height: 5px; } }
+    transition: margin 0.35s, text-shadow 0.35s; }
+  .portfolio .project__link a:hover {
+    margin: -1px 0 0 -1px;
+    text-decoration: underline;
+    filter: brightness(125%); }
   .portfolio h1,
   .portfolio h2,
   .portfolio h3 {
@@ -729,6 +733,17 @@ portfolio-page-image {
 
 .fine-print {
   font-size: .25em; }
+
+.job__line {
+  border: none;
+  height: 5px;
+  position: relative; }
+  @media (min-width: 1024px) {
+    .job__line {
+      height: 3px; } }
+  @media (min-width: 1360px) {
+    .job__line {
+      height: 5px; } }
 
 .portfolio__navigation {
   align-items: center;
@@ -744,7 +759,7 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -762,8 +777,7 @@ portfolio-page-image {
   .project__toggle:hover {
     z-index: 1001; }
     .project__toggle:hover ~ .project__container {
-      filter: contrast(80%) brightness(102%);
-      transform: scale(1.05);
+      filter: contrast(80%) brightness(115%);
       z-index: 1000; }
 
 .project__toggle-label {
@@ -785,10 +799,12 @@ project {
   transition: all 0.35s;
   display: block;
   pointer-events: none; }
-  project.project--empty .project__toggle {
-    display: none; }
-  project.project--empty .project__container {
-    filter: contrast(80%); }
+  project.project--empty {
+    z-index: 0; }
+    project.project--empty .project__toggle {
+      display: none; }
+    project.project--empty .project__container {
+      filter: contrast(80%); }
   project:nth-child(1) {
     display: none; }
   project:nth-child(1) .project__toggle,
@@ -903,13 +919,13 @@ project {
   project .project__toggle:checked:hover ~ .project__container {
     filter: brightness(100%) contrast(100%); }
   project .project__toggle:checked ~ .project__container {
+    height: 90%;
     left: -100%;
-    height: initial;
-    width: 170%;
+    padding: 5%;
     transform: scale(1);
-    transition: filter 0.35s, left 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s, transform 0.7s;
-    z-index: 1000;
-    padding: 15%; }
+    transition: filter 0.35s, background-color 0.35s, left 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s;
+    width: 190%;
+    z-index: 1000; }
     project .project__toggle:checked ~ .project__container .project__title {
       font-size: 1.5em;
       transition-delay: 0s; }
@@ -942,8 +958,10 @@ project {
 
 .project__container {
   position: absolute;
-  transition: filter 0.35s, left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s, transform 0.7s;
-  margin: 0; }
+  transition: filter 0.35s, background-color 0.35s, left 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s;
+  margin: 0;
+  overflow: hidden;
+  z-index: 20; }
 
 .project__title {
   transition: all 0.35s;
@@ -997,3 +1015,6 @@ project {
   align-items: center;
   display: flex;
   justify-content: space-between; }
+
+.project__full-bleed-link {
+  display: block; }

@@ -19,23 +19,21 @@ const getHeroData = () => {
             },
             {
                 title: 'LinkedIn',
-                projectLink: 'https://ca.linkedin.com/in/angus-macdonald-34426719',
-                projectIcon: 'img/linkedin.svg',
+                link: 'https://ca.linkedin.com/in/angus-macdonald-34426719',
+                icon: 'img/linkedin.svg',
             },
             {
                 title: 'GitHub',
-                projectLink: 'https://github.com/angusm',
-                projectIcon: 'img/github.svg',
+                link: 'https://github.com/angusm',
+                icon: 'img/github.svg',
             },
             {
                 title: 'Email',
-                projectLink: 'mailto:angus@angusmacdonald.ca',
-                projectIcon: 'img/github.svg',
+                link: 'mailto:angus@angusmacdonald.ca',
+                icon: 'img/email.svg',
             },
             {
                 title: 'About This Site',
-                projectLink: 'mailto:angus@angusmacdonald.ca',
-                projectIcon: 'img/github.svg',
             },
         ],
     };

@@ -28,7 +28,7 @@ const getRGAData = () => {
             },
             {
                 title: 'Chrome Version Selection',
-                projectLink: 'https://www.google.com/chrome',
+                link: 'https://www.google.com/chrome',
                 paragraphs: [
                     `
                 Updated script that delivers the appropriate
@@ -53,7 +53,7 @@ const getRGAData = () => {
             },
             {
                 title: 'Duo',
-                projectLink: 'https://duo.google.com',
+                link: 'https://duo.google.com',
                 paragraphs: [
                     `
                 Built a batch animation library to avoid jank on the
@@ -63,7 +63,7 @@ const getRGAData = () => {
             },
             {
                 title: 'Maps Treks',
-                projectLink: 'https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza',
+                link: 'https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza',
                 paragraphs: [
                     `
                 Updated the existing sites for
