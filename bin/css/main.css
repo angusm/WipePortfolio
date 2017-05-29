@@ -501,6 +501,13 @@ project {
 .project__full-bleed-link {
   display: block; }
 
+.project__icon {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%; }
+
 .slant-grouping--4:hover > *:nth-child(1) {
   left: 0; }
 
@@ -1018,3 +1025,10 @@ project {
 
 .project__full-bleed-link {
   display: block; }
+
+.project__icon {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%; }

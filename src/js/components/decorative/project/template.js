@@ -6,13 +6,12 @@ export default `
 <label class="project__toggle-label">X</label>
 <div class="project__container" ng-if="$ctrl.project.isEmpty"></div>
 <div class="project__container" ng-if="!$ctrl.project.isEmpty">
-    <a class="project__full-bleed-link"
-       href="{{ $ctrl.project.link }}"
-       ng-if="$ctrl.isOnlyALink()"
-       target="_blank">
-   </a>
+    <img class="project__icon"
+        ng-if="$ctrl.project.icon"
+        ng-attr-src="{{ $ctrl.project.icon }}">
     <div class="project__title">
         <div class="project__title-line"
+             ng-if="!$ctrl.project.icon"
              ng-repeat="line in $ctrl.getProjectTitleLines()">
             {{ line }}
         </div>
@@ -31,5 +30,10 @@ export default `
               </a>
           </div>
     </div>
+    <a class="project__full-bleed-link"
+       href="{{ $ctrl.project.link }}"
+       ng-if="$ctrl.isOnlyALink()"
+       target="_blank">
+    </a>
 </input>
 `;

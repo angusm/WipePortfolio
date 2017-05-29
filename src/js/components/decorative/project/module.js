@@ -21,8 +21,6 @@ projectModule.component(COMPONENT_NAME, {
         }
 
         isOnlyALink() {
-            console.log(!this.project.paragraphs &&
-                this.project.link);
             return !this.project.paragraphs &&
                     this.project.link;
         }
