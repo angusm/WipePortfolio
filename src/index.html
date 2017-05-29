@@ -9,32 +9,10 @@
 </head>
 <body>
     <div class="portfolio" ng-controller="portfolioController as p">
-        <portfolio-page id="hero">
-            <portfolio-page-image></portfolio-page-image>
-            <portfolio-page-content>
-                <h1 class="name">Angus MacDonald</h1>
-                <div class="contact-info slant-grouping--4">
-                    <hr class="group__line-top">
-                    <div class="contact-line"><a target="_blank" href="mailto:angus@angusmacdonald.ca">angus@angusmacdonald.ca</a></div>
-                    <div class="contact-line">650 - 625 - 7971</div>
-                    <hr class="group__line-bottom">
-                </div>
-                <div class="social-links">
-                    <a class="social-link"
-                       href="https://ca.linkedin.com/in/angus-macdonald-34426719">
-                        <img class="social-icon" src="img/linkedin.svg"> LinkedIn
-                    </a>
-                    <a class="social-link"
-                       href="https://github.com/angusm">
-                        <img class="social-icon" src="img/github.svg"> GitHub
-                    </a>
-                </div>
-            </portfolio-page-content>
-        </portfolio-page>
         <portfolio-page ng-repeat="page in p.pages"
                         ng-attr-id="{{ page.code }}"
                         job-title="{{ page.title }}"
-                        job-time-worked="{{ page.timeWorked }}">
+                        job-time-worked="page.timeWorked">
             <portfolio-page-image>
                 <div class="{{ page.code }}-bg"></div>
                 <div class="job__logo">
@@ -47,6 +25,7 @@
             <portfolio-page-content>
                 <div class="projects" id="projects">
                     <project ng-repeat="project in page.projects"
+                             ng-class="{'project--empty': project.isEmpty}"
                              project-group="{{ page.code }}"
                              project-title="{{ project.title }}">
                             <p ng-repeat="paragraph in project.paragraphs"

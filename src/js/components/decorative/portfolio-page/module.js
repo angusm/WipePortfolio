@@ -15,7 +15,7 @@ portfolioPageModule.component(COMPONENT_NAME, {
     template: template,
     bindings: {
         jobTitle: '@?',
-        jobTimeWorked: '@?',
+        jobTimeWorked: '=?',
     },
     transclude: {
         portfolioPageImage: 'portfolioPageImage',

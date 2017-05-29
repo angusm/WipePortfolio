@@ -14,23 +14,9 @@ $fractal-size-factor: .5;
   &:hover {
     z-index: 1001;
     ~ .project__container {
-      z-index: 1000;
+      filter: contrast(80%) brightness(102%);
       transform: scale(1.05);
-    }
-  }
-}
-
-@include component-style('portfolio-page') {
-  &:nth-child(even) {
-    .project__toggle:hover ~ .project__container,
-    .project__container:hover {
-      filter: contrast(75%) brightness(120%);
-    }
-  }
-  &:nth-child(odd) {
-    .project__toggle:hover ~ .project__container,
-    .project__container:hover {
-      filter: contrast(75%) brightness(80%);
+      z-index: 1000;
     }
   }
 }
@@ -38,11 +24,14 @@ $fractal-size-factor: .5;
 .project__toggle-label {
   @include standard-transition();
   @include transition-delay();
+  @include flex-center();
   height: 5%;
   opacity: 0;
   position: absolute;
   right: $standard-margin;
+  text-align: center;
   top: $standard-margin;
+  vertical-align: middle;
   width: 5%;
 }
 
@@ -100,6 +89,15 @@ $fractal-size-factor: .5;
   display: block;
   pointer-events: none;
 
+  &.project--empty {
+    .project__toggle {
+      display: none;
+    }
+    .project__container {
+      filter: contrast(80%);
+    }
+  }
+
   &:nth-child(1) {
     display: none;
   }
@@ -147,19 +145,35 @@ $fractal-size-factor: .5;
       opacity: 1;
     }
 
+    &:hover ~ .project__container {
+      filter: brightness(100%) contrast(100%);
+    }
+
     & ~ .project__container {
+      $expanded-project-container-padding: 15%;
       @include absolute-fill();
+      left: -100%;
+      height: initial;
+      width: 200% - ($expanded-project-container-padding * 2);
       transform: scale(1);
-      transition: left $transition-time,
+      transition: filter $transition-time,
+        left $transition-time,
         top $transition-time,
         width $transition-time,
         height $transition-time,
-        transform $transition-time;
+        padding $transition-time,
+        transform $transition-time * 2;
       z-index: 1000;
+      padding: $expanded-project-container-padding;
 
       .project__title {
         font-size: 1.5em;
         transition-delay: 0s;
+      }
+
+      .project__title-line {
+        display: inline-block;
+        margin-right: 6px;
       }
 
       .project__details {
@@ -200,11 +214,13 @@ $fractal-size-factor: .5;
 
 .project__container {
   position: absolute;
-  transition: left $transition-time $transition-time,
+  transition: filter $transition-time,
+    left $transition-time $transition-time,
     top $transition-time $transition-time,
     width $transition-time $transition-time,
     height $transition-time $transition-time,
-    transform $transition-time;
+    padding $transition-time $transition-time,
+    transform $transition-time * 2;
   margin: 0;
 }
 

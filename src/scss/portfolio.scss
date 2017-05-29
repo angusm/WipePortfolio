@@ -67,13 +67,13 @@ $large-breakpoint-section-margin: 5%;
   &:nth-child(odd) {
     @include page-coloring($color-b, $color-a, $link-color-b);
     $dark-colors: (
-            #C8C8C8,
-            #F8F8F8,
-            #FFFFFF,
             #DFDFDF,
+            #E4E4E4,
+            #FFFFFF,
+            #F8F8F8,
+            #F4F4F4,
             #E8E8E8,
             #EFEFEF,
-            #D8D8D8,
     );
 
     @include component-style('project') {

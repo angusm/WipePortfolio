@@ -13,6 +13,7 @@ class PortfolioController {
             const pageCopy = {};
             Object.keys(page).forEach((pageKey) => {
                 switch (pageKey) {
+                    case 'timeWorked':
                     case 'logo':
                         pageCopy[pageKey] = $sce.trustAsHtml(page[pageKey]);
                         break;

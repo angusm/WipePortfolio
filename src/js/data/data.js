@@ -1,12 +1,15 @@
+import getHeroData from './pages/hero';
 import getRGAData from './pages/rga';
 import getNerdsData from './pages/nerds';
 import getAVPData from './pages/avp';
 import getDCMData from './pages/dcm';
 
-const PROJECT_LENGTH = 6;
+const PROJECT_LENGTH = 12;
 
 const getEmptyProject = () => {
-    return {};
+    return {
+        isEmpty: true,
+    };
 };
 
 const padProjects = (data) => {
@@ -18,6 +21,7 @@ const padProjects = (data) => {
 };
 
 const allData = [
+    getHeroData(),
     getRGAData(),
     getNerdsData(),
     getAVPData(),
