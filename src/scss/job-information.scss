@@ -12,7 +12,6 @@ $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
 }
 
 .job__company {
-  font-size: 20px;
   font-weight: 300;
   margin: auto $standard-margin $standard-margin $job-info-margin;
 }
@@ -29,6 +28,7 @@ $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
 .job__company,
 .job__time-worked {
   display: inline-block;
+  font-size: 20px;
 }
 
 .job__logo {

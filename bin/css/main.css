@@ -142,7 +142,6 @@
   margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
 
 .job__company {
-  font-size: 20px;
   font-weight: 300;
   margin: auto 10px 10px calc(2.5% + 10px); }
 
@@ -155,7 +154,8 @@
 
 .job__company,
 .job__time-worked {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 20px; }
 
 .job__logo {
   margin-top: -13%;
@@ -230,7 +230,6 @@
   margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
 
 .job__company {
-  font-size: 20px;
   font-weight: 300;
   margin: auto 10px 10px calc(2.5% + 10px); }
 
@@ -243,7 +242,8 @@
 
 .job__company,
 .job__time-worked {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 20px; }
 
 .job__logo {
   margin-top: -13%;
