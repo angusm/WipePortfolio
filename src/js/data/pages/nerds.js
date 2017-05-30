@@ -1,7 +1,7 @@
 const getNerdsData = () => {
     return {
         code: 'nerds',
-        company: 'Nerd Corps / DHX Media',
+        company: 'Nerd Corps',
         logo: `
         <div class="job__logo">
             <div class="job__logo-container">
@@ -46,6 +46,7 @@ const getNerdsData = () => {
             },
             {
                 title: 'KMM',
+                icon: 'img/kmm.png',
                 link: "http://www.kateandmimmim.ca",
                 paragraphs: [
                     `

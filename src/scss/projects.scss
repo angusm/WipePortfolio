@@ -28,7 +28,6 @@ $icon-fade-time: .5s;
   }
 
   .project__title.project__title--with-icon .project__title-line {
-    margin-top: 0;
     opacity: 1;
   }
 }
@@ -267,7 +266,6 @@ $icon-fade-time: .5s;
     font-size $transition-time;
 
   &.project__title--with-icon .project__title-line {
-    margin-top: 5px;
     opacity: 0;
     transition: margin $transition-time;
   }

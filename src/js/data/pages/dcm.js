@@ -13,6 +13,7 @@ const getDCMData = () => {
         projects: [
             {
                 title: 'Para Paints',
+                icon: 'img/para.png',
                 link: 'past-projects/para-2016/index.html',
                 paragraphs: [
                     `

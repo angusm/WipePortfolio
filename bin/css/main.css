@@ -310,7 +310,6 @@
 
 .project__toggle:hover ~ .project__container .project__title.project__title--with-icon .project__title-line,
 .project__container:hover .project__title.project__title--with-icon .project__title-line {
-  margin-top: 0;
   opacity: 1; }
 
 .project__toggle-label {
@@ -618,7 +617,6 @@ project {
   text-align: center;
   transition: opacity 0.5s, font-size 0.35s; }
   .project__title.project__title--with-icon .project__title-line {
-    margin-top: 5px;
     opacity: 0;
     transition: margin 0.35s; }
   @media (min-width: 1024px) {
@@ -1014,7 +1012,6 @@ portfolio-page-image {
 
 .project__toggle:hover ~ .project__container .project__title.project__title--with-icon .project__title-line,
 .project__container:hover .project__title.project__title--with-icon .project__title-line {
-  margin-top: 0;
   opacity: 1; }
 
 .project__toggle-label {
@@ -1322,7 +1319,6 @@ project {
   text-align: center;
   transition: opacity 0.5s, font-size 0.35s; }
   .project__title.project__title--with-icon .project__title-line {
-    margin-top: 5px;
     opacity: 0;
     transition: margin 0.35s; }
   @media (min-width: 1024px) {
