@@ -6,8 +6,6 @@
 $medium-breakpoint-section-margin: 3% 5%;
 $large-breakpoint-section-margin: 5%;
 
-@include slant-grouping(4);
-
 @include component-style('portfolio-page-content') {
   display: block;
 }

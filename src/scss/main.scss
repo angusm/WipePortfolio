@@ -6,7 +6,11 @@
 @import 'projects';
 
 h1 {
-  font-size: 48px;
+  font-size: 24px;
+
+  @include breakpoint($ret) {
+    font-size: 48px;
+  }
 
   @include breakpoint($m) {
     font-size: 30px;
@@ -18,9 +22,13 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 12px;
 
   @include breakpoint($m) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($ret) {
     font-size: 20px;
   }
 }

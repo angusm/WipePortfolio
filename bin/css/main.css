@@ -154,8 +154,7 @@
 
 .job__company,
 .job__time-worked {
-  display: inline-block;
-  font-size: 20px; }
+  display: inline-block; }
 
 .job__logo {
   margin-top: -13%;
@@ -242,8 +241,7 @@
 
 .job__company,
 .job__time-worked {
-  display: inline-block;
-  font-size: 20px; }
+  display: inline-block; }
 
 .job__logo {
   margin-top: -13%;
@@ -614,9 +612,8 @@ project {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 1.75em;
-  height: calc(100% - 10px);
-  margin: 10px 0 0;
+  font-size: 15px;
+  margin: 0;
   text-align: center; }
   .project__title.project__title--with-icon .project__title-line {
     transition: opacity 0.5s;
@@ -633,6 +630,9 @@ project {
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
+  @media (min-resolution: 2dppx) {
+    .project__title {
+      font-size: 28px; } }
 
 .project__details {
   transition: all 0.35s;
@@ -699,30 +699,6 @@ project {
   margin: auto;
   opacity: 1;
   transition: opacity 0.5s; }
-
-.slant-grouping--4:hover > *:nth-child(1) {
-  left: 0; }
-
-.slant-grouping--4:hover > *:nth-child(2) {
-  left: 0; }
-
-.slant-grouping--4:hover > *:nth-child(3) {
-  right: 0; }
-
-.slant-grouping--4:hover > *:nth-child(4) {
-  right: 0; }
-
-.slant-grouping--4 > * {
-  position: relative;
-  transition: left 500ms, right 500ms; }
-  .slant-grouping--4 > *:nth-child(1) {
-    left: -4%; }
-  .slant-grouping--4 > *:nth-child(2) {
-    left: -1%; }
-  .slant-grouping--4 > *:nth-child(3) {
-    right: -1%; }
-  .slant-grouping--4 > *:nth-child(4) {
-    right: -4%; }
 
 portfolio-page-content {
   display: block; }
@@ -1318,9 +1294,8 @@ project {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 1.75em;
-  height: calc(100% - 10px);
-  margin: 10px 0 0;
+  font-size: 15px;
+  margin: 0;
   text-align: center; }
   .project__title.project__title--with-icon .project__title-line {
     transition: opacity 0.5s;
@@ -1337,6 +1312,9 @@ project {
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
+  @media (min-resolution: 2dppx) {
+    .project__title {
+      font-size: 28px; } }
 
 .project__details {
   transition: all 0.35s;
@@ -1405,7 +1383,10 @@ project {
   transition: opacity 0.5s; }
 
 h1 {
-  font-size: 48px; }
+  font-size: 24px; }
+  @media (min-resolution: 2dppx) {
+    h1 {
+      font-size: 48px; } }
   @media (min-width: 1024px) {
     h1 {
       font-size: 30px; } }
@@ -1417,10 +1398,13 @@ h1 {
       font-size: 36px; } }
 
 h2 {
-  font-size: 32px; }
+  font-size: 12px; }
   @media (min-width: 1024px) {
     h2 {
       font-size: 20px; } }
   @media (orientation: landscape) {
+    h2 {
+      font-size: 20px; } }
+  @media (min-resolution: 2dppx) {
     h2 {
       font-size: 20px; } }

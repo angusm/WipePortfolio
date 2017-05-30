@@ -268,9 +268,8 @@ project.hero-cta {
   @include absolute-fill();
   @include flex-center();
   flex-direction: column;
-  font-size: 1.75em;
-  height: calc(100% - #{$standard-margin});
-  margin: $standard-margin 0 0;
+  font-size: 15px;
+  margin: 0;
   text-align: center;
 
   &.project__title--with-icon .project__title-line {
@@ -283,6 +282,10 @@ project.hero-cta {
     height: calc(100% - #{$standard-margin * 2});
     margin: $standard-margin;
     width: calc(100% - #{$standard-margin * 2});
+  }
+
+  @include breakpoint($ret) {
+    font-size: 28px;
   }
 }
 

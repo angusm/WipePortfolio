@@ -38,6 +38,12 @@ $standard-margin: 10px;
       @content;
     }
   }
+
+  @if $media-query == $ret {
+    @media (min-resolution: 2dppx) {
+      @content;
+    }
+  }
 }
 
 @mixin component-style($component-names...) {
