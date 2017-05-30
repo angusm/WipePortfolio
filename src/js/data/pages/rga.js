@@ -14,7 +14,7 @@ const getRGAData = () => {
                  src="img/google.svg">
         </div>`,
         title: 'Software Engineer',
-        timeWorked: 'Mar 2016 - Present',
+        timeWorked: '2016 - Present',
         projects: [
             {
                 title: 'Readability and Reviews',
@@ -44,10 +44,10 @@ const getRGAData = () => {
                 ],
             },
             {
-                title: 'Internal Projects',
+                title: 'Internal Project',
                 paragraphs: [
                     `
-                Worked on projects using, Django and Angular, for
+                Worked on a project using Django and Angular, for
                 handling internal processes under the supervision of
                 the CorpEng team.`,
                 ],

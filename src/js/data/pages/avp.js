@@ -1,7 +1,7 @@
 const getAVPData = () => {
     return {
         code: 'avp',
-        company: 'Associated Veterinary Purchasing',
+        company: 'AVPBC',
         logo: `
                 <div class="job__logo">
                     <div class="job__logo-container">
@@ -11,7 +11,7 @@ const getAVPData = () => {
                     </div>
                 </div>`,
         title: 'Developer',
-        timeWorked: 'Jan. 2013 - Aug. 2014',
+        timeWorked: '2013 - 2014',
         projects: [
             {
                 title: 'jBASE System',

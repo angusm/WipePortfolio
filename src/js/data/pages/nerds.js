@@ -9,7 +9,7 @@ const getNerdsData = () => {
             </div>
         </div>`,
         title: 'Jr. Software Developer',
-        timeWorked: 'Aug. 2014 - Feb. 2016',
+        timeWorked: '2014 - 2016',
         projects: [
             {
                 title: 'Artemis',

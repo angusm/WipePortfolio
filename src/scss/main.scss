@@ -9,7 +9,11 @@ h1 {
   font-size: 3em;
 
   @include breakpoint($m) {
-    font-size: 2.25em;
+    font-size: 30px;
+  }
+
+  @include breakpoint($l) {
+    font-size: 36px;
   }
 }
 
@@ -17,6 +21,6 @@ h2 {
   font-size: 2em;
 
   @include breakpoint($m) {
-    font-size: 1.25em;
+    font-size: 20px;
   }
 }

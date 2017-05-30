@@ -7,6 +7,8 @@ export default `
             <h1 class="job__title"
                 ng-bind="$ctrl.jobTitle"
                 ng-if="$ctrl.jobTitle"></h1>
+            <!--<h2 class="job__company"-->
+                <!--ng-bind="$ctrl.jobCompany"></h2>-->
             <h2 class="job__time-worked"
                 ng-bind-html="$ctrl.jobTimeWorked"
                 ng-if="$ctrl.jobTimeWorked"></h2>

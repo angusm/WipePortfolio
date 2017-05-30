@@ -140,7 +140,7 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 1.25em;
+  font-size: 20px;
   font-weight: 300;
   left: 0;
   position: absolute;
@@ -229,7 +229,7 @@
 
 .job__company {
   bottom: 20px;
-  font-size: 1.25em;
+  font-size: 20px;
   font-weight: 300;
   left: 0;
   position: absolute;
@@ -304,9 +304,13 @@
       filter: contrast(80%) brightness(115%);
       z-index: 1000; }
 
+project.hero-cta .project__toggle:hover ~ .project__container .project__icon,
+project.hero-cta .project__container:hover .project__icon {
+  opacity: .5; }
+
 .project__toggle:hover ~ .project__container .project__icon,
 .project__container:hover .project__icon {
-  opacity: 0.1; }
+  opacity: 0.05; }
 
 .project__toggle:hover ~ .project__container .project__title.project__title--with-icon .project__title-line,
 .project__container:hover .project__title.project__title--with-icon .project__title-line {
@@ -607,6 +611,7 @@ project {
   z-index: 20; }
 
 .project__title {
+  transition: all 0.35s;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -614,20 +619,19 @@ project {
   font-size: 1.75em;
   height: calc(100% - 10px);
   margin: 10px 0 0;
-  text-align: center;
-  transition: opacity 0.5s, font-size 0.35s; }
+  text-align: center; }
   .project__title.project__title--with-icon .project__title-line {
-    opacity: 0;
-    transition: margin 0.35s; }
+    transition: opacity 0.5s;
+    opacity: 0; }
   @media (min-width: 1024px) {
     .project__title {
-      font-size: 1.25em;
+      font-size: 20px;
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
   @media (orientation: landscape) {
     .project__title {
-      font-size: 1.25em;
+      font-size: 20px;
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
@@ -1006,9 +1010,13 @@ portfolio-page-image {
       filter: contrast(80%) brightness(115%);
       z-index: 1000; }
 
+project.hero-cta .project__toggle:hover ~ .project__container .project__icon,
+project.hero-cta .project__container:hover .project__icon {
+  opacity: .5; }
+
 .project__toggle:hover ~ .project__container .project__icon,
 .project__container:hover .project__icon {
-  opacity: 0.1; }
+  opacity: 0.05; }
 
 .project__toggle:hover ~ .project__container .project__title.project__title--with-icon .project__title-line,
 .project__container:hover .project__title.project__title--with-icon .project__title-line {
@@ -1309,6 +1317,7 @@ project {
   z-index: 20; }
 
 .project__title {
+  transition: all 0.35s;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -1316,20 +1325,19 @@ project {
   font-size: 1.75em;
   height: calc(100% - 10px);
   margin: 10px 0 0;
-  text-align: center;
-  transition: opacity 0.5s, font-size 0.35s; }
+  text-align: center; }
   .project__title.project__title--with-icon .project__title-line {
-    opacity: 0;
-    transition: margin 0.35s; }
+    transition: opacity 0.5s;
+    opacity: 0; }
   @media (min-width: 1024px) {
     .project__title {
-      font-size: 1.25em;
+      font-size: 20px;
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
   @media (orientation: landscape) {
     .project__title {
-      font-size: 1.25em;
+      font-size: 20px;
       height: calc(100% - 20px);
       margin: 10px;
       width: calc(100% - 20px); } }
@@ -1404,16 +1412,19 @@ h1 {
   font-size: 3em; }
   @media (min-width: 1024px) {
     h1 {
-      font-size: 2.25em; } }
+      font-size: 30px; } }
   @media (orientation: landscape) {
     h1 {
-      font-size: 2.25em; } }
+      font-size: 30px; } }
+  @media (min-width: 1360px) {
+    h1 {
+      font-size: 36px; } }
 
 h2 {
   font-size: 2em; }
   @media (min-width: 1024px) {
     h2 {
-      font-size: 1.25em; } }
+      font-size: 20px; } }
   @media (orientation: landscape) {
     h2 {
-      font-size: 1.25em; } }
+      font-size: 20px; } }
