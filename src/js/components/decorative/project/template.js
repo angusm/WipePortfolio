@@ -3,15 +3,18 @@ export default `
        class="project__toggle"  
        name="{{ $ctrl.project.group }}"
        ng-if="!$ctrl.project.isEmpty && !$ctrl.isOnlyALink()">
-<label class="project__toggle-label">X</label>
+<label class="project__toggle-label"
+    ng-if="!$ctrl.project.isEmpty && !$ctrl.isOnlyALink()">X</label>
 <div class="project__container" ng-if="$ctrl.project.isEmpty"></div>
 <div class="project__container" ng-if="!$ctrl.project.isEmpty">
-    <img class="project__icon"
-        ng-if="$ctrl.project.icon"
-        ng-attr-src="{{ $ctrl.project.icon }}">
-    <div class="project__title">
+    <div class="project__icon-container">
+        <img class="project__icon"
+            ng-if="$ctrl.project.icon"
+            ng-attr-src="{{ $ctrl.project.icon }}">
+    </div>
+    <div class="project__title"
+        ng-class="{'project__title--with-icon': $ctrl.project.icon && $ctrl.project.title}">
         <div class="project__title-line"
-             ng-if="!$ctrl.project.icon"
              ng-repeat="line in $ctrl.getProjectTitleLines()">
             {{ line }}
         </div>

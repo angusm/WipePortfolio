@@ -29,6 +29,7 @@ const getRGAData = () => {
             {
                 title: 'Chrome Version Selection',
                 link: 'https://www.google.com/chrome',
+                icon: 'img/chrome.webp',
                 paragraphs: [
                     `
                 Updated script that delivers the appropriate
@@ -54,6 +55,7 @@ const getRGAData = () => {
             {
                 title: 'Duo',
                 link: 'https://duo.google.com',
+                icon: 'img/duo.webp',
                 paragraphs: [
                     `
                 Built a batch animation library to avoid jank on the
@@ -64,6 +66,7 @@ const getRGAData = () => {
             {
                 title: 'Maps Treks',
                 link: 'https://www.google.com/maps/about/behind-the-scenes/streetview/treks/pyramids-of-giza',
+                icon: 'img/maps.webp',
                 paragraphs: [
                     `
                 Updated the existing sites for

@@ -3,6 +3,7 @@
 
 $total-project-count: 14;
 $fractal-size-factor: .5;
+$icon-fade-time: .5s;
 
 .project__toggle {
   position: absolute;
@@ -17,6 +18,18 @@ $fractal-size-factor: .5;
       filter: contrast(80%) brightness(115%);
       z-index: 1000;
     }
+  }
+}
+
+.project__toggle:hover ~ .project__container,
+.project__container:hover {
+  .project__icon {
+    opacity: 0.1;
+  }
+
+  .project__title.project__title--with-icon .project__title-line {
+    margin-top: 0;
+    opacity: 1;
   }
 }
 
@@ -158,11 +171,11 @@ $fractal-size-factor: .5;
     }
 
     & ~ .project__container {
-      $expanded-project-container-padding: 5%;
       @include absolute-fill();
-      height: 100% - ($expanded-project-container-padding * 2);
-      left: -100%;
+      $expanded-project-container-padding: 5%;
+      height: 200% - ($expanded-project-container-padding * 2);
       padding: $expanded-project-container-padding;
+      top: -100%;
       transform: scale(1);
       transition: filter $transition-time,
         background-color $transition-time,
@@ -171,8 +184,15 @@ $fractal-size-factor: .5;
         width $transition-time,
         height $transition-time,
         padding $transition-time;
-      width: 200% - ($expanded-project-container-padding * 2);
+      width: 100% - ($expanded-project-container-padding * 2);
       z-index: 1000;
+
+      @include breakpoint($m) {
+        height: 100% - ($expanded-project-container-padding * 2);
+        left: -100%;
+        top: 0;
+        width: 200% - ($expanded-project-container-padding * 2);
+      }
 
       .project__title {
         font-size: 1.5em;
@@ -194,6 +214,7 @@ $fractal-size-factor: .5;
         height: 0;
         left: 0;
         margin: 1.5%;
+        opacity: 1;
         padding-top: 5%;
         top: 0;
         width: 5%;
@@ -236,20 +257,25 @@ $fractal-size-factor: .5;
 
 .project__title {
   @include absolute-fill();
-  @include standard-transition();
   @include flex-center();
   flex-direction: column;
-  font-size: 2em;
-  text-align: center;
-  margin: $standard-margin 0 0;
+  font-size: 1.75em;
   height: calc(100% - #{$standard-margin});
+  margin: $standard-margin 0 0;
+  text-align: center;
+  transition: opacity $icon-fade-time,
+    font-size $transition-time;
+
+  &.project__title--with-icon .project__title-line {
+    margin-top: 5px;
+    opacity: 0;
+    transition: margin $transition-time;
+  }
 
   @include breakpoint($m) {
-    display: block;
     font-size: 1.25em;
     height: calc(100% - #{$standard-margin * 2});
     margin: $standard-margin;
-    text-align: left;
     width: calc(100% - #{$standard-margin * 2});
   }
 }
@@ -318,11 +344,17 @@ $fractal-size-factor: .5;
   display: block;
 }
 
+.project__icon-container {
+  @include absolute-fill();
+  @include flex-center();
+}
+
 .project__icon {
   $icon-size: 50%;
   position: absolute;
-  width: $icon-size;
-  height: $icon-size;
-  left: (100% - $icon-size) / 2;
-  top: (100% - $icon-size) / 2;
+  max-width: $icon-size;
+  max-height: $icon-size;
+  margin: auto;
+  opacity: 1;
+  transition: opacity $icon-fade-time;
 }

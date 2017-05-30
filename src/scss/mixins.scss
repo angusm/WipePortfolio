@@ -1,3 +1,5 @@
+@import "breakpoints";
+
 $standard-margin: 10px;
 
 %standard-drop-shadow {
@@ -9,8 +11,32 @@ $standard-margin: 10px;
 }
 
 @mixin breakpoint($media-query) {
-  @media #{$media-query} {
-    @content;
+
+  @if $media-query == $xl {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $media-query == $l {
+    @media (min-width: 1360px) {
+      @content;
+    }
+  }
+
+  @if $media-query == $m {
+    @media (min-width: 1024px) {
+      @content;
+    }
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if $media-query == $s {
+    @media (min-width: 720px) and (not min-resolution: 2dppx) {
+      @content;
+    }
   }
 }
 

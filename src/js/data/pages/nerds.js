@@ -57,6 +57,7 @@ const getNerdsData = () => {
             },
             {
                 title: 'Slug',
+                icon: 'img/slugterra.png',
                 link: 'http://www.slugterra.com',
                 paragraphs: [
                     `
