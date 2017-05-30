@@ -35,6 +35,7 @@ $large-breakpoint-section-margin: 5%;
       }
     }
 
+    .job__company,
     .job__title,
     .job__time-worked {
       color: $page-color-b;
@@ -60,17 +61,6 @@ $large-breakpoint-section-margin: 5%;
       stroke: $link-color-b;
       fill: $link-color-b;
     }
-  }
-
-  $job-info-margin-percentage: 2.5%;
-  $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
-
-  .job__title {
-    margin: $job-info-margin $job-info-margin auto;
-  }
-
-  .job__time-worked {
-    margin: auto $job-info-margin $standard-margin;
   }
 
   &:nth-child(odd) {
@@ -230,7 +220,7 @@ $large-breakpoint-section-margin: 5%;
 .portfolio__navigation {
   align-items: center;
   display: flex;
-  font-size: 2em;
+  font-size: 32px;
   height: 100%;
   position: fixed;
   right: 0;

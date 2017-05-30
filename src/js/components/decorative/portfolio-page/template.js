@@ -7,12 +7,13 @@ export default `
             <h1 class="job__title"
                 ng-bind="$ctrl.jobTitle"
                 ng-if="$ctrl.jobTitle"></h1>
-            <!--<h2 class="job__company"-->
-                <!--ng-bind="$ctrl.jobCompany"></h2>-->
+            <h2 class="job__company"
+                ng-bind-html="$ctrl.jobCompany"
+                ng-if="$ctrl.jobCompany"></h2>
             <h2 class="job__time-worked"
                 ng-bind-html="$ctrl.jobTimeWorked"
                 ng-if="$ctrl.jobTimeWorked"></h2>
-            <hr class="job__line" ng-if="$ctrl.jobTitle && $ctrl.jobTimeWorked">
+            <hr class="job__line">
         </portfolio-image>
     </portfolio-section>
     <portfolio-section>

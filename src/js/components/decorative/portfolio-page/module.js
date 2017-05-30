@@ -14,7 +14,7 @@ const portfolioPageModule = angular.module(COMPONENT_NAME, [
 portfolioPageModule.component(COMPONENT_NAME, {
     template: template,
     bindings: {
-        jobCompany: '@?',
+        jobCompany: '=?',
         jobTitle: '@?',
         jobTimeWorked: '=?',
     },

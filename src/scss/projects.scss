@@ -21,10 +21,19 @@ $icon-fade-time: .5s;
   }
 }
 
+project.hero-cta {
+  .project__toggle:hover ~ .project__container,
+  .project__container:hover {
+    .project__icon {
+      opacity: .5;
+    }
+  }
+}
+
 .project__toggle:hover ~ .project__container,
 .project__container:hover {
   .project__icon {
-    opacity: 0.1;
+    opacity: 0.05;
   }
 
   .project__title.project__title--with-icon .project__title-line {
@@ -255,6 +264,7 @@ $icon-fade-time: .5s;
 }
 
 .project__title {
+  @include standard-transition();
   @include absolute-fill();
   @include flex-center();
   flex-direction: column;
@@ -262,16 +272,14 @@ $icon-fade-time: .5s;
   height: calc(100% - #{$standard-margin});
   margin: $standard-margin 0 0;
   text-align: center;
-  transition: opacity $icon-fade-time,
-    font-size $transition-time;
 
   &.project__title--with-icon .project__title-line {
+    transition: opacity $icon-fade-time;
     opacity: 0;
-    transition: margin $transition-time;
   }
 
   @include breakpoint($m) {
-    font-size: 1.25em;
+    font-size: 20px;
     height: calc(100% - #{$standard-margin * 2});
     margin: $standard-margin;
     width: calc(100% - #{$standard-margin * 2});

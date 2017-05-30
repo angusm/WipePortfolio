@@ -4,20 +4,31 @@
 
 $job__logo-image-max-size: 150px;
 
-.job__company {
-  bottom: 20px;
-  font-size: 20px;
-  font-weight: 300;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+$job-info-margin-percentage: 2.5%;
+$job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
+
+.job__title {
+  margin: $job-info-margin $job-info-margin auto;
 }
 
-.job__title,
+.job__company {
+  font-size: 20px;
+  font-weight: 300;
+  margin: auto $standard-margin $standard-margin $job-info-margin;
+}
+
 .job__time-worked {
-  margin: 0;
-  position: relative;
+  font-style: italic;
+  margin: auto 0 $standard-margin;
+
+  @include breakpoint($s) {
+    font-style: normal;
+  }
+}
+
+.job__company,
+.job__time-worked {
+  display: inline-block;
 }
 
 .job__logo {
@@ -48,12 +59,4 @@ $job__logo-image-max-size: 150px;
 .job__logo-image {
   height: auto;
   max-width: $job__logo-image-max-size;
-}
-
-.job__time-worked {
-  font-style: italic;
-
-  @include breakpoint($s) {
-    font-style: normal;
-  }
 }

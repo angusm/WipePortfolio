@@ -138,19 +138,24 @@
   width: 100%;
   height: 100%; }
 
+.job__title {
+  margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
+
 .job__company {
-  bottom: 20px;
   font-size: 20px;
   font-weight: 300;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%; }
+  margin: auto 10px 10px calc(2.5% + 10px); }
 
-.job__title,
 .job__time-worked {
-  margin: 0;
-  position: relative; }
+  font-style: italic;
+  margin: auto 0 10px; }
+  @media (min-width: 720px) and (false: 2dppx) {
+    .job__time-worked {
+      font-style: normal; } }
+
+.job__company,
+.job__time-worked {
+  display: inline-block; }
 
 .job__logo {
   margin-top: -13%;
@@ -178,12 +183,6 @@
 .job__logo-image {
   height: auto;
   max-width: 150px; }
-
-.job__time-worked {
-  font-style: italic; }
-  @media (min-width: 720px) and (false: 2dppx) {
-    .job__time-worked {
-      font-style: normal; } }
 
 #avp .avp-bg {
   background: url(../img/avp-bg.jpg) center center;
@@ -227,19 +226,24 @@
   width: 100%;
   height: 100%; }
 
+.job__title {
+  margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
+
 .job__company {
-  bottom: 20px;
   font-size: 20px;
   font-weight: 300;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%; }
+  margin: auto 10px 10px calc(2.5% + 10px); }
 
-.job__title,
 .job__time-worked {
-  margin: 0;
-  position: relative; }
+  font-style: italic;
+  margin: auto 0 10px; }
+  @media (min-width: 720px) and (false: 2dppx) {
+    .job__time-worked {
+      font-style: normal; } }
+
+.job__company,
+.job__time-worked {
+  display: inline-block; }
 
 .job__logo {
   margin-top: -13%;
@@ -267,12 +271,6 @@
 .job__logo-image {
   height: auto;
   max-width: 150px; }
-
-.job__time-worked {
-  font-style: italic; }
-  @media (min-width: 720px) and (false: 2dppx) {
-    .job__time-worked {
-      font-style: normal; } }
 
 .rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
@@ -733,10 +731,6 @@ portfolio-page {
   display: block;
   height: 100%;
   width: 100%; }
-  portfolio-page .job__title {
-    margin: calc(2.5% + 10px) calc(2.5% + 10px) auto; }
-  portfolio-page .job__time-worked {
-    margin: auto calc(2.5% + 10px) 10px; }
   portfolio-page:nth-child(odd) {
     background-color: #000;
     color: #000;
@@ -752,6 +746,7 @@ portfolio-page {
         margin-right: 0; }
       portfolio-page:nth-child(odd) portfolio-section:nth-child(2) {
         margin-left: 0; } }
+    portfolio-page:nth-child(odd) .job__company,
     portfolio-page:nth-child(odd) .job__title,
     portfolio-page:nth-child(odd) .job__time-worked {
       color: #fff; }
@@ -826,6 +821,7 @@ portfolio-page {
         margin-right: 0; }
       portfolio-page:nth-child(even) portfolio-section:nth-child(2) {
         margin-left: 0; } }
+    portfolio-page:nth-child(even) .job__company,
     portfolio-page:nth-child(even) .job__title,
     portfolio-page:nth-child(even) .job__time-worked {
       color: #000; }
@@ -978,7 +974,7 @@ portfolio-page-image {
 .portfolio__navigation {
   align-items: center;
   display: flex;
-  font-size: 2em;
+  font-size: 32px;
   height: 100%;
   position: fixed;
   right: 0;
@@ -1409,7 +1405,7 @@ project {
   transition: opacity 0.5s; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 48px; }
   @media (min-width: 1024px) {
     h1 {
       font-size: 30px; } }
@@ -1421,7 +1417,7 @@ h1 {
       font-size: 36px; } }
 
 h2 {
-  font-size: 2em; }
+  font-size: 32px; }
   @media (min-width: 1024px) {
     h2 {
       font-size: 20px; } }

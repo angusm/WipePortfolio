@@ -1,10 +1,9 @@
 const getHeroData = () => {
     return {
         code: 'hero',
-        company: '',
         logo: ``,
         title: 'Angus MacDonald',
-        timeWorked: `
+        company: `
             <a href="mailto:angus@angusmacdonald.ca">
                 angus@angusmacdonald.ca</a>`,
         projects: [

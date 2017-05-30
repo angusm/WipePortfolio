@@ -12,7 +12,7 @@
         <portfolio-page ng-repeat="page in p.pages"
                         ng-attr-id="{{ page.code }}"
                         job-title="{{ page.title }}"
-                        job-company="{{ page.company }}"
+                        job-company="page.company"
                         job-time-worked="page.timeWorked">
             <portfolio-page-image>
                 <div class="{{ page.code }}-bg"></div>
@@ -21,7 +21,6 @@
                         ng-bind-html="page.logo">
                     </div>
                 </div>
-                <div class="job__company" ng-bind="page.company"></div>
             </portfolio-page-image>
             <portfolio-page-content>
                 <div class="projects" id="projects">
