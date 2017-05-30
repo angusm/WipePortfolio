@@ -80,48 +80,6 @@ $standard-margin: 10px;
   font-family: 'Roboto', sans-serif;
 }
 
-@mixin slant-grouping($numbers...) {
-  $slant-offset: 3%;
-  @each $number in $numbers {
-    .slant-grouping--#{$number} {
-
-      &:hover > * {
-        @for $i from 1 through $number {
-          &:nth-child(#{$i}) {
-            @if $i <= ($number / 2) {
-              left: 0;
-            }
-            @if $i > ($number / 2) {
-              right: 0;
-            }
-          }
-        }
-      }
-
-      & > * {
-        position: relative;
-        transition: left 500ms, right 500ms;
-
-        $total-offset: $number * ($slant-offset - 1);
-        $total-offset-one-side: $total-offset / 2;
-        @for $i from 1 through $number {
-          $iMinus: $i - 1;
-          &:nth-child(#{$i}) {
-
-            @if $i <= ($number / 2) {
-              left: -$total-offset-one-side + ($iMinus * $slant-offset);
-            }
-            @if $i > ($number / 2) {
-              right: -$total-offset-one-side +
-                  (($number - $iMinus - 1) * $slant-offset);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 $transition-time: .35s;
 
 @mixin standard-transition() {
