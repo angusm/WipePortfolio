@@ -144,19 +144,25 @@ $large-breakpoint-section-margin: 5%;
 }
 
 @include component-style('portfolio-section') {
-  $portfolio-section-mobile-max-side-length: calc(50vh - 10vw);
   display: inline-block;
-  flex: 1;
-  max-height: $portfolio-section-mobile-max-side-length;
-  max-width: $portfolio-section-mobile-max-side-length;
-  padding-top: 50%;
+  flex: 0;
   position: relative;
   width: 100%;
+  max-height: calc(50vh - 5vw);
+  max-width: calc(50vh - 5vw);
 
   @include breakpoint($m) {
-    max-width: none;
     width: 50%;
+    max-height: calc(100vh - 5vw);
+    max-width: calc(100vh - 5vw);
   }
+}
+
+@include component-style('portfolio-section-outer-container') {
+  display: block;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
 }
 
 @include component-style('portfolio-section-container') {

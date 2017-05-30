@@ -2,6 +2,35 @@
 @import '../colors';
 @import '../mixins';
 #hero {
+  .hero-cta .project__icon{
+    @keyframes shake {
+      32%, 48% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      34%, 46% {
+        transform: translate3d(1px, 0, 0);
+      }
+
+      36%, 40%, 44% {
+        transform: translate3d(-2px, 0, 0);
+      }
+
+      38%, 42% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      0%, 26%, 54% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    animation: shake 5s cubic-bezier(.36,.07,.19,.97) both;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 
   @include component-style('portfolio-page-image') {
     background-image: url(../img/hero.JPG);

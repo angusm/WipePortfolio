@@ -24,6 +24,10 @@ projectModule.component(COMPONENT_NAME, {
             return !this.project.paragraphs &&
                     this.project.link;
         }
+
+        getLinkTarget() {
+            return this.project.linkTarget || "_blank";
+        }
     }
 });
 

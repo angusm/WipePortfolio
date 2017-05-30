@@ -24,7 +24,7 @@ const getDCMData = () => {
                 ],
             },
             {
-                title: 'Misc. Contracts',
+                title: 'Misc.',
                 paragraphs: [
                     `
                             Helped with a small contract for Darwin Construction

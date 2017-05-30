@@ -1,5 +1,13 @@
 $standard-margin: 10px;
 
+%standard-drop-shadow {
+  filter: drop-shadow(0 1px 1px rgba(#000, .5));
+}
+
+@mixin standard-drop-shadow() {
+  @extend %standard-drop-shadow;
+}
+
 @mixin breakpoint($media-query) {
   @media #{$media-query} {
     @content;

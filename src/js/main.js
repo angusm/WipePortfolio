@@ -35,6 +35,16 @@ class PortfolioController {
             return pageCopy;
         });
     }
+
+    getProjectClasses(project) {
+        const classList = [
+            project.class,
+        ];
+        if (project.isEmpty) {
+            classList.push('project--empty');
+        }
+        return classList.join(' ');
+    }
 }
 
 portfolioModule.controller(

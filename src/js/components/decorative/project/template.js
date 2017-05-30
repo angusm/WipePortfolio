@@ -21,7 +21,7 @@ export default `
         <ng-transclude></ng-transclude>
             <div class="project__link"
                ng-if="$ctrl.project.link">
-              <a target="_blank"
+              <a target="{{ $ctrl.project.linkTarget }}"
                  href="{{ $ctrl.project.link }}">
                 Check it out
                 <svg class="project__link-arrow">
@@ -33,7 +33,7 @@ export default `
     <a class="project__full-bleed-link"
        href="{{ $ctrl.project.link }}"
        ng-if="$ctrl.isOnlyALink()"
-       target="_blank">
+       target="{{ $ctrl.getLinkTarget() }}">
     </a>
 </input>
 `;

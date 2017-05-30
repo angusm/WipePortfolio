@@ -26,7 +26,7 @@ const getAVPData = () => {
                 ],
             },
             {
-                title: 'Customer Portal',
+                title: 'Portal',
                 paragraphs: [
                     `
                             Worked a CakePHP sub-site into an existing
@@ -37,7 +37,7 @@ const getAVPData = () => {
                 ],
             },
             {
-                title: 'E-Commerce',
+                title: 'Shop',
                 paragraphs: [
                     `
                             Developed an online ordering site with CakePHP and

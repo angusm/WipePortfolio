@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,6 +6,25 @@
   bottom: 0;
   width: 100%;
   height: 100%; }
+
+#hero .hero-cta .project__icon {
+  animation: shake 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px; }
+
+@keyframes shake {
+  32%, 48% {
+    transform: translate3d(-1px, 0, 0); }
+  34%, 46% {
+    transform: translate3d(1px, 0, 0); }
+  36%, 40%, 44% {
+    transform: translate3d(-2px, 0, 0); }
+  38%, 42% {
+    transform: translate3d(2px, 0, 0); }
+  0%, 26%, 54% {
+    transform: translate3d(0, 0, 0); } }
 
 #hero portfolio-page-image {
   background-image: url(../img/hero.JPG);
@@ -86,7 +105,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -104,7 +123,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +199,16 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,7 +260,7 @@
     .job__time-worked {
       font-style: normal; } }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -241,7 +269,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,10 +321,17 @@ project {
   project:nth-child(1) .project__container {
     height: 50%;
     width: 50%;
-    left: -50%;
-    right: 100%;
-    top: 50%;
-    bottom: 0%; }
+    left: 50%;
+    right: -100%;
+    top: -50%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(1) .project__toggle,
+      project:nth-child(1) .project__container {
+        left: -50%;
+        right: 0%;
+        top: 50%;
+        bottom: 0%; } }
   project:nth-child(2) .project__toggle,
   project:nth-child(2) .project__container {
     height: 50%;
@@ -307,10 +342,17 @@ project {
   project:nth-child(3) .project__container {
     height: 25%;
     width: 25%;
-    left: -75%;
-    right: 150%;
-    top: 75%;
-    bottom: 0%; }
+    left: 25%;
+    right: -50%;
+    top: -25%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(3) .project__toggle,
+      project:nth-child(3) .project__container {
+        left: -75%;
+        right: 50%;
+        top: 75%;
+        bottom: 0%; } }
   project:nth-child(4) .project__toggle,
   project:nth-child(4) .project__container {
     height: 25%;
@@ -321,10 +363,17 @@ project {
   project:nth-child(5) .project__container {
     height: 25%;
     width: 25%;
-    left: -25%;
-    right: 100%;
-    top: 25%;
+    left: 75%;
+    right: -100%;
+    top: -75%;
     bottom: 50%; }
+    @media (min-width: 1024px) {
+      project:nth-child(5) .project__toggle,
+      project:nth-child(5) .project__container {
+        left: -25%;
+        right: 0%;
+        top: 25%;
+        bottom: 50%; } }
   project:nth-child(6) .project__toggle,
   project:nth-child(6) .project__container {
     height: 25%;
@@ -335,10 +384,17 @@ project {
   project:nth-child(7) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -87.5%;
-    right: 175%;
-    top: 87.5%;
-    bottom: 0%; }
+    left: 12.5%;
+    right: -25%;
+    top: -12.5%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(7) .project__toggle,
+      project:nth-child(7) .project__container {
+        left: -87.5%;
+        right: 75%;
+        top: 87.5%;
+        bottom: 0%; } }
   project:nth-child(8) .project__toggle,
   project:nth-child(8) .project__container {
     height: 12.5%;
@@ -349,10 +405,17 @@ project {
   project:nth-child(9) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -62.5%;
-    right: 150%;
-    top: 62.5%;
-    bottom: 25%; }
+    left: 37.5%;
+    right: -50%;
+    top: -37.5%;
+    bottom: 75%; }
+    @media (min-width: 1024px) {
+      project:nth-child(9) .project__toggle,
+      project:nth-child(9) .project__container {
+        left: -62.5%;
+        right: 50%;
+        top: 62.5%;
+        bottom: 25%; } }
   project:nth-child(10) .project__toggle,
   project:nth-child(10) .project__container {
     height: 12.5%;
@@ -363,10 +426,17 @@ project {
   project:nth-child(11) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -37.5%;
-    right: 125%;
-    top: 37.5%;
+    left: 62.5%;
+    right: -75%;
+    top: -62.5%;
     bottom: 50%; }
+    @media (min-width: 1024px) {
+      project:nth-child(11) .project__toggle,
+      project:nth-child(11) .project__container {
+        left: -37.5%;
+        right: 25%;
+        top: 37.5%;
+        bottom: 50%; } }
   project:nth-child(12) .project__toggle,
   project:nth-child(12) .project__container {
     height: 12.5%;
@@ -377,10 +447,17 @@ project {
   project:nth-child(13) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -12.5%;
-    right: 100%;
-    top: 12.5%;
-    bottom: 75%; }
+    left: 87.5%;
+    right: -100%;
+    top: -87.5%;
+    bottom: 25%; }
+    @media (min-width: 1024px) {
+      project:nth-child(13) .project__toggle,
+      project:nth-child(13) .project__container {
+        left: -12.5%;
+        right: 0%;
+        top: 12.5%;
+        bottom: 75%; } }
   project:nth-child(14) .project__toggle,
   project:nth-child(14) .project__container {
     height: 12.5%;
@@ -447,14 +524,22 @@ project {
 
 .project__title {
   transition: all 0.35s;
-  font-size: .8em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2em;
   text-align: center;
-  margin: 10px 0 0; }
+  margin: 10px 0 0;
+  height: calc(100% - 10px); }
   @media (min-width: 1024px) {
     .project__title {
       display: block;
+      font-size: 1.25em;
+      height: calc(100% - 20px);
+      margin: 10px;
       text-align: left;
-      margin: 10px; } }
+      width: calc(100% - 20px); } }
 
 .project__details {
   transition: all 0.35s;
@@ -698,16 +783,22 @@ portfolio-page {
 
 portfolio-section {
   display: inline-block;
-  flex: 1;
-  max-height: calc(50vh - 10vw);
-  max-width: calc(50vh - 10vw);
-  padding-top: 50%;
+  flex: 0;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  max-height: calc(50vh - 5vw);
+  max-width: calc(50vh - 5vw); }
   @media (min-width: 1024px) {
     portfolio-section {
-      max-width: none;
-      width: 50%; } }
+      width: 50%;
+      max-height: calc(100vh - 5vw);
+      max-width: calc(100vh - 5vw); } }
+
+portfolio-section-outer-container {
+  display: block;
+  padding-top: 100%;
+  position: relative;
+  width: 100%; }
 
 portfolio-section-container {
   display: block; }
@@ -766,7 +857,7 @@ portfolio-page-image {
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__container, .project__title, .project__full-bleed-link, portfolio-section-container, portfolio-content, .portfolio {
   position: absolute;
   top: 0;
   left: 0;
@@ -818,10 +909,17 @@ project {
   project:nth-child(1) .project__container {
     height: 50%;
     width: 50%;
-    left: -50%;
-    right: 100%;
-    top: 50%;
-    bottom: 0%; }
+    left: 50%;
+    right: -100%;
+    top: -50%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(1) .project__toggle,
+      project:nth-child(1) .project__container {
+        left: -50%;
+        right: 0%;
+        top: 50%;
+        bottom: 0%; } }
   project:nth-child(2) .project__toggle,
   project:nth-child(2) .project__container {
     height: 50%;
@@ -832,10 +930,17 @@ project {
   project:nth-child(3) .project__container {
     height: 25%;
     width: 25%;
-    left: -75%;
-    right: 150%;
-    top: 75%;
-    bottom: 0%; }
+    left: 25%;
+    right: -50%;
+    top: -25%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(3) .project__toggle,
+      project:nth-child(3) .project__container {
+        left: -75%;
+        right: 50%;
+        top: 75%;
+        bottom: 0%; } }
   project:nth-child(4) .project__toggle,
   project:nth-child(4) .project__container {
     height: 25%;
@@ -846,10 +951,17 @@ project {
   project:nth-child(5) .project__container {
     height: 25%;
     width: 25%;
-    left: -25%;
-    right: 100%;
-    top: 25%;
+    left: 75%;
+    right: -100%;
+    top: -75%;
     bottom: 50%; }
+    @media (min-width: 1024px) {
+      project:nth-child(5) .project__toggle,
+      project:nth-child(5) .project__container {
+        left: -25%;
+        right: 0%;
+        top: 25%;
+        bottom: 50%; } }
   project:nth-child(6) .project__toggle,
   project:nth-child(6) .project__container {
     height: 25%;
@@ -860,10 +972,17 @@ project {
   project:nth-child(7) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -87.5%;
-    right: 175%;
-    top: 87.5%;
-    bottom: 0%; }
+    left: 12.5%;
+    right: -25%;
+    top: -12.5%;
+    bottom: 100%; }
+    @media (min-width: 1024px) {
+      project:nth-child(7) .project__toggle,
+      project:nth-child(7) .project__container {
+        left: -87.5%;
+        right: 75%;
+        top: 87.5%;
+        bottom: 0%; } }
   project:nth-child(8) .project__toggle,
   project:nth-child(8) .project__container {
     height: 12.5%;
@@ -874,10 +993,17 @@ project {
   project:nth-child(9) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -62.5%;
-    right: 150%;
-    top: 62.5%;
-    bottom: 25%; }
+    left: 37.5%;
+    right: -50%;
+    top: -37.5%;
+    bottom: 75%; }
+    @media (min-width: 1024px) {
+      project:nth-child(9) .project__toggle,
+      project:nth-child(9) .project__container {
+        left: -62.5%;
+        right: 50%;
+        top: 62.5%;
+        bottom: 25%; } }
   project:nth-child(10) .project__toggle,
   project:nth-child(10) .project__container {
     height: 12.5%;
@@ -888,10 +1014,17 @@ project {
   project:nth-child(11) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -37.5%;
-    right: 125%;
-    top: 37.5%;
+    left: 62.5%;
+    right: -75%;
+    top: -62.5%;
     bottom: 50%; }
+    @media (min-width: 1024px) {
+      project:nth-child(11) .project__toggle,
+      project:nth-child(11) .project__container {
+        left: -37.5%;
+        right: 25%;
+        top: 37.5%;
+        bottom: 50%; } }
   project:nth-child(12) .project__toggle,
   project:nth-child(12) .project__container {
     height: 12.5%;
@@ -902,10 +1035,17 @@ project {
   project:nth-child(13) .project__container {
     height: 12.5%;
     width: 12.5%;
-    left: -12.5%;
-    right: 100%;
-    top: 12.5%;
-    bottom: 75%; }
+    left: 87.5%;
+    right: -100%;
+    top: -87.5%;
+    bottom: 25%; }
+    @media (min-width: 1024px) {
+      project:nth-child(13) .project__toggle,
+      project:nth-child(13) .project__container {
+        left: -12.5%;
+        right: 0%;
+        top: 12.5%;
+        bottom: 75%; } }
   project:nth-child(14) .project__toggle,
   project:nth-child(14) .project__container {
     height: 12.5%;
@@ -972,14 +1112,22 @@ project {
 
 .project__title {
   transition: all 0.35s;
-  font-size: .8em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2em;
   text-align: center;
-  margin: 10px 0 0; }
+  margin: 10px 0 0;
+  height: calc(100% - 10px); }
   @media (min-width: 1024px) {
     .project__title {
       display: block;
+      font-size: 1.25em;
+      height: calc(100% - 20px);
+      margin: 10px;
       text-align: left;
-      margin: 10px; } }
+      width: calc(100% - 20px); } }
 
 .project__details {
   transition: all 0.35s;
@@ -1032,3 +1180,15 @@ project {
   height: 50%;
   left: 25%;
   top: 25%; }
+
+h1 {
+  font-size: 4em; }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 2.25em; } }
+
+h2 {
+  font-size: 2.5em; }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 1.25em; } }

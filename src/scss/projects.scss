@@ -119,12 +119,19 @@ $fractal-size-factor: .5;
         }
 
         @if ($i % 2 == 1) {
-          $x-pos: 100% + get-square-x-pos(($i + 1) / 2);
+          $x-pos: get-square-x-pos(($i + 1) / 2);
           $y-pos: get-square-y-pos(($i + 1) / 2);
-          left: 100% - $x-pos - $square-size;
-          right: 100% + get-square-x-pos(($i + 1) / 2);
-          top: 100% - $y-pos - $square-size;
-          bottom: $y-pos;
+          left: 100% - $square-size - $x-pos;
+          right: $x-pos - 100%;
+          top: -$y-pos -$square-size;
+          bottom: 100% - $y-pos;
+
+          @include breakpoint($m) {
+            left: -$x-pos - $square-size;
+            right: $x-pos;
+            top: 100% - $y-pos - $square-size;
+            bottom: $y-pos;
+          }
         }
       }
     }
@@ -228,15 +235,22 @@ $fractal-size-factor: .5;
 }
 
 .project__title {
+  @include absolute-fill();
   @include standard-transition();
-  font-size: .8em;
+  @include flex-center();
+  flex-direction: column;
+  font-size: 2em;
   text-align: center;
   margin: $standard-margin 0 0;
+  height: calc(100% - #{$standard-margin});
 
   @include breakpoint($m) {
     display: block;
-    text-align: left;
+    font-size: 1.25em;
+    height: calc(100% - #{$standard-margin * 2});
     margin: $standard-margin;
+    text-align: left;
+    width: calc(100% - #{$standard-margin * 2});
   }
 }
 

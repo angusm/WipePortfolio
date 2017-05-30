@@ -33,7 +33,10 @@ const getHeroData = () => {
                 icon: 'img/email.svg',
             },
             {
-                title: 'About This Site',
+                class: 'hero-cta',
+                linkTarget: '_self',
+                link: '#rga',
+                icon: 'img/down-chevron.svg',
             },
         ],
     };
