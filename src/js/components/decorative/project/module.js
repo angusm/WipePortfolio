@@ -15,6 +15,7 @@ projectModule.component(COMPONENT_NAME, {
         constructor() {
             this.project = this.project || {};
         }
+
         getProjectTitleLines() {
             return this.project.title ?
                 this.project.title.split(' ') : [];

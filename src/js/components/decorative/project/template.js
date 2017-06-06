@@ -19,6 +19,10 @@ export default `
             {{ line }}
         </div>
     </div>
+    <div class="project__title project__title--inline"
+        ng-class="{'project__title--with-icon': $ctrl.project.icon && $ctrl.project.title}">
+        <div class="project__title-line" ng-bind="$ctrl.project.title"></div>
+    </div>
     <div class="project__details"
         ng-if="!$ctrl.isOnlyALink()">
         <ng-transclude></ng-transclude>

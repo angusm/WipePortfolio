@@ -28,7 +28,11 @@ h2 {
     font-size: 20px;
   }
 
-  @include breakpoint($ret) {
+  @include breakpoint($m-ret) {
     font-size: 20px;
+  }
+
+  @include breakpoint($ret) {
+    font-size: 40px;
   }
 }

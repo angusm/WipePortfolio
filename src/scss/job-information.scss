@@ -6,9 +6,14 @@ $job__logo-image-max-size: 150px;
 
 $job-info-margin-percentage: 2.5%;
 $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
+$job-info-margin-top: calc(#{$job-info-margin-percentage} + #{$standard-margin} - 5vh);
 
 .job__title {
-  margin: $job-info-margin $job-info-margin auto;
+  margin: $job-info-margin-top $job-info-margin auto;
+
+  @include breakpoint($m) {
+    margin: $job-info-margin $job-info-margin auto;
+  }
 }
 
 .job__company {

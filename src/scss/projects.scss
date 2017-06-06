@@ -43,14 +43,15 @@ project.hero-cta {
 
 .project__toggle-label {
   @include standard-transition();
-  @include transition-delay();
   @include flex-center();
+  font-size: 25px;
   height: 5%;
   opacity: 0;
   position: absolute;
   right: $standard-margin;
   text-align: center;
   top: $standard-margin;
+  transition: opacity $transition-time;
   vertical-align: middle;
   width: 5%;
 }
@@ -161,13 +162,17 @@ project.hero-cta {
   .project__toggle:checked {
     &,
     & + .project__toggle-label {
-      width: 5% !important;
+      bottom: auto !important;
       height: 5% !important;
       left: auto !important;
       right: $standard-margin !important;
-      top: $standard-margin !important;
-      bottom: auto !important;
+      top: calc(-105% + #{$standard-margin}) !important;
+      width: 5% !important;
       z-index: 1001;
+
+      @include breakpoint($m) {
+        top: $standard-margin !important;
+      }
     }
 
     & + .project__toggle-label {
@@ -183,7 +188,7 @@ project.hero-cta {
       $expanded-project-container-padding: 5%;
       height: 200% - ($expanded-project-container-padding * 2);
       padding: $expanded-project-container-padding;
-      top: -100%;
+      top: -105%;
       transform: scale(1);
       transition: filter $transition-time,
         background-color $transition-time,
@@ -203,8 +208,12 @@ project.hero-cta {
       }
 
       .project__title {
-        font-size: 1.5em;
+        opacity: 0;
         transition-delay: 0s;
+      }
+
+      .project__title--inline {
+        opacity: 1;
       }
 
       .project__title-line {
@@ -270,6 +279,7 @@ project.hero-cta {
   flex-direction: column;
   font-size: 15px;
   margin: 0;
+  opacity: 1;
   text-align: center;
 
   &.project__title--with-icon .project__title-line {
@@ -289,13 +299,32 @@ project.hero-cta {
   }
 }
 
+.project__title--inline {
+  display: block;
+  font-size: 40px;
+  height: auto;
+  margin: $standard-margin;
+  opacity: 0;
+  position: relative;
+  text-align: left;
+  width: auto;
+
+  @include breakpoint($m) {
+    font-size: 22px;
+  }
+}
+
 .project__details {
   @include standard-transition();
-  font-size: .8em;
+  font-size: 22px;
   margin: $standard-margin;
   opacity: 0;
   transform: translate3d(0, $standard-margin, 0);
   transition-delay: 0s;
+
+  @include breakpoint($m) {
+    font-size: 16px;
+  }
 
   .project__link {
     display: inline-block;

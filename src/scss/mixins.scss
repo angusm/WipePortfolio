@@ -40,7 +40,16 @@ $standard-margin: 10px;
   }
 
   @if $media-query == $ret {
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx)  and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @if $media-query == $m-ret {
+    @media (min-width: 1024px) and (min-resolution: 2dppx) {
+      @content;
+    }
+    @media (orientation: landscape) and (min-resolution: 2dppx) {
       @content;
     }
   }
