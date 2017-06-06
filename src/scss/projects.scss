@@ -209,11 +209,11 @@ project.hero-cta {
 
       .project__title {
         opacity: 0;
-        transition-delay: 0s;
       }
 
       .project__title--inline {
         opacity: 1;
+        transition-delay: 0s;
       }
 
       .project__title-line {
@@ -273,7 +273,6 @@ project.hero-cta {
 }
 
 .project__title {
-  @include standard-transition();
   @include absolute-fill();
   @include flex-center();
   flex-direction: column;
@@ -281,10 +280,11 @@ project.hero-cta {
   margin: 0;
   opacity: 1;
   text-align: center;
+  transition: opacity $transition-time;
 
   &.project__title--with-icon .project__title-line {
-    transition: opacity $icon-fade-time;
     opacity: 0;
+    transition: opacity $icon-fade-time;
   }
 
   @include breakpoint($m) {
@@ -301,7 +301,7 @@ project.hero-cta {
 
 .project__title--inline {
   display: block;
-  font-size: 40px;
+  font-size: 44px;
   height: auto;
   margin: $standard-margin;
   opacity: 0;
@@ -310,7 +310,7 @@ project.hero-cta {
   width: auto;
 
   @include breakpoint($m) {
-    font-size: 22px;
+    font-size: 32px;
   }
 }
 
