@@ -5,6 +5,23 @@
 @import 'portfolio';
 @import 'projects';
 
+.wip-container {
+  @include absolute-fill();
+  @include flex-center();
+  position: fixed;
+  z-index: 999999999999;
+  pointer-events: none;
+}
+
+h1.wip {
+  color: white;
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 100px;
+  opacity: .3;
+  text-shadow: 2px 2px 5px black;
+}
+
 h1 {
   font-size: 24px;
 
