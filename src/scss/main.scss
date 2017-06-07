@@ -5,6 +5,10 @@
 @import 'portfolio';
 @import 'projects';
 
+@include component-style('ng-transclude') {
+  display: block;
+}
+
 .wip-container {
   @include absolute-fill();
   @include flex-center();
@@ -14,6 +18,7 @@
 }
 
 h1.wip {
+  display: none;
   color: white;
   position: absolute;
   font-family: Arial, sans-serif;
@@ -45,11 +50,15 @@ h2 {
     font-size: 20px;
   }
 
-  @include breakpoint($m-ret) {
+  @include breakpoint($ret) {
+    font-size: 40px;
+  }
+
+  @include breakpoint($landscape-ret) {
     font-size: 20px;
   }
 
-  @include breakpoint($ret) {
-    font-size: 40px;
+  @include breakpoint($landscape-ret) {
+    font-size: 20px;
   }
 }

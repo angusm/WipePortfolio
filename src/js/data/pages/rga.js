@@ -19,11 +19,27 @@ const getRGAData = () => {
             {
                 title: 'Readability and Reviews',
                 paragraphs: [
-                    `
-                Presented reviewers with contributions made to
-                the Google code base to successfully demonstrate
-                my merit and earned the ability to approve
-                change lists.`,
+                    `As part of Google's process to ensure code quality, all
+                    submissions must be vetted for readability as part of the
+                    code review process, by a qualified reviewer`,
+                    `To help contribute to my team I was selected as one of
+                    our team members to undergo the process to attain 
+                    Javascript readability. This process involved writing a
+                    sizable chunk of code that contributed meaningfully to
+                    Google's codebase and would serve as a strong example of
+                    my best work.`,
+                    `My code underwent a review process in which it was
+                    examined for strict compliance with the google style guide,
+                    for clarity in its structure and naming, for testability,
+                    for maintainability and for demonstrating language mastery
+                    and best practices.`,
+                    `I was fortunate enough to have learned from the outstanding
+                    people around me and was able to attain review approval for
+                    Javascript readability with a record low amount of revisions
+                    for my team.
+                    I was then happy to be able to review and approve
+                    submissions by my teammates as well as others throughout the
+                    organization.`
                 ],
             },
             {

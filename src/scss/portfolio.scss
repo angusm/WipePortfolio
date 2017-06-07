@@ -6,14 +6,24 @@
 $medium-breakpoint-section-margin: 3% 5%;
 $large-breakpoint-section-margin: 5%;
 
+@include component-style('portfolio-image') {
+  display: block;
+}
+
 @include component-style('portfolio-page-content') {
   display: block;
 }
 
 @include component-style('portfolio-page') {
-  display: block;
-  height: 100%;
-  width: 100%;
+  @include flex-center();
+  flex-direction: column;
+  padding: 5%;
+  position: relative;
+  z-index: 50;
+
+  @include breakpoint($m) {
+    flex-direction: row;
+  }
 
   @mixin page-coloring(
     $page-color-a, $page-color-b, $link-color-a, $link-color-b) {
@@ -114,22 +124,6 @@ $large-breakpoint-section-margin: 5%;
         }
       }
     }
-  }
-}
-
-.portfolio-page-container {
-  @include flex-center();
-  flex-direction: column;
-  height: calc(100% - 10vw - 5vh);
-  padding: calc(5% + 5vh) 5% 5%;
-  position: relative;
-  width: 90%;
-  z-index: 50;
-
-  @include breakpoint($m) {
-    flex-direction: row;
-    height: calc(100% - 10vw);
-    padding: 5%;
   }
 }
 

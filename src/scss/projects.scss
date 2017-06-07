@@ -166,7 +166,7 @@ project.hero-cta {
       height: 5% !important;
       left: auto !important;
       right: $standard-margin !important;
-      top: calc(-105% + #{$standard-margin}) !important;
+      top: calc(-100% + #{$standard-margin}) !important;
       width: 5% !important;
       z-index: 1001;
 
@@ -188,7 +188,7 @@ project.hero-cta {
       $expanded-project-container-padding: 5%;
       height: 200% - ($expanded-project-container-padding * 2);
       padding: $expanded-project-container-padding;
-      top: -105%;
+      top: -100%;
       transform: scale(1);
       transition: filter $transition-time,
         background-color $transition-time,
@@ -312,6 +312,10 @@ project.hero-cta {
   @include breakpoint($m) {
     font-size: 32px;
   }
+
+  @include breakpoint($ret) {
+    font-size: 64px;
+  }
 }
 
 .project__details {
@@ -324,6 +328,10 @@ project.hero-cta {
 
   @include breakpoint($m) {
     font-size: 16px;
+  }
+
+  @include breakpoint($ret) {
+    font-size: 32px;
   }
 
   .project__link {
