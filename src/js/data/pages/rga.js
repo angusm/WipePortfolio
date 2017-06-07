@@ -1,7 +1,7 @@
 const getRGAData = () => {
     return {
         code: 'rga',
-        company: 'R/GA at Google',
+        company: 'R/GA @ Google',
         logo: `
         <div class="rga-google">
             <div class="rga-logo">

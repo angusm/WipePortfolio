@@ -12,7 +12,7 @@ $job-info-side-margin: 12.5%;
 .job {
   left: 0;
   position: absolute;
-  top: 12.5%;
+  top: 5%;
 
   @include breakpoint($landscape-ret) {
     left: 12.5%;

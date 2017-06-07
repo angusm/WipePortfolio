@@ -1,7 +1,7 @@
 @import "breakpoints";
 @import "mixins";
 
-$total-project-count: 14;
+$total-project-count: 11;
 $fractal-size-factor: .5;
 $icon-fade-time: .5s;
 
@@ -14,7 +14,7 @@ $icon-fade-time: .5s;
 
   &:hover {
     z-index: 1001;
-    ~ .project__container {
+    ~ .project__button {
       filter: contrast(80%) brightness(115%);
       z-index: 1000;
     }
@@ -22,16 +22,16 @@ $icon-fade-time: .5s;
 }
 
 project.hero-cta {
-  .project__toggle:hover ~ .project__container,
-  .project__container:hover {
+  .project__toggle:hover ~ .project__button,
+  .project__button:hover {
     .project__icon {
       opacity: .5;
     }
   }
 }
 
-.project__toggle:hover ~ .project__container,
-.project__container:hover {
+.project__toggle:hover ~ .project__button,
+.project__button:hover {
   .project__icon {
     opacity: 0.05;
   }
@@ -116,19 +116,16 @@ project.hero-cta {
     .project__toggle {
       display: none;
     }
-    .project__container {
+    .project__button {
       filter: contrast(80%);
     }
   }
 
-  &:nth-child(1) {
-    display: none;
-  }
-
-  @for $i from 1 through $total-project-count {
-    &:nth-child(#{$i}) {
+  @for $i from 2 through $total-project-count + 1 {
+    &:nth-child(#{$i - 1}) {
       .project__toggle,
-      .project__container {
+      .project__modal,
+      .project__button {
         $square-size: get-square-size($i);
         height: $square-size;
         width: $square-size;
@@ -179,20 +176,18 @@ project.hero-cta {
       opacity: 1;
     }
 
-    &:hover ~ .project__container {
-      filter: brightness(100%) contrast(100%);
-    }
-
-    & ~ .project__container {
+    & ~ .project__modal {
       @include absolute-fill();
       $expanded-project-container-padding: 5%;
       height: 200% - ($expanded-project-container-padding * 2);
+      opacity: 1;
       padding: $expanded-project-container-padding;
       top: -100%;
       transform: scale(1);
       transition: filter $transition-time,
         background-color $transition-time,
         left $transition-time,
+        opacity $transition-time,
         top $transition-time,
         width $transition-time,
         height $transition-time,
@@ -253,16 +248,23 @@ project.hero-cta {
   }
 }
 
-.project__container,
+.project__modal {
+  opacity: 0;
+}
+
+.project__button,
+.project__modal,
 .project__toggle {
   pointer-events: all;
 }
 
-.project__container {
+.project__button,
+.project__modal {
   position: absolute;
   transition: filter $transition-time,
     background-color $transition-time,
     left $transition-time $transition-time,
+    opacity $transition-time $transition-time,
     top $transition-time $transition-time,
     width $transition-time $transition-time,
     height $transition-time $transition-time,

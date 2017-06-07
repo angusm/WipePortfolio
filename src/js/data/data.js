@@ -4,7 +4,7 @@ import getNerdsData from './pages/nerds';
 import getAVPData from './pages/avp';
 import getDCMData from './pages/dcm';
 
-const PROJECT_LENGTH = 12;
+const PROJECT_LENGTH = 11;
 
 const getEmptyProject = () => {
     return {
@@ -13,7 +13,7 @@ const getEmptyProject = () => {
 };
 
 const padProjects = (data) => {
-    data.projects = [getEmptyProject()].concat(data.projects);
+    // data.projects = [getEmptyProject()].concat(data.projects);
     while (data.projects.length < PROJECT_LENGTH) {
         data.projects.push(getEmptyProject());
     }

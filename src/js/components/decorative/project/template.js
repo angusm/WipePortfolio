@@ -5,8 +5,10 @@ export default `
        ng-if="!$ctrl.project.isEmpty && !$ctrl.isOnlyALink()">
 <label class="project__toggle-label"
     ng-if="!$ctrl.project.isEmpty && !$ctrl.isOnlyALink()">X</label>
-<div class="project__container" ng-if="$ctrl.project.isEmpty"></div>
-<div class="project__container" ng-if="!$ctrl.project.isEmpty">
+<div class="project__button" ng-if="$ctrl.project.isEmpty"></div>
+
+<!--The project icon button-->
+<div class="project__button" ng-if="!$ctrl.project.isEmpty">
     <div class="project__icon-container">
         <img class="project__icon"
             ng-if="$ctrl.project.icon"
@@ -19,8 +21,10 @@ export default `
             {{ line }}
         </div>
     </div>
-    <div class="project__title project__title--inline"
-        ng-class="{'project__title--with-icon': $ctrl.project.icon && $ctrl.project.title}">
+</div>
+
+<div class="project__modal">
+    <div class="project__title project__title--inline">
         <div class="project__title-line" ng-bind="$ctrl.project.title"></div>
     </div>
     <div class="project__details"
@@ -42,5 +46,5 @@ export default `
        ng-if="$ctrl.isOnlyALink()"
        target="{{ $ctrl.getLinkTarget() }}">
     </a>
-</input>
+</div>
 `;

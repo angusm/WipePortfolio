@@ -12,28 +12,12 @@
   @include breakpoint($l) {
     font-size: 36px;
   }
-
-  @include breakpoint($ret) {
-    font-size: 64px;
-  }
-
-  @include breakpoint($landscape-ret) {
-    font-size: 32px;
-  }
 }
 
 @mixin subheader-font() {
   font-size: 12px;
 
   @include breakpoint($m) {
-    font-size: 20px;
-  }
-
-  @include breakpoint($ret) {
-    font-size: 40px;
-  }
-
-  @include breakpoint($landscape-ret) {
     font-size: 20px;
   }
 }
