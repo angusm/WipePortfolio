@@ -1,8 +1,6 @@
 export default `
 <portfolio-section>
-    <portfolio-image>
-        <ng-transclude ng-transclude-slot="portfolioPageImage">
-        </ng-transclude>
+    <div class="job">
         <h1 class="job__title"
             ng-bind="$ctrl.jobTitle"
             ng-if="$ctrl.jobTitle"></h1>
@@ -12,7 +10,10 @@ export default `
         <h2 class="job__time-worked"
             ng-bind-html="$ctrl.jobTimeWorked"
             ng-if="$ctrl.jobTimeWorked"></h2>
-        <hr class="job__line">
+    </div>
+    <portfolio-image>
+        <ng-transclude ng-transclude-slot="portfolioPageImage">
+        </ng-transclude>
     </portfolio-image>
 </portfolio-section>
 <portfolio-section>

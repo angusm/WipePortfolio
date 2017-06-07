@@ -17,8 +17,9 @@ $large-breakpoint-section-margin: 5%;
 @include component-style('portfolio-page') {
   @include flex-center();
   flex-direction: column;
-  padding: 5%;
+  height: 100%;
   position: relative;
+  width: 100%;
   z-index: 50;
 
   @include breakpoint($m) {

@@ -7,18 +7,31 @@ $job__logo-image-max-size: 150px;
 $job-info-margin-percentage: 2.5%;
 $job-info-margin: calc(#{$job-info-margin-percentage} + #{$standard-margin});
 $job-info-margin-top: calc(#{$job-info-margin-percentage} + #{$standard-margin});
+$job-info-side-margin: 12.5%;
 
-.job__title {
-  margin: $job-info-margin-top $job-info-margin auto;
+.job {
+  left: 0;
+  position: absolute;
+  top: 12.5%;
+
+  @include breakpoint($landscape-ret) {
+    left: 12.5%;
+    top: 0;
+  }
 
   @include breakpoint($m) {
-    margin: $job-info-margin $job-info-margin auto;
+    left: 12.5%;
+    top: 0;
   }
+}
+
+.job__title {
+  margin: 0 0 auto;
 }
 
 .job__company {
   font-weight: 300;
-  margin: auto $standard-margin $standard-margin $job-info-margin;
+  margin: auto 0 0;
 }
 
 .job__time-worked {

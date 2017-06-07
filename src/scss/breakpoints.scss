@@ -5,3 +5,51 @@ $landscape-ret: 'landscape-retina';
 $portrait-ret: 'portrait-retina';
 $s: 'small';
 $ret: 'retina';
+
+@mixin breakpoint($media-query) {
+
+  @if $media-query == $xl {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $media-query == $l {
+    @media (min-width: 1360px) {
+      @content;
+    }
+  }
+
+  @if $media-query == $m {
+    @media (min-width: 1024px) {
+      @content;
+    }
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if $media-query == $s {
+    @media (min-width: 720px) and (not min-resolution: 2dppx) {
+      @content;
+    }
+  }
+
+  @if $media-query == $ret {
+    @media (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+
+  @if $media-query == $landscape-ret {
+    @media (orientation: landscape) and (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+
+  @if $media-query == $portrait-ret {
+    @media (orientation: portrait) and (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+}

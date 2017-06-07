@@ -1,4 +1,5 @@
 @import "breakpoints";
+@import "fonts";
 
 $standard-margin: 10px;
 
@@ -8,55 +9,6 @@ $standard-margin: 10px;
 
 @mixin standard-drop-shadow() {
   @extend %standard-drop-shadow;
-}
-
-@mixin breakpoint($media-query) {
-
-  @if $media-query == $xl {
-    @media (min-width: 1920px) {
-      @content;
-    }
-  }
-
-  @if $media-query == $l {
-    @media (min-width: 1360px) {
-      @content;
-    }
-  }
-
-  @if $media-query == $m {
-    @media (min-width: 1024px) {
-      @content;
-    }
-    @media (orientation: landscape) {
-      @content;
-    }
-  }
-
-  @if $media-query == $s {
-    @media (min-width: 720px) and (not min-resolution: 2dppx) {
-      @content;
-    }
-  }
-
-  @if $media-query == $ret {
-    @media (min-resolution: 2dppx) {
-      @content;
-    }
-  }
-
-  @if $media-query == $landscape-ret {
-    @media (min-width: 1024px) and (min-resolution: 2dppx) {
-      @content;
-    }
-    @media (orientation: landscape) and (min-resolution: 2dppx) {
-      @content;
-    }
-  }
-
-  @if $media-query == $landscape-ret {
-
-  }
 }
 
 @mixin component-style($component-names...) {
@@ -93,10 +45,6 @@ $standard-margin: 10px;
   align-items: center;
   display: flex;
   justify-content: center;
-}
-
-@mixin roboto-font() {
-  font-family: 'Roboto', sans-serif;
 }
 
 $transition-time: .35s;
