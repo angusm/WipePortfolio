@@ -13,7 +13,6 @@ const getEmptyProject = () => {
 };
 
 const padProjects = (data) => {
-    // data.projects = [getEmptyProject()].concat(data.projects);
     while (data.projects.length < PROJECT_LENGTH) {
         data.projects.push(getEmptyProject());
     }

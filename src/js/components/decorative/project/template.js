@@ -21,6 +21,11 @@ export default `
             {{ line }}
         </div>
     </div>
+    <a class="project__full-bleed-link"
+       href="{{ $ctrl.project.link }}"
+       ng-if="$ctrl.isOnlyALink()"
+       target="{{ $ctrl.getLinkTarget() }}">
+    </a>
 </div>
 
 <div class="project__modal">
@@ -41,10 +46,5 @@ export default `
               </a>
           </div>
     </div>
-    <a class="project__full-bleed-link"
-       href="{{ $ctrl.project.link }}"
-       ng-if="$ctrl.isOnlyALink()"
-       target="{{ $ctrl.getLinkTarget() }}">
-    </a>
 </div>
 `;

@@ -5,6 +5,9 @@ $total-project-count: 11;
 $fractal-size-factor: .5;
 $icon-fade-time: .5s;
 
+$expanded-project-container-padding: 5%;
+$epcp: $expanded-project-container-padding;
+
 .project__toggle {
   position: absolute;
   cursor: pointer;
@@ -123,8 +126,8 @@ project.hero-cta {
 
   @for $i from 2 through $total-project-count + 1 {
     &:nth-child(#{$i - 1}) {
+
       .project__toggle,
-      .project__modal,
       .project__button {
         $square-size: get-square-size($i);
         height: $square-size;
@@ -159,11 +162,13 @@ project.hero-cta {
   .project__toggle:checked {
     &,
     & + .project__toggle-label {
+      position: fixed;
       bottom: auto !important;
-      height: 5% !important;
+      height: $epcp !important;
       left: auto !important;
-      right: $standard-margin !important;
-      top: calc(-100% + #{$standard-margin}) !important;
+      margin-top: $epcp;
+      right: $epcp !important;
+      top: 0 !important;
       width: 5% !important;
       z-index: 1001;
 
@@ -177,29 +182,16 @@ project.hero-cta {
     }
 
     & ~ .project__modal {
-      @include absolute-fill();
-      $expanded-project-container-padding: 5%;
-      height: 200% - ($expanded-project-container-padding * 2);
       opacity: 1;
-      padding: $expanded-project-container-padding;
-      top: -100%;
-      transform: scale(1);
-      transition: filter $transition-time,
+      pointer-events: all;
+      transition:
         background-color $transition-time,
-        left $transition-time,
-        opacity $transition-time,
-        top $transition-time,
-        width $transition-time,
-        height $transition-time,
-        padding $transition-time;
-      width: 100% - ($expanded-project-container-padding * 2);
-      z-index: 1000;
+        opacity $transition-time;
 
       @include breakpoint($m) {
-        height: 100% - ($expanded-project-container-padding * 2);
-        left: -100%;
+        left: 0;
         top: 0;
-        width: 200% - ($expanded-project-container-padding * 2);
+        width: 100% - ($expanded-project-container-padding * 2);
       }
 
       .project__title {
@@ -249,29 +241,33 @@ project.hero-cta {
 }
 
 .project__modal {
+  @include absolute-fill();
   opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  padding: $epcp $epcp * 2 $epcp $epcp;
+  width: 100% - $epcp * 3;
+  transform: scale(1);
+  z-index: 1000;
+}
+
+.project__button {
+  position: absolute;
+  z-index: 20;
 }
 
 .project__button,
-.project__modal,
 .project__toggle {
   pointer-events: all;
 }
 
 .project__button,
 .project__modal {
-  position: absolute;
   transition: filter $transition-time,
     background-color $transition-time,
-    left $transition-time $transition-time,
-    opacity $transition-time $transition-time,
-    top $transition-time $transition-time,
-    width $transition-time $transition-time,
-    height $transition-time $transition-time,
-    padding $transition-time $transition-time;
+    opacity $transition-time $transition-time;
   margin: 0;
   overflow: hidden;
-  z-index: 20;
 }
 
 .project__title {
@@ -297,7 +293,7 @@ project.hero-cta {
   }
 
   @include breakpoint($ret) {
-    font-size: 28px;
+    font-size: 16px;
   }
 }
 
@@ -316,15 +312,18 @@ project.hero-cta {
   }
 
   @include breakpoint($ret) {
-    font-size: 64px;
+    font-size: 32px;
   }
 }
 
 .project__details {
   @include standard-transition();
   font-size: 22px;
+  height: 75%;
   margin: $standard-margin;
   opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   transform: translate3d(0, $standard-margin, 0);
   transition-delay: 0s;
 
@@ -333,7 +332,7 @@ project.hero-cta {
   }
 
   @include breakpoint($ret) {
-    font-size: 32px;
+    font-size: 16px;
   }
 
   .project__link {

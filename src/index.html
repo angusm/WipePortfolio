@@ -9,6 +9,9 @@
           rel="stylesheet">
 </head>
 <body>
+    <div class="wip-container">
+        <h1 class="wip">Work In Progress</h1>
+    </div>
     <div class="portfolio" ng-controller="portfolioController as p">
         <portfolio-page ng-repeat="page in p.pages"
                         ng-attr-id="{{ page.code }}"

@@ -2,6 +2,7 @@ const getHeroData = () => {
     return {
         code: 'hero',
         logo: ``,
+        isHero: true,
         title: 'Angus MacDonald',
         company: `
             <a href="mailto:angus@angusmacdonald.ca">

@@ -1,4 +1,4 @@
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +111,7 @@
 .google-logo {
   display: inline-block; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -129,7 +129,7 @@
 .nerds-logo {
   filter: drop-shadow(0 3px 1px #000); }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -224,7 +224,7 @@
   position: relative;
   width: 90%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +233,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -304,7 +304,7 @@
   height: auto;
   max-width: 150px; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -313,7 +313,7 @@
   width: 100%;
   height: 100%; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -373,14 +373,12 @@ project {
     project.project--empty .project__button {
       filter: contrast(80%); }
   project:nth-child(1) .project__toggle,
-  project:nth-child(1) .project__modal,
   project:nth-child(1) .project__button {
     height: 50%;
     width: 50%;
     left: 0%;
     top: 0%; }
   project:nth-child(2) .project__toggle,
-  project:nth-child(2) .project__modal,
   project:nth-child(2) .project__button {
     height: 25%;
     width: 25%;
@@ -390,7 +388,6 @@ project {
     bottom: 100%; }
     @media (min-width: 1024px) {
       project:nth-child(2) .project__toggle,
-      project:nth-child(2) .project__modal,
       project:nth-child(2) .project__button {
         left: -75%;
         right: 50%;
@@ -398,21 +395,18 @@ project {
         bottom: 0%; } }
     @media (orientation: landscape) {
       project:nth-child(2) .project__toggle,
-      project:nth-child(2) .project__modal,
       project:nth-child(2) .project__button {
         left: -75%;
         right: 50%;
         top: 75%;
         bottom: 0%; } }
   project:nth-child(3) .project__toggle,
-  project:nth-child(3) .project__modal,
   project:nth-child(3) .project__button {
     height: 25%;
     width: 25%;
     left: 50%;
     top: 0%; }
   project:nth-child(4) .project__toggle,
-  project:nth-child(4) .project__modal,
   project:nth-child(4) .project__button {
     height: 25%;
     width: 25%;
@@ -422,7 +416,6 @@ project {
     bottom: 50%; }
     @media (min-width: 1024px) {
       project:nth-child(4) .project__toggle,
-      project:nth-child(4) .project__modal,
       project:nth-child(4) .project__button {
         left: -25%;
         right: 0%;
@@ -430,21 +423,18 @@ project {
         bottom: 50%; } }
     @media (orientation: landscape) {
       project:nth-child(4) .project__toggle,
-      project:nth-child(4) .project__modal,
       project:nth-child(4) .project__button {
         left: -25%;
         right: 0%;
         top: 25%;
         bottom: 50%; } }
   project:nth-child(5) .project__toggle,
-  project:nth-child(5) .project__modal,
   project:nth-child(5) .project__button {
     height: 25%;
     width: 25%;
     left: 0%;
     top: 50%; }
   project:nth-child(6) .project__toggle,
-  project:nth-child(6) .project__modal,
   project:nth-child(6) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -454,7 +444,6 @@ project {
     bottom: 100%; }
     @media (min-width: 1024px) {
       project:nth-child(6) .project__toggle,
-      project:nth-child(6) .project__modal,
       project:nth-child(6) .project__button {
         left: -87.5%;
         right: 75%;
@@ -462,21 +451,18 @@ project {
         bottom: 0%; } }
     @media (orientation: landscape) {
       project:nth-child(6) .project__toggle,
-      project:nth-child(6) .project__modal,
       project:nth-child(6) .project__button {
         left: -87.5%;
         right: 75%;
         top: 87.5%;
         bottom: 0%; } }
   project:nth-child(7) .project__toggle,
-  project:nth-child(7) .project__modal,
   project:nth-child(7) .project__button {
     height: 12.5%;
     width: 12.5%;
     left: 75%;
     top: 0%; }
   project:nth-child(8) .project__toggle,
-  project:nth-child(8) .project__modal,
   project:nth-child(8) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -486,7 +472,6 @@ project {
     bottom: 75%; }
     @media (min-width: 1024px) {
       project:nth-child(8) .project__toggle,
-      project:nth-child(8) .project__modal,
       project:nth-child(8) .project__button {
         left: -62.5%;
         right: 50%;
@@ -494,21 +479,18 @@ project {
         bottom: 25%; } }
     @media (orientation: landscape) {
       project:nth-child(8) .project__toggle,
-      project:nth-child(8) .project__modal,
       project:nth-child(8) .project__button {
         left: -62.5%;
         right: 50%;
         top: 62.5%;
         bottom: 25%; } }
   project:nth-child(9) .project__toggle,
-  project:nth-child(9) .project__modal,
   project:nth-child(9) .project__button {
     height: 12.5%;
     width: 12.5%;
     left: 50%;
     top: 25%; }
   project:nth-child(10) .project__toggle,
-  project:nth-child(10) .project__modal,
   project:nth-child(10) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -518,7 +500,6 @@ project {
     bottom: 50%; }
     @media (min-width: 1024px) {
       project:nth-child(10) .project__toggle,
-      project:nth-child(10) .project__modal,
       project:nth-child(10) .project__button {
         left: -37.5%;
         right: 25%;
@@ -526,14 +507,12 @@ project {
         bottom: 50%; } }
     @media (orientation: landscape) {
       project:nth-child(10) .project__toggle,
-      project:nth-child(10) .project__modal,
       project:nth-child(10) .project__button {
         left: -37.5%;
         right: 25%;
         top: 37.5%;
         bottom: 50%; } }
   project:nth-child(11) .project__toggle,
-  project:nth-child(11) .project__modal,
   project:nth-child(11) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -541,11 +520,13 @@ project {
     top: 50%; }
   project .project__toggle:checked,
   project .project__toggle:checked + .project__toggle-label {
+    position: fixed;
     bottom: auto !important;
     height: 5% !important;
     left: auto !important;
-    right: 10px !important;
-    top: calc(-100% + 10px) !important;
+    margin-top: 5%;
+    right: 5% !important;
+    top: 0 !important;
     width: 5% !important;
     z-index: 1001; }
     @media (min-width: 1024px) {
@@ -559,26 +540,19 @@ project {
   project .project__toggle:checked + .project__toggle-label {
     opacity: 1; }
   project .project__toggle:checked ~ .project__modal {
-    height: 190%;
     opacity: 1;
-    padding: 5%;
-    top: -100%;
-    transform: scale(1);
-    transition: filter 0.35s, background-color 0.35s, left 0.35s, opacity 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s;
-    width: 90%;
-    z-index: 1000; }
+    pointer-events: all;
+    transition: background-color 0.35s, opacity 0.35s; }
     @media (min-width: 1024px) {
       project .project__toggle:checked ~ .project__modal {
-        height: 90%;
-        left: -100%;
+        left: 0;
         top: 0;
-        width: 190%; } }
+        width: 90%; } }
     @media (orientation: landscape) {
       project .project__toggle:checked ~ .project__modal {
-        height: 90%;
-        left: -100%;
+        left: 0;
         top: 0;
-        width: 190%; } }
+        width: 90%; } }
     project .project__toggle:checked ~ .project__modal .project__title {
       opacity: 0; }
     project .project__toggle:checked ~ .project__modal .project__title--inline {
@@ -609,20 +583,27 @@ project {
         width: 100%; }
 
 .project__modal {
-  opacity: 0; }
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  padding: 5% 10% 5% 5%;
+  width: 85%;
+  transform: scale(1);
+  z-index: 1000; }
+
+.project__button {
+  position: absolute;
+  z-index: 20; }
 
 .project__button,
-.project__modal,
 .project__toggle {
   pointer-events: all; }
 
 .project__button,
 .project__modal {
-  position: absolute;
-  transition: filter 0.35s, background-color 0.35s, left 0.35s 0.35s, opacity 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s;
+  transition: filter 0.35s, background-color 0.35s, opacity 0.35s 0.35s;
   margin: 0;
-  overflow: hidden;
-  z-index: 20; }
+  overflow: hidden; }
 
 .project__title {
   align-items: center;
@@ -651,7 +632,7 @@ project {
       width: calc(100% - 20px); } }
   @media (min-resolution: 2dppx) {
     .project__title {
-      font-size: 28px; } }
+      font-size: 16px; } }
 
 .project__title--inline {
   display: block;
@@ -670,13 +651,16 @@ project {
       font-size: 32px; } }
   @media (min-resolution: 2dppx) {
     .project__title--inline {
-      font-size: 64px; } }
+      font-size: 32px; } }
 
 .project__details {
   transition: all 0.35s;
   font-size: 22px;
+  height: 75%;
   margin: 10px;
   opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   transform: translate3d(0, 10px, 0);
   transition-delay: 0s; }
   @media (min-width: 1024px) {
@@ -687,7 +671,7 @@ project {
       font-size: 16px; } }
   @media (min-resolution: 2dppx) {
     .project__details {
-      font-size: 32px; } }
+      font-size: 16px; } }
   .project__details .project__link {
     display: inline-block;
     margin-bottom: 15px; }
@@ -960,16 +944,18 @@ portfolio-page-image {
   display: flex;
   font-size: 32px;
   height: 100%;
+  pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 100; }
   .portfolio__navigation ul li {
-    color: #999; }
+    color: #999;
+    pointer-events: all; }
     .portfolio__navigation ul li:hover {
       color: #ccc; }
 
-.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, project .project__toggle:checked ~ .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
+.rga-bg, .nerds-bg, .job__logo-container, #avp .avp-bg, .dcm-bg, project, .project__modal, .project__title, .project__full-bleed-link, .project__icon-container, portfolio-section-container, portfolio-content, .portfolio, .wip-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -1029,14 +1015,12 @@ project {
     project.project--empty .project__button {
       filter: contrast(80%); }
   project:nth-child(1) .project__toggle,
-  project:nth-child(1) .project__modal,
   project:nth-child(1) .project__button {
     height: 50%;
     width: 50%;
     left: 0%;
     top: 0%; }
   project:nth-child(2) .project__toggle,
-  project:nth-child(2) .project__modal,
   project:nth-child(2) .project__button {
     height: 25%;
     width: 25%;
@@ -1046,7 +1030,6 @@ project {
     bottom: 100%; }
     @media (min-width: 1024px) {
       project:nth-child(2) .project__toggle,
-      project:nth-child(2) .project__modal,
       project:nth-child(2) .project__button {
         left: -75%;
         right: 50%;
@@ -1054,21 +1037,18 @@ project {
         bottom: 0%; } }
     @media (orientation: landscape) {
       project:nth-child(2) .project__toggle,
-      project:nth-child(2) .project__modal,
       project:nth-child(2) .project__button {
         left: -75%;
         right: 50%;
         top: 75%;
         bottom: 0%; } }
   project:nth-child(3) .project__toggle,
-  project:nth-child(3) .project__modal,
   project:nth-child(3) .project__button {
     height: 25%;
     width: 25%;
     left: 50%;
     top: 0%; }
   project:nth-child(4) .project__toggle,
-  project:nth-child(4) .project__modal,
   project:nth-child(4) .project__button {
     height: 25%;
     width: 25%;
@@ -1078,7 +1058,6 @@ project {
     bottom: 50%; }
     @media (min-width: 1024px) {
       project:nth-child(4) .project__toggle,
-      project:nth-child(4) .project__modal,
       project:nth-child(4) .project__button {
         left: -25%;
         right: 0%;
@@ -1086,21 +1065,18 @@ project {
         bottom: 50%; } }
     @media (orientation: landscape) {
       project:nth-child(4) .project__toggle,
-      project:nth-child(4) .project__modal,
       project:nth-child(4) .project__button {
         left: -25%;
         right: 0%;
         top: 25%;
         bottom: 50%; } }
   project:nth-child(5) .project__toggle,
-  project:nth-child(5) .project__modal,
   project:nth-child(5) .project__button {
     height: 25%;
     width: 25%;
     left: 0%;
     top: 50%; }
   project:nth-child(6) .project__toggle,
-  project:nth-child(6) .project__modal,
   project:nth-child(6) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -1110,7 +1086,6 @@ project {
     bottom: 100%; }
     @media (min-width: 1024px) {
       project:nth-child(6) .project__toggle,
-      project:nth-child(6) .project__modal,
       project:nth-child(6) .project__button {
         left: -87.5%;
         right: 75%;
@@ -1118,21 +1093,18 @@ project {
         bottom: 0%; } }
     @media (orientation: landscape) {
       project:nth-child(6) .project__toggle,
-      project:nth-child(6) .project__modal,
       project:nth-child(6) .project__button {
         left: -87.5%;
         right: 75%;
         top: 87.5%;
         bottom: 0%; } }
   project:nth-child(7) .project__toggle,
-  project:nth-child(7) .project__modal,
   project:nth-child(7) .project__button {
     height: 12.5%;
     width: 12.5%;
     left: 75%;
     top: 0%; }
   project:nth-child(8) .project__toggle,
-  project:nth-child(8) .project__modal,
   project:nth-child(8) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -1142,7 +1114,6 @@ project {
     bottom: 75%; }
     @media (min-width: 1024px) {
       project:nth-child(8) .project__toggle,
-      project:nth-child(8) .project__modal,
       project:nth-child(8) .project__button {
         left: -62.5%;
         right: 50%;
@@ -1150,21 +1121,18 @@ project {
         bottom: 25%; } }
     @media (orientation: landscape) {
       project:nth-child(8) .project__toggle,
-      project:nth-child(8) .project__modal,
       project:nth-child(8) .project__button {
         left: -62.5%;
         right: 50%;
         top: 62.5%;
         bottom: 25%; } }
   project:nth-child(9) .project__toggle,
-  project:nth-child(9) .project__modal,
   project:nth-child(9) .project__button {
     height: 12.5%;
     width: 12.5%;
     left: 50%;
     top: 25%; }
   project:nth-child(10) .project__toggle,
-  project:nth-child(10) .project__modal,
   project:nth-child(10) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -1174,7 +1142,6 @@ project {
     bottom: 50%; }
     @media (min-width: 1024px) {
       project:nth-child(10) .project__toggle,
-      project:nth-child(10) .project__modal,
       project:nth-child(10) .project__button {
         left: -37.5%;
         right: 25%;
@@ -1182,14 +1149,12 @@ project {
         bottom: 50%; } }
     @media (orientation: landscape) {
       project:nth-child(10) .project__toggle,
-      project:nth-child(10) .project__modal,
       project:nth-child(10) .project__button {
         left: -37.5%;
         right: 25%;
         top: 37.5%;
         bottom: 50%; } }
   project:nth-child(11) .project__toggle,
-  project:nth-child(11) .project__modal,
   project:nth-child(11) .project__button {
     height: 12.5%;
     width: 12.5%;
@@ -1197,11 +1162,13 @@ project {
     top: 50%; }
   project .project__toggle:checked,
   project .project__toggle:checked + .project__toggle-label {
+    position: fixed;
     bottom: auto !important;
     height: 5% !important;
     left: auto !important;
-    right: 10px !important;
-    top: calc(-100% + 10px) !important;
+    margin-top: 5%;
+    right: 5% !important;
+    top: 0 !important;
     width: 5% !important;
     z-index: 1001; }
     @media (min-width: 1024px) {
@@ -1215,26 +1182,19 @@ project {
   project .project__toggle:checked + .project__toggle-label {
     opacity: 1; }
   project .project__toggle:checked ~ .project__modal {
-    height: 190%;
     opacity: 1;
-    padding: 5%;
-    top: -100%;
-    transform: scale(1);
-    transition: filter 0.35s, background-color 0.35s, left 0.35s, opacity 0.35s, top 0.35s, width 0.35s, height 0.35s, padding 0.35s;
-    width: 90%;
-    z-index: 1000; }
+    pointer-events: all;
+    transition: background-color 0.35s, opacity 0.35s; }
     @media (min-width: 1024px) {
       project .project__toggle:checked ~ .project__modal {
-        height: 90%;
-        left: -100%;
+        left: 0;
         top: 0;
-        width: 190%; } }
+        width: 90%; } }
     @media (orientation: landscape) {
       project .project__toggle:checked ~ .project__modal {
-        height: 90%;
-        left: -100%;
+        left: 0;
         top: 0;
-        width: 190%; } }
+        width: 90%; } }
     project .project__toggle:checked ~ .project__modal .project__title {
       opacity: 0; }
     project .project__toggle:checked ~ .project__modal .project__title--inline {
@@ -1265,20 +1225,27 @@ project {
         width: 100%; }
 
 .project__modal {
-  opacity: 0; }
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  padding: 5% 10% 5% 5%;
+  width: 85%;
+  transform: scale(1);
+  z-index: 1000; }
+
+.project__button {
+  position: absolute;
+  z-index: 20; }
 
 .project__button,
-.project__modal,
 .project__toggle {
   pointer-events: all; }
 
 .project__button,
 .project__modal {
-  position: absolute;
-  transition: filter 0.35s, background-color 0.35s, left 0.35s 0.35s, opacity 0.35s 0.35s, top 0.35s 0.35s, width 0.35s 0.35s, height 0.35s 0.35s, padding 0.35s 0.35s;
+  transition: filter 0.35s, background-color 0.35s, opacity 0.35s 0.35s;
   margin: 0;
-  overflow: hidden;
-  z-index: 20; }
+  overflow: hidden; }
 
 .project__title {
   align-items: center;
@@ -1307,7 +1274,7 @@ project {
       width: calc(100% - 20px); } }
   @media (min-resolution: 2dppx) {
     .project__title {
-      font-size: 28px; } }
+      font-size: 16px; } }
 
 .project__title--inline {
   display: block;
@@ -1326,13 +1293,16 @@ project {
       font-size: 32px; } }
   @media (min-resolution: 2dppx) {
     .project__title--inline {
-      font-size: 64px; } }
+      font-size: 32px; } }
 
 .project__details {
   transition: all 0.35s;
   font-size: 22px;
+  height: 75%;
   margin: 10px;
   opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   transform: translate3d(0, 10px, 0);
   transition-delay: 0s; }
   @media (min-width: 1024px) {
@@ -1343,7 +1313,7 @@ project {
       font-size: 16px; } }
   @media (min-resolution: 2dppx) {
     .project__details {
-      font-size: 32px; } }
+      font-size: 16px; } }
   .project__details .project__link {
     display: inline-block;
     margin-bottom: 15px; }
@@ -1415,31 +1385,40 @@ ng-transclude {
   pointer-events: none; }
 
 h1.wip {
-  display: none;
   color: white;
   position: absolute;
   font-family: Arial, sans-serif;
-  font-size: 100px;
+  font-size: 75px;
   opacity: .3;
-  text-shadow: 2px 2px 5px black; }
+  text-shadow: 2px 2px 5px black;
+  text-align: center; }
+  @media (min-width: 1024px) {
+    h1.wip {
+      font-size: 100px; } }
+  @media (orientation: landscape) {
+    h1.wip {
+      font-size: 100px; } }
+  @media (min-resolution: 2dppx) {
+    h1.wip {
+      font-size: 75px; } }
 
-h1 {
+h1, h2 {
   font-size: 24px; }
   @media (min-width: 1024px) {
-    h1 {
+    h1, h2 {
       font-size: 30px; } }
   @media (orientation: landscape) {
-    h1 {
+    h1, h2 {
       font-size: 30px; } }
   @media (min-width: 1360px) {
-    h1 {
+    h1, h2 {
       font-size: 36px; } }
 
-h2 {
+h3 {
   font-size: 12px; }
   @media (min-width: 1024px) {
-    h2 {
+    h3 {
       font-size: 20px; } }
   @media (orientation: landscape) {
-    h2 {
+    h3 {
       font-size: 20px; } }

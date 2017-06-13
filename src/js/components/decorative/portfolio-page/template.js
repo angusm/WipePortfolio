@@ -3,13 +3,16 @@ export default `
     <div class="job">
         <h1 class="job__title"
             ng-bind="$ctrl.jobTitle"
-            ng-if="$ctrl.jobTitle"></h1>
-        <h2 class="job__company"
+            ng-if="$ctrl.jobTitle && $ctrl.isHero"></h1>
+        <h2 class="job__title"
+            ng-bind="$ctrl.jobTitle"
+            ng-if="$ctrl.jobTitle && !$ctrl.isHero"></h2>
+        <h3 class="job__company"
             ng-bind-html="$ctrl.jobCompany"
-            ng-if="$ctrl.jobCompany"></h2>
-        <h2 class="job__time-worked"
+            ng-if="$ctrl.jobCompany"></h3>
+        <h3 class="job__time-worked"
             ng-bind-html="$ctrl.jobTimeWorked"
-            ng-if="$ctrl.jobTimeWorked"></h2>
+            ng-if="$ctrl.jobTimeWorked"></h3>
     </div>
     <portfolio-image>
         <ng-transclude ng-transclude-slot="portfolioPageImage">

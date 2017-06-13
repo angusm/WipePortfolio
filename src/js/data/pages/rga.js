@@ -47,16 +47,35 @@ const getRGAData = () => {
                 link: 'https://www.google.com/chrome',
                 icon: 'img/chrome.webp',
                 paragraphs: [
-                    `
-                Updated script that delivers the appropriate
-                <a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel">dev</a>,
-                <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
-                <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
-                or
-                <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
-                version of Chrome to user based on their OS, its
-                version, whether it's 32 or 64-bit and the user's
-                browser.`,
+                    `As new versions of Chrome were being released, support
+                    for some older operating systems was being phased out. As a
+                    result new features needed to be added to the javascript on
+                    the Chrome download page. An update would need to be made to
+                    the code that handled determining the appropriate files and
+                    download methods to deliver to users based on their current
+                    operating system and browser.`,
+                    `There was existing code that delivered a single package
+                    determined by the user's operating system and leveraged
+                    stream-lined install processes based on the user's OS and
+                    browser. Digging into the script it appeared to have begun
+                    with the best of intentions but had seen too many hands and
+                    small updates and its original glory had faded a bit.`,
+                    `Digging through the code base I discovered that this script
+                    had made its way far and wide into over a dozen separate
+                    pages, some even spanning sites. Working closely with our
+                    QA department and on occasion collaborating with engineers
+                    from the Chrome team I was able to consolidate some of the
+                    code handling these downloads and make the changes necessary
+                    to deliver the many different install files for Chrome based
+                    on the <em>version</em> of the current user's operating
+                    system.`,
+                    `The script currently lives in the
+                    <a href="https://www.google.com/chrome/browser/desktop/index.html?extra=devchannel">dev</a>,
+                    <a href="https://www.google.com/chrome/browser/beta.html">beta</a>,
+                    <a href="https://www.google.com/chrome/browser/desktop/">consumer</a>
+                    and
+                    <a href="https://www.google.com/chrome/browser/canary.html">canary</a>
+                    download pages, among others.`,
                 ],
             },
             {
